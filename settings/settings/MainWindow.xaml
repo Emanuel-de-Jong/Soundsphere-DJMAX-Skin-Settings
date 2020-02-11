@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:settings"
         mc:Ignorable="d"
-        Title="settings" Height="500" Width="400" ResizeMode="NoResize">
+        Title="settings" Height="650" Width="400" ResizeMode="NoResize">
 
     <Window.Resources>
         <Style TargetType="Label">
@@ -110,7 +110,7 @@
                     <Button Click="GenerateJSON">Generate JSON</Button>
                 </StackPanel>
 
-                <TextBlock Grid.Row="12" Grid.ColumnSpan="3" Name="debug"/>
+                <TextBlock Grid.Row="12" Grid.ColumnSpan="3" TextWrapping="Wrap" Name="debug" />
             </Grid>
         </TabItem>
     </TabControl>
