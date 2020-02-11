@@ -24,5 +24,10 @@ namespace settings
         {
             InitializeComponent();
         }
+
+        private void GenerateJSON(object sender, RoutedEventArgs e)
+        {
+            int est = 1;
+        }
     }
 }
