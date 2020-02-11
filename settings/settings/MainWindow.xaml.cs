@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace settings
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml test
     /// </summary>
     public partial class MainWindow : Window
     {
