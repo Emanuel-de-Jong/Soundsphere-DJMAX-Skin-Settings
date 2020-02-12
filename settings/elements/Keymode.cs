@@ -7,7 +7,7 @@ namespace elements
     {
         public string name { get; set; }
         public string playfield { get; set; }
-        public object[] cses { get; set; }
+        public List<object[]> cses { get; set; }
         public List<ImagesImage> images { get; set; }
     }
 }
