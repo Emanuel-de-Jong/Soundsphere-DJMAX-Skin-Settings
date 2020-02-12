@@ -47,44 +47,35 @@ namespace settings
 
         private void GenerateJSON(object sender, RoutedEventArgs e)
         {
-            string name = "DJMAX 10K";
+            Keymode km_10K = new Keymode();
+            km_10K.name = "DJMAX 10K";
 
-            string playfield = "playfield10K.json";
+            km_10K.playfield = "playfield10K.json";
 
-            List<object[]> cses = new List<object[]>()
-            {
-                new Cs { x = 0.5, y = 0, a = 0, b = 0, binding = eBinding.h }.getCsAsArr()
-            };
+            km_10K.cses.Add(
+                new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() }
+            );
 
-            List<Image> images = new List<Image>()
-            {
-                new Image { name = "n1", path = "6K/note1.png", layer = Layer },
-                new Image { name = "n1t", path = "6K/note1tail.png", layer = Layer, blendAlphaMode = eBlendAlphaMode.alphamultiply }
-            };
+            km_10K.images.Add(
+                new Image { name = "n1", path = "6K/note1.png", layer = Layer }
+            );
 
-            Dictionary<string, Dictionary<string, NoteComponent>> notes = new Dictionary<string, Dictionary<string, NoteComponent>>()
-            {
-                { 
-                    "measure1", new Dictionary<string, NoteComponent>()
+            km_10K.notes["measure1:" + eNoteType.LongNote] =
+                new Dictionary<string, NoteComponent>() {
                     {
-                        { 
-                            "Head", new NoteComponent()
-                            {
-                                cs = 1,
-                                gc = new Gc {
-                                    x = new List<double>() { -0.222 }, y = new List<double>() { 0.699, 1 },
-                                    w = new List<double>() { 0.464 }, h = new List<double>() { 0 },
-                                    ox = new List<double>() { 0 }, oy = new List<double>() { 0 }
-                                },
-                                layer = Layer,
-                                image = images[0].name
-                            }
-                        } 
+                        eNoteComponent.Head.ToString(), 
+                        new NoteComponent() {
+                            cs = 1,
+                            gc = new Gc {
+                                x = new List<double>() { -0.222 }, y = new List<double>() { 0.699, 1 },
+                                w = new List<double>() { 0.464 }, h = new List<double>() { 0 },
+                                ox = new List<double>() { 0 }, oy = new List<double>() { 0 }
+                            },
+                            layer = Layer,
+                            image = km_10K.images[0].name
+                        }
                     }
-                }
-            };
-
-            Keymode km_10K = new Keymode { name = name, playfield = playfield, cses = cses, images = images, notes = notes };
+                };
 
             showJSON(km_10K);
         }

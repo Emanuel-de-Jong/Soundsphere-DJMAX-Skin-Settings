@@ -12,8 +12,15 @@ namespace elements
         public string path { get; set; }
         public int layer { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
-        public eBlendMode blendMode { get; set; }
+        public eBlendMode? blendMode { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
-        public eBlendAlphaMode blendAlphaMode { get; set; }
+        public eBlendAlphaMode? blendAlphaMode { get; set; }
+
+        public Image()
+        {
+            name = "";
+            path = "";
+            layer = 0;
+        }
     }
 }
