@@ -110,7 +110,7 @@
                     <Button Click="GenerateJSON">Generate JSON</Button>
                 </StackPanel>
 
-                <TextBlock Grid.Row="12" Grid.ColumnSpan="3" TextWrapping="Wrap" Name="debug" />
+                <TextBox Grid.Row="12" Grid.ColumnSpan="3" TextWrapping="Wrap" Name="debug" />
             </Grid>
         </TabItem>
     </TabControl>

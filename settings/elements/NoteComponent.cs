@@ -4,7 +4,7 @@ using System.Text;
 
 namespace elements
 {
-    public class Head
+    public class NoteComponent
     {
         public int cs { get; set; }
         public Gc gc { get; set; }

@@ -31,12 +31,32 @@ namespace settings
 
         private void GenerateJSON(object sender, RoutedEventArgs e)
         {
+            Cs cs = new Cs { num1 = 0.5, num2 = 0, num3 = 0, num4 = 0, orientation = "h" };
+
             ImagesImage n1 = new ImagesImage { name = "n1", path = "6K/note1.png" };
             ImagesImage n1t = new ImagesImage { name = "n1t", path = "6K/note1tail.png" };
 
-            Cs cs = new Cs { num1 = 0.5, num2 = 0, num3 = 0, num4 = 0, orientation = "h" };
+            Dictionary<string, NoteComponent> measure1 = new Dictionary<string, NoteComponent>()
+            {
+                { "Head", new NoteComponent()
+                {
+                    cs = 1,
+                    gc = new Gc {
+                        x = new List<double>() { -0.222 }, y = new List<double>() { 0.699, 1 },
+                        w = new List<double>() { 0.464 }, h = new List<double>() { 0 },
+                        ox = new List<double>() { 0 }, oy = new List<double>() { 0 }
+                    },
+                    sb = new Sb(),
+                    layer = 0,
+                    image = "white"
+                }}
+            };
 
-            Keymode km_10K = new Keymode { name = "DJMAX 10K", playfield = "playfield10K.json", cses = new List<object[]> { cs.getCsAsArr() }, images = new List<ImagesImage> { n1, n1t } };
+
+            Keymode km_10K = new Keymode { name = "DJMAX 10K", playfield = "playfield10K.json", cses = new List<object[]> { cs.getCsAsArr() }, 
+                images = new List<ImagesImage> { n1, n1t }, notes = new Dictionary<string, Dictionary<string, NoteComponent>>() { { "measure1:ShortNote", measure1 } }
+            };
+
 
             debug.Text = JsonConvert.SerializeObject(km_10K);
         }

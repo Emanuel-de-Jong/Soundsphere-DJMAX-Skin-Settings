@@ -9,5 +9,6 @@ namespace elements
         public string playfield { get; set; }
         public List<object[]> cses { get; set; }
         public List<ImagesImage> images { get; set; }
+        public Dictionary<string, Dictionary<string, NoteComponent>> notes { get; set; }
     }
 }
