@@ -53,12 +53,27 @@ namespace settings
             };
 
 
-            Keymode km_10K = new Keymode { name = "DJMAX 10K", playfield = "playfield10K.json", cses = new List<object[]> { cs.getCsAsArr() }, 
-                images = new List<ImagesImage> { n1, n1t }, notes = new Dictionary<string, Dictionary<string, NoteComponent>>() { { "measure1:ShortNote", measure1 } }
+            Keymode km_10K = new Keymode
+            {
+                name = "DJMAX 10K",
+                playfield = "playfield10K.json",
+                cses = new List<object[]> { cs.getCsAsArr() },
+                images = new List<ImagesImage> { n1, n1t },
+                notes = new Dictionary<string, Dictionary<string, NoteComponent>>() { { "measure1:ShortNote", measure1 } }
             };
 
 
-            debug.Text = JsonConvert.SerializeObject(km_10K);
+            showJSON(km_10K);
+
+
+
+
+        }
+
+        public void showJSON(object objJSON)
+        {
+            debug.Text = JsonConvert.SerializeObject(objJSON, Formatting.Indented,
+                new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
         }
     }
 }

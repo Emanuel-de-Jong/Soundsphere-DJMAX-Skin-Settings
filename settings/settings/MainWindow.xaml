@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:settings"
         mc:Ignorable="d"
-        Title="settings" Height="650" Width="400" ResizeMode="NoResize">
+        Title="settings" Height="650" Width="400" ResizeMode="CanResize">
 
     <Window.Resources>
         <Style TargetType="Label">
@@ -42,6 +42,7 @@
         <TabItem Header="JSON">
             <Grid>
                 <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
@@ -51,9 +52,8 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />-->
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="2*" />
                     <RowDefinition Height="8*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -62,7 +62,7 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0">Background Video</Label>
+                <!--<Label Grid.Row="0" Grid.Column="0">Background Video</Label>
                 <CheckBox Grid.Row="0" Grid.Column="1" Name="bgVid"/>
                 <Image Grid.Row="0" Grid.Column="2" Source="Images/fxbeam.png"/>
                 
@@ -104,13 +104,13 @@
 
                 <Label Grid.Row="10" Grid.Column="0">Particles</Label>
                 <CheckBox Grid.Row="10" Grid.Column="1" Name="particles"/>
-                <Image Grid.Row="10" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Image Grid.Row="10" Grid.Column="2" Source="Images/fxbeam.png"/>-->
 
-                <StackPanel Grid.Row="11" Grid.ColumnSpan="3">
+                <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
                     <Button Click="GenerateJSON">Generate JSON</Button>
                 </StackPanel>
 
-                <TextBox Grid.Row="12" Grid.ColumnSpan="3" TextWrapping="Wrap" Name="debug" />
+                <TextBox Grid.Row="1" Grid.ColumnSpan="3" TextWrapping="Wrap" Name="debug" />
             </Grid>
         </TabItem>
     </TabControl>
