@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
 using elements;
+using Newtonsoft.Json.Converters;
+using Image = elements.Image;
 
 namespace settings
 {
@@ -22,6 +24,20 @@ namespace settings
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int layer = 1;
+
+        public int Layer
+        {
+            get
+            {
+                return layer++;
+            }
+            set
+            {
+                layer = 0;
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,10 +47,10 @@ namespace settings
 
         private void GenerateJSON(object sender, RoutedEventArgs e)
         {
-            Cs cs = new Cs { num1 = 0.5, num2 = 0, num3 = 0, num4 = 0, orientation = "h" };
+            Cs cs = new Cs { x = 0.5, y = 0, a = 0, b = 0, binding = eBinding.h };
 
-            ImagesImage n1 = new ImagesImage { name = "n1", path = "6K/note1.png" };
-            ImagesImage n1t = new ImagesImage { name = "n1t", path = "6K/note1tail.png" };
+            Image n1 = new Image { name = "n1", path = "6K/note1.png", layer = Layer };
+            Image n1t = new Image { name = "n1t", path = "6K/note1tail.png", layer = Layer, blendAlphaMode = eBlendAlphaMode.alphamultiply };
 
             Dictionary<string, NoteComponent> measure1 = new Dictionary<string, NoteComponent>()
             {
@@ -54,26 +70,18 @@ namespace settings
 
 
             Keymode km_10K = new Keymode
-            {
-                name = "DJMAX 10K",
-                playfield = "playfield10K.json",
-                cses = new List<object[]> { cs.getCsAsArr() },
-                images = new List<ImagesImage> { n1, n1t },
-                notes = new Dictionary<string, Dictionary<string, NoteComponent>>() { { "measure1:ShortNote", measure1 } }
+            { name = "DJMAX 10K", playfield = "playfield10K.json", cses = new List<object[]> { cs.getCsAsArr() }, 
+                images = new List<Image> { n1, n1t }, notes = new Dictionary<string, Dictionary<string, NoteComponent>>() { { "measure1:ShortNote", measure1 } }
             };
 
-
             showJSON(km_10K);
-
-
-
-
         }
 
         public void showJSON(object objJSON)
         {
-            debug.Text = JsonConvert.SerializeObject(objJSON, Formatting.Indented,
-                new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+            debug.Text = JsonConvert.SerializeObject(objJSON, Formatting.Indented, new JsonSerializerSettings { 
+                NullValueHandling = NullValueHandling.Ignore 
+            });
         }
     }
 }
