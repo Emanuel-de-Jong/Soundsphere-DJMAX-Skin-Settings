@@ -93,7 +93,8 @@ namespace settings
             s4K.name = "DJMAX 4K";
             s4K.playfield = "playfield4K.json";
             s4K.cses.Add(sCs.Cs);
-            s4K.images = Keymode.GetImages(10, false);
+            s4K.images = Keymode.GetImages(4, false);
+            s4K.notes = Keymode.GetNotes(4, false, s4K.images);
 
             return s4K;
         }

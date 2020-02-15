@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace elements
 {
@@ -20,23 +22,15 @@ namespace elements
             notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
         }
 
-        public static List<Image> GetImages(int notes = 10, bool sidetracks = false)
+        public static List<Image> GetImages(int keymode = 10, bool sidetracks = false)
         {
             List<Image> images = new List<Image>();
 
 
-            string dir = "";
-            if (notes >= 6)
-            {
-                dir = "6K";
-            }
-            else
-            {
-                dir = notes.ToString() + "K";
-            }
+            images.Add(new Image() { name = "measure", path = "resources/measure", layer = sLayer.GetAndIncrement() });
 
 
-            if (notes == 8)
+            if (keymode == 8)
             {
                 for (int i = 1; i <= 2; i++)
                 {
@@ -47,7 +41,7 @@ namespace elements
                     images.Add(new Image() { name = "fx" + side, path = "resources/8K/fx" + side + ".png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
                 }
             }
-            else if (notes == 10)
+            else if (keymode == 10)
             {
                 for (int i = 2; i >= 1; i--)
                 {
@@ -73,17 +67,58 @@ namespace elements
             }
 
 
+            string dir = "resources/";
+            if (keymode >= 6)
+            {
+                dir += "6K";
+            }
+            else
+            {
+                dir += keymode.ToString() + "K";
+            }
+
             for (int i=1; i <=2; i++)
             {
                 string noteCount = i.ToString();
-                images.Add(new Image() { name = "n" + noteCount + "b", path = "resources/" + dir + "/note" + noteCount + "body.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount + "h", path = "resources/" + dir + "/note" + noteCount + "head.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount + "t", path = "resources/" + dir + "/note" + noteCount + "tail.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount, path = "resources/" + dir + "/note" + noteCount + ".png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "b", path = dir + "/note" + noteCount + "body.png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "h", path = dir + "/note" + noteCount + "head.png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "t", path = dir + "/note" + noteCount + "tail.png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount, path = dir + "/note" + noteCount + ".png", layer = sLayer.GetAndIncrement() });
             }
 
 
             return images;
+        }
+
+        public static Dictionary<string, Dictionary<string, NoteComponent>> GetNotes(int keymode, bool sidetracks, List<Image> images)
+        {
+            Dictionary<string, Dictionary<string, NoteComponent>> notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
+
+            string dir = "settingsresources/positions/positions" + keymode.ToString() + "K";
+            dir += sidetracks ? "2ST" : "";
+            dir += ".json";
+            string json = File.ReadAllText(dir);
+            var positions = JsonConvert.DeserializeObject<Positions>(json);
+
+            var measure1Pos = positions.measure1["ShortNote"]["Head"];
+            notes["measure1:" + eNoteType.ShortNote] =
+                new Dictionary<string, NoteComponent>() {
+                    {
+                        eNoteComponent.Head.ToString(),
+                        new NoteComponent() {
+                            cs = 1,
+                            gc = new Gc {
+                                x = measure1Pos["x"], y = measure1Pos["y"],
+                                w = measure1Pos["w"], h = measure1Pos["h"],
+                                ox = measure1Pos["ox"], oy = measure1Pos["oy"]
+                            },
+                            layer = sLayer.GetAndIncrement(),
+                            image = images[0].name
+                        }
+                    }
+                };
+
+            return notes;
         }
     }
 }
