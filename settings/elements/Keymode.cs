@@ -19,5 +19,20 @@ namespace elements
             images = new List<Image>();
             notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
         }
+
+        public static List<Image> GetImages(int notes = 10, int scratches = 0, int layer = 0)
+        {
+            this.layer = layer;
+
+            List<Image> images = new List<Image>();
+
+            if(notes == 4)
+            {
+                Image image = new Image() { name = "n1", path = "resources/4K/note1.png", layer = 0 };
+            }
+
+
+            return images;
+        }
     }
 }

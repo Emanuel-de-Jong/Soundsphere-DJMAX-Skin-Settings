@@ -24,6 +24,7 @@ namespace settings
     /// </summary>
     public partial class MainWindow : Window
     {
+        private object[] cs = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
         private int layer = 1;
 
         public int Layer
@@ -34,7 +35,7 @@ namespace settings
             }
             set
             {
-                layer = 0;
+                layer = value;
             }
         }
 
@@ -47,6 +48,19 @@ namespace settings
 
         private void GenerateJSON(object sender, RoutedEventArgs e)
         {
+            List<MetaDataItem> sMetaData = new List<MetaDataItem>();
+
+            Keymode s4K = Get4K();
+            List<PlayfieldItem> sPlayfield4K = GetPlayfield4K();
+            sMetaData.Add(new MetaDataItem() { name = "DJMAX 4K", inputMode = "4key", type = "json:full-v2", path = "4K.json" });
+            Layer = 1;
+
+
+
+
+
+
+
             Keymode km_10K = new Keymode();
             km_10K.name = "DJMAX 10K";
 
@@ -77,15 +91,33 @@ namespace settings
                     }
                 };
 
-            showJSON(km_10K);
+            ShowJSON(km_10K);
         }
 
-        public void showJSON(object objJSON)
+        public void ShowJSON(object objJSON)
         {
             debug.Text = JsonConvert.SerializeObject(objJSON, Formatting.Indented, new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
             });
+        }
+
+        public Keymode Get4K()
+        {
+            Keymode s4K = new Keymode();
+            s4K.name = "DJMAX 4K";
+            s4K.playfield = "playfield4K.json";
+            s4K.cses.Add(cs);
+            s4K.images = Keymode.GetImages(4, 0, layer);
+
+            return s4K;
+        }
+
+        public List<PlayfieldItem> GetPlayfield4K()
+        {
+            List<PlayfieldItem> sPlayfield4K = new List<PlayfieldItem>();
+
+            return sPlayfield4K;
         }
     }
 }
