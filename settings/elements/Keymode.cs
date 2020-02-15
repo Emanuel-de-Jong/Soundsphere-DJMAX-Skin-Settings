@@ -20,17 +20,55 @@ namespace elements
             notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
         }
 
-        public static List<Image> GetImages(int notes = 10, int scratches = 0, int layer = 0)
+        public static List<Image> GetImages(int notes = 10, int scratches = 0)
         {
-            this.layer = layer;
-
             List<Image> images = new List<Image>();
 
-            if(notes == 4)
+            string dir = "";
+            if (notes >= 6)
             {
-                Image image = new Image() { name = "n1", path = "resources/4K/note1.png", layer = 0 };
+                dir = "6K";
+            }
+            else
+            {
+                dir = notes.ToString() + "K";
             }
 
+            for (int i=1; i <=2; i++)
+            {
+                string noteCount = i.ToString();
+                images.Add(new Image() { name = "n" + noteCount + "b", path = "resources/" + dir + "/note" + noteCount + "body.png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "h", path = "resources/" + dir + "/note" + noteCount + "head.png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "t", path = "resources/" + dir + "/note" + noteCount + "tail.png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount, path = "resources/" + dir + "/note" + noteCount + ".png", layer = sLayer.GetAndIncrement() });
+            }
+
+            if (notes == 8)
+            {
+                for (int i = 1; i <= 2; i++)
+                {
+                    string side = i == 1 ? "left" : "right";
+                    images.Add(new Image() { name = "fx" + side + "b", path = "resources/" + dir + "/fx" + side + "body.png", layer = sLayer.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx" + side + "h", path = "resources/" + dir + "/fx" + side + "head.png", layer = sLayer.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx" + side + "t", path = "resources/" + dir + "/fx" + side + "tail.png", layer = sLayer.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx" + side, path = "resources/" + dir + "/fx" + side + ".png", layer = sLayer.GetAndIncrement() });
+                }
+            }
+            else if(notes == 10)
+            {
+                for (int i = 1; i <= 2; i++)
+                {
+                    string side = i == 1 ? "left" : "right";
+                    for (int j = 1; j <= 2; j++)
+                    {
+                        string fxCount = i.ToString();
+                        images.Add(new Image() { name = "fx" + side + "b", path = "resources/" + dir + "/fx" + side + "body.png", layer = sLayer.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + side + "h", path = "resources/" + dir + "/fx" + side + "head.png", layer = sLayer.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + side + "t", path = "resources/" + dir + "/fx" + side + "tail.png", layer = sLayer.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + side, path = "resources/" + dir + "/fx" + side + ".png", layer = sLayer.GetAndIncrement() });
+                    }
+                }
+            }
 
             return images;
         }

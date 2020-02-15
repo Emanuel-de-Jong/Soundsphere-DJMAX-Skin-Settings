@@ -24,21 +24,6 @@ namespace settings
     /// </summary>
     public partial class MainWindow : Window
     {
-        private object[] cs = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
-        private int layer = 1;
-
-        public int Layer
-        {
-            get
-            {
-                return layer++;
-            }
-            set
-            {
-                layer = value;
-            }
-        }
-
         public MainWindow()
         {
             InitializeComponent();
@@ -53,7 +38,7 @@ namespace settings
             Keymode s4K = Get4K();
             List<PlayfieldItem> sPlayfield4K = GetPlayfield4K();
             sMetaData.Add(new MetaDataItem() { name = "DJMAX 4K", inputMode = "4key", type = "json:full-v2", path = "4K.json" });
-            Layer = 1;
+            sLayer.Layer = 1;
 
 
 
@@ -71,7 +56,7 @@ namespace settings
             );
 
             km_10K.images.Add(
-                new Image { name = "n1", path = "6K/note1.png", layer = Layer }
+                new Image { name = "n1", path = "6K/note1.png", layer = sLayer.GetAndIncrement() }
             );
 
             km_10K.notes["measure1:" + eNoteType.LongNote] =
@@ -85,7 +70,7 @@ namespace settings
                                 w = new List<double>() { 0.464 }, h = new List<double>() { 0 },
                                 ox = new List<double>() { 0 }, oy = new List<double>() { 0 }
                             },
-                            layer = Layer,
+                            layer = sLayer.GetAndIncrement(),
                             image = km_10K.images[0].name
                         }
                     }
@@ -107,8 +92,8 @@ namespace settings
             Keymode s4K = new Keymode();
             s4K.name = "DJMAX 4K";
             s4K.playfield = "playfield4K.json";
-            s4K.cses.Add(cs);
-            s4K.images = Keymode.GetImages(4, 0, layer);
+            s4K.cses.Add(sCs.Cs);
+            s4K.images = Keymode.GetImages(4, 0);
 
             return s4K;
         }

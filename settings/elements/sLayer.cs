@@ -12,12 +12,17 @@ namespace elements
         {
             get
             {
-                return layer++;
+                return layer;
             }
             set
             {
                 layer = value;
             }
+        }
+
+        public static int GetAndIncrement()
+        {
+            return layer++;
         }
     }
 }
