@@ -76,7 +76,7 @@ namespace settings
                     }
                 };
 
-            ShowJSON(km_10K);
+            ShowJSON(s4K);
         }
 
         public void ShowJSON(object objJSON)
@@ -93,7 +93,7 @@ namespace settings
             s4K.name = "DJMAX 4K";
             s4K.playfield = "playfield4K.json";
             s4K.cses.Add(sCs.Cs);
-            s4K.images = Keymode.GetImages(4, 0);
+            s4K.images = Keymode.GetImages(10, false);
 
             return s4K;
         }
