@@ -86,9 +86,7 @@ namespace elements
         {
             Dictionary<string, Dictionary<string, NoteComponent>> notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
 
-            string dir = "settingsresources/positions/positions" + keymode + "K";
-            dir += sidetracks ? "2ST" : "";
-            dir += ".json";
+            string dir = info.files["positions" + keymode + "k" + (sidetracks ? "2st" : "")];
             string json = File.ReadAllText(dir);
             var positions = JsonConvert.DeserializeObject<Positions>(json);
 
