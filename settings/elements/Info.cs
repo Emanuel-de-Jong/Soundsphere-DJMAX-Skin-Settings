@@ -35,7 +35,8 @@ namespace elements
 
         public void SetLayers()
         {
-            layers["bg"] = 0;
+            layers["novidbg"] = 0;
+            layers["bg"] = 1;
             layers["combobg"] = 10;
             layers["judgeline"] = 20;
             layers["fxbeam"] = 30;
