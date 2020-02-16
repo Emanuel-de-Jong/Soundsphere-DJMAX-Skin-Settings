@@ -16,7 +16,7 @@ namespace elements
         public double w { get; set; }
         public double h { get; set; }
         public int layer { get; set; }
-        public Cs cs { get; set; }
+        public object[] cs { get; set; }
 
         public PlayfieldItem()
         {
@@ -26,7 +26,6 @@ namespace elements
             w = 0;
             h = 0;
             layer = 0;
-            cs = new Cs();
         }
     }
 }

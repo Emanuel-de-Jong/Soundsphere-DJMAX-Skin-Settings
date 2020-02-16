@@ -41,42 +41,6 @@ namespace settings
             List<PlayfieldItem> sPlayfield4K = GetPlayfield4K();
             sMetaData.Add(new MetaDataItem() { name = info.skinName + " 4K", inputMode = "4key", type = "json:full-v2", path = info.files["4K"] });
 
-
-
-
-
-
-
-            Keymode km_10K = new Keymode();
-            km_10K.name = "DJMAX 10K";
-
-            km_10K.playfield = "playfield10K.json";
-
-            km_10K.cses.Add(
-                new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() }
-            );
-
-            km_10K.images.Add(
-                new Image { name = "n1", path = "6K/note1.png", layer = sLayers.GetAndIncrement() }
-            );
-
-            km_10K.notes["measure1:" + eNoteType.LongNote] =
-                new Dictionary<string, NoteComponent>() {
-                    {
-                        eNoteComponent.Head.ToString(), 
-                        new NoteComponent() {
-                            cs = 1,
-                            gc = new Gc {
-                                x = new List<double>() { -0.222 }, y = new List<double>() { 0.699, 1 },
-                                w = new List<double>() { 0.464 }, h = new List<double>() { 0 },
-                                ox = new List<double>() { 0 }, oy = new List<double>() { 0 }
-                            },
-                            layer = sLayers.GetAndIncrement(),
-                            image = km_10K.images[0].name
-                        }
-                    }
-                };
-
             ShowJSON(s4K);
         }
 
@@ -91,11 +55,11 @@ namespace settings
         public Keymode Get4K()
         {
             Keymode s4K = new Keymode();
-            s4K.name = "DJMAX 4K";
-            s4K.playfield = "keymodes/playfields/playfield4K.json";
-            s4K.cses.Add(sCs.Cs);
+            s4K.name = info.skinName + " 4K";
+            s4K.playfield = info.files["playfield4K"];
+            s4K.cses.Add(info.cs);
             s4K.images = Keymode.GetImages(4, false);
-            s4K.notes = Keymode.GetNotes(4, false, s4K.images);
+            //s4K.notes = Keymode.GetNotes(4, false, s4K.images);
 
             return s4K;
         }

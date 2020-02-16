@@ -7,6 +7,8 @@ namespace elements
 {
     public class Keymode
     {
+        static Info info = new Info();
+
         public string name { get; set; }
         public string playfield { get; set; }
         public List<object[]> cses { get; set; }
@@ -27,7 +29,7 @@ namespace elements
             List<Image> images = new List<Image>();
 
 
-            images.Add(new Image() { name = "measure", path = "resources/measure.png", layer = sLayers.GetAndIncrement() });
+            images.Add(new Image() { name = "measure", path = info.files["measure"], layer = info.layers["measure"] });
 
 
             if (keymode == 8)
@@ -35,10 +37,10 @@ namespace elements
                 for (int i = 1; i <= 2; i++)
                 {
                     string side = i == 1 ? "left" : "right";
-                    images.Add(new Image() { name = "fx" + side + "b", path = "resources/8K/fx" + side + "body.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
-                    images.Add(new Image() { name = "fx" + side + "t", path = "resources/8K/fx" + side + "tail.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
-                    images.Add(new Image() { name = "fx" + side + "h", path = "resources/8K/fx" + side + "head.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
-                    images.Add(new Image() { name = "fx" + side, path = "resources/8K/fx" + side + ".png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx1" + side + "body", path = info.files["fx1" + side + "body"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx1body"] });
+                    images.Add(new Image() { name = "fx1" + side + "tail", path = info.files["fx1" + side + "tail"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx1tail"] });
+                    images.Add(new Image() { name = "fx1" + side + "head", path = info.files["fx1" + side + "head"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx1head"] });
+                    images.Add(new Image() { name = "fx1" + side, path = info.files["fx1" + side], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx1"] });
                 }
             }
             else if (keymode == 10)
@@ -49,10 +51,10 @@ namespace elements
                     for (int j = 1; j <= 2; j++)
                     {
                         string side = j == 1 ? "left" : "right";
-                        images.Add(new Image() { name = "fx" + fxCount + side + "b", path = "resources/10K/fx" + fxCount + side + "body.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
-                        images.Add(new Image() { name = "fx" + fxCount + side + "t", path = "resources/10K/fx" + fxCount + side + "tail.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
-                        images.Add(new Image() { name = "fx" + fxCount + side + "h", path = "resources/10K/fx" + fxCount + side + "head.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
-                        images.Add(new Image() { name = "fx" + fxCount + side, path = "resources/10K/fx" + fxCount + side + ".png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "body", path = info.files["fx" + fxCount + side + "body"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx" + fxCount + "body"] });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "tail", path = info.files["fx" + fxCount + side + "tail"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx" + fxCount + "tail"] });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "head", path = info.files["fx" + fxCount + side + "head"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx" + fxCount + "head"] });
+                        images.Add(new Image() { name = "fx" + fxCount + side, path = info.files["fx" + fxCount + side], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = info.layers["fx" + fxCount] });
                     }
                 }
             }
@@ -60,30 +62,20 @@ namespace elements
 
             if (sidetracks)
             {
-                images.Add(new Image() { name = "stb", path = "resources/stbody.png", layer = sLayers.GetAndIncrement() });
-                images.Add(new Image() { name = "stt", path = "resources/sttail.png", layer = sLayers.GetAndIncrement() });
-                images.Add(new Image() { name = "sth", path = "resources/sthead.png", layer = sLayers.GetAndIncrement() });
-                images.Add(new Image() { name = "st", path = "resources/st.png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "stbody", path = info.files["stbody"], layer = info.layers["stbody"] });
+                images.Add(new Image() { name = "sttail", path = info.files["sttail"], layer = info.layers["sttail"] });
+                images.Add(new Image() { name = "sthead", path = info.files["sthead"], layer = info.layers["sthead"] });
+                images.Add(new Image() { name = "st", path = info.files["st"], layer = info.layers["stbody"] });
             }
 
-
-            string dir = "resources/";
-            if (keymode >= 6)
-            {
-                dir += "6K";
-            }
-            else
-            {
-                dir += keymode + "K";
-            }
-
+            int noteKey = keymode >= 6 ? 6 : keymode;
             for (int i=1; i <=2; i++)
             {
                 string noteCount = i.ToString();
-                images.Add(new Image() { name = "n" + noteCount + "b", path = dir + "/note" + noteCount + "body.png", layer = sLayers.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount + "t", path = dir + "/note" + noteCount + "tail.png", layer = sLayers.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount + "h", path = dir + "/note" + noteCount + "head.png", layer = sLayers.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount, path = dir + "/note" + noteCount + ".png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "note" + noteCount + "body", path = info.files["note" + noteCount + "body" + noteKey + "k"], layer = info.layers["notebody"] });
+                images.Add(new Image() { name = "note" + noteCount + "tail", path = info.files["note" + noteCount + "tail" + noteKey + "k"], layer = info.layers["notetail"] });
+                images.Add(new Image() { name = "note" + noteCount + "head", path = info.files["note" + noteCount + "head" + noteKey + "k"], layer = info.layers["notehead"] });
+                images.Add(new Image() { name = "note" + noteCount, path = info.files["note" + noteCount + noteKey + "k"], layer = info.layers["note"] });
             }
 
 
