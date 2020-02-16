@@ -65,7 +65,7 @@ namespace elements
                 images.Add(new Image() { name = "stbody", path = info.files["stbody"], layer = info.layers["stbody"] });
                 images.Add(new Image() { name = "sttail", path = info.files["sttail"], layer = info.layers["sttail"] });
                 images.Add(new Image() { name = "sthead", path = info.files["sthead"], layer = info.layers["sthead"] });
-                images.Add(new Image() { name = "st", path = info.files["st"], layer = info.layers["stbody"] });
+                images.Add(new Image() { name = "st", path = info.files["st"], layer = info.layers["st"] });
             }
 
             int noteKey = keymode >= 6 ? 6 : keymode;
@@ -82,15 +82,13 @@ namespace elements
             return images;
         }
 
-        public static Dictionary<string, Dictionary<string, NoteComponent>> GetNotes(int keymode, bool sidetracks, List<Image> images)
+        public static Dictionary<string, Dictionary<string, NoteComponent>> GetNotes(int keymode, bool sidetracks)
         {
             Dictionary<string, Dictionary<string, NoteComponent>> notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
 
             string dir = info.files["positions" + keymode + "k" + (sidetracks ? "2st" : "")];
             string json = File.ReadAllText(dir);
             var positions = JsonConvert.DeserializeObject<Positions>(json);
-
-            int imgIndex = 0;
 
             var measure1Pos = positions.measure1["ShortNote"]["Head"];
             notes["measure1:" + eNoteType.ShortNote] =
@@ -104,57 +102,87 @@ namespace elements
                                 w = measure1Pos["w"], h = measure1Pos["h"],
                                 ox = measure1Pos["ox"], oy = measure1Pos["oy"]
                             },
-                            layer = images[imgIndex].layer,
-                            image = images[imgIndex].name
+                            layer = info.layers["measure"],
+                            image = "measure"
                         }
                     }
                 };
 
-            List<int> imgIndexes = new List<int>() { 0 };
-            switch (keymode)
+
+            List<Dictionary<string, string>> itemsValues = new List<Dictionary<string, string>>();
+
+            if(sidetracks)
             {
-                case 4:
-                    imgIndexes.Add(imgIndex + 1);
-                    imgIndexes.Add(imgIndex + 5);
-                    imgIndexes.Add(imgIndex + 5);
-                    imgIndexes.Add(imgIndex + 1);
-                    break;
-                case 5:
-                    imgIndexes.Add(imgIndex + 1);
-                    imgIndexes.Add(imgIndex + 5);
-                    imgIndexes.Add(imgIndex + 1);
-                    imgIndexes.Add(imgIndex + 5);
-                    imgIndexes.Add(imgIndex + 1);
-                    break;
-                default:
-                    imgIndexes.Add(imgIndex + 1);
-                    imgIndexes.Add(imgIndex + 5);
-                    imgIndexes.Add(imgIndex + 1);
-                    imgIndexes.Add(imgIndex + 1);
-                    imgIndexes.Add(imgIndex + 5);
-                    imgIndexes.Add(imgIndex + 1);
-                    break;
+                string name = keymode == 10 ? "scratch1" : "key1";
+                itemsValues.Add(
+                        new Dictionary<string, string>()
+                        {
+                            { "name", name },
+                            { "layer", "st" },
+                            { "image", "st" },
+                            { "lnBodyLayer", "stbody" },
+                            { "lnBodyImage", "stbody" },
+                            { "lnTailLayer", "sttail" },
+                            { "lnTailImage", "sttail" },
+                            { "lnHeadLayer", "sthead" },
+                            { "lnHeadImage", "sthead" },
+                        }
+                    );
             }
 
-            int loops = keymode >= 6 ? 6 : keymode;
-            for (int i=1; i<= loops; i++)
+            Dictionary<string, Dictionary<string, List<double>>> itemPositions;
+            foreach (Dictionary<string, string> values in itemsValues)
             {
-                var keyPos = positions[i];
+                itemPositions = positions[values["name"]]["ShortNote"];
+                notes[values["name"] + ":" + eNoteType.ShortNote] =
+                    new Dictionary<string, NoteComponent>() {
+                        {
+                            eNoteComponent.Head.ToString(),
+                            new NoteComponent() {
+                                cs = 1,
+                                gc = new Gc {
+                                    x = itemPositions["Head"]["x"], y = itemPositions["Head"]["y"],
+                                    w = itemPositions["Head"]["w"], h = itemPositions["Head"]["h"],
+                                    ox = itemPositions["Head"]["ox"], oy = itemPositions["Head"]["oy"]
+                                },
+                                layer = info.layers[values["layer"]],
+                                image = values["image"]
+                            }
+                        }
+                    };
 
-                var longNotePos = keyPos[eNoteType.LongNote.ToString()];
-                notes["key" + i + ":" + eNoteType.LongNote] =
+                itemPositions = positions[values["name"]]["SoundNote"];
+                notes[values["name"] + ":" + eNoteType.SoundNote] =
+                    new Dictionary<string, NoteComponent>() {
+                        {
+                            eNoteComponent.Head.ToString(),
+                            new NoteComponent() {
+                                cs = 1,
+                                gc = new Gc {
+                                    x = itemPositions["Head"]["x"], y = itemPositions["Head"]["y"],
+                                    w = itemPositions["Head"]["w"], h = itemPositions["Head"]["h"],
+                                    ox = itemPositions["Head"]["ox"], oy = itemPositions["Head"]["oy"]
+                                },
+                                layer = info.layers[values["layer"]],
+                                image = values["image"]
+                            }
+                        }
+                    };
+
+                itemPositions = positions[values["name"]]["LongNote"];
+                notes[values["name"] + ":" + eNoteType.LongNote] =
                     new Dictionary<string, NoteComponent>() {
                         {
                             eNoteComponent.Body.ToString(),
                             new NoteComponent() {
                                 cs = 1,
                                 gc = new Gc {
-                                    x = longNotePos["Body"]["x"], y = longNotePos["Body"]["y"],
-                                    w = longNotePos["Body"]["w"], h = longNotePos["Body"]["h"],
-                                    ox = longNotePos["Body"]["ox"], oy = longNotePos["Body"]["oy"]
+                                    x = itemPositions["Body"]["x"], y = itemPositions["Body"]["y"],
+                                    w = itemPositions["Body"]["w"], h = itemPositions["Body"]["h"],
+                                    ox = itemPositions["Body"]["ox"], oy = itemPositions["Body"]["oy"]
                                 },
-                                layer = images[imgIndexes[i]].layer,
-                                image = images[imgIndexes[i]].name
+                                layer = info.layers[values["lnBodyLayer"]],
+                                image = values["lnBodyImage"]
                             }
                         },
                         {
@@ -162,12 +190,12 @@ namespace elements
                             new NoteComponent() {
                                 cs = 1,
                                 gc = new Gc {
-                                    x = longNotePos["Tail"]["x"], y = longNotePos["Tail"]["y"],
-                                    w = longNotePos["Tail"]["w"], h = longNotePos["Tail"]["h"],
-                                    ox = longNotePos["Tail"]["ox"], oy = longNotePos["Tail"]["oy"]
+                                    x = itemPositions["Tail"]["x"], y = itemPositions["Tail"]["y"],
+                                    w = itemPositions["Tail"]["w"], h = itemPositions["Tail"]["h"],
+                                    ox = itemPositions["Tail"]["ox"], oy = itemPositions["Tail"]["oy"]
                                 },
-                                layer = images[imgIndexes[i]+1].layer,
-                                image = images[imgIndexes[i]+1].name
+                                layer = info.layers[values["lnTailLayer"]],
+                                image = values["lnTailImage"]
                             }
                         },
                         {
@@ -175,48 +203,12 @@ namespace elements
                             new NoteComponent() {
                                 cs = 1,
                                 gc = new Gc {
-                                    x = longNotePos["Head"]["x"], y = longNotePos["Head"]["y"],
-                                    w = longNotePos["Head"]["w"], h = longNotePos["Head"]["h"],
-                                    ox = longNotePos["Head"]["ox"], oy = longNotePos["Head"]["oy"]
+                                    x = itemPositions["Head"]["x"], y = itemPositions["Head"]["y"],
+                                    w = itemPositions["Head"]["w"], h = itemPositions["Head"]["h"],
+                                    ox = itemPositions["Head"]["ox"], oy = itemPositions["Head"]["oy"]
                                 },
-                                layer = images[imgIndexes[i]+2].layer,
-                                image = images[imgIndexes[i]+2].name
-                            }
-                        }
-                    };
-
-                var shortNotePos = keyPos[eNoteType.ShortNote.ToString()];
-                notes["key" + i + ":" + eNoteType.ShortNote] =
-                    new Dictionary<string, NoteComponent>() {
-                        {
-                            eNoteComponent.Head.ToString(),
-                            new NoteComponent() {
-                                cs = 1,
-                                gc = new Gc {
-                                    x = shortNotePos["Head"]["x"], y = shortNotePos["Head"]["y"],
-                                    w = shortNotePos["Head"]["w"], h = shortNotePos["Head"]["h"],
-                                    ox = shortNotePos["Head"]["ox"], oy = shortNotePos["Head"]["oy"]
-                                },
-                                layer = images[imgIndexes[i]+3].layer,
-                                image = images[imgIndexes[i]+3].name
-                            }
-                        }
-                    };
-
-                var soundNotePos = keyPos[eNoteType.SoundNote.ToString()];
-                notes["key" + i + ":" + eNoteType.SoundNote] =
-                    new Dictionary<string, NoteComponent>() {
-                        {
-                            eNoteComponent.Head.ToString(),
-                            new NoteComponent() {
-                                cs = 1,
-                                gc = new Gc {
-                                    x = soundNotePos["Head"]["x"], y = soundNotePos["Head"]["y"],
-                                    w = soundNotePos["Head"]["w"], h = soundNotePos["Head"]["h"],
-                                    ox = soundNotePos["Head"]["ox"], oy = soundNotePos["Head"]["oy"]
-                                },
-                                layer = images[imgIndexes[i]+3].layer,
-                                image = images[imgIndexes[i]+3].name
+                                layer = info.layers[values["lnHeadLayer"]],
+                                image = values["lnHeadImage"]
                             }
                         }
                     };

@@ -8,6 +8,7 @@ namespace elements
     class Positions
     {
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> measure1 { get; set; }
+        public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> scratch1 { get; set; }
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> key1 { get; set; }
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> key2 { get; set; }
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> key3 { get; set; }
@@ -18,35 +19,40 @@ namespace elements
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> key8 { get; set; }
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> key9 { get; set; }
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> key10 { get; set; }
-        public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> scratch1 { get; set; }
         public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> scratch2 { get; set; }
 
-        public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> this[int index]
+        public Dictionary<string, Dictionary<string, Dictionary<string, List<double>>>> this[string name]
         {
             get
             {
-                switch (index)
+                switch (name)
                 {
-                    case 1:
+                    case "measure1":
+                        return scratch1;
+                    case "scratch1":
+                        return scratch1;
+                    case "key1":
                         return key1;
-                    case 2:
+                    case "key2":
                         return key2;
-                    case 3:
+                    case "key3":
                         return key3;
-                    case 4:
+                    case "key4":
                         return key4;
-                    case 5:
+                    case "key5":
                         return key5;
-                    case 6:
+                    case "key6":
                         return key6;
-                    case 7:
+                    case "key7":
                         return key7;
-                    case 8:
+                    case "key8":
                         return key8;
-                    case 9:
+                    case "key9":
                         return key9;
-                    case 10:
+                    case "key10":
                         return key10;
+                    case "scratch2":
+                        return scratch2;
                 }
                 return measure1;
             }
