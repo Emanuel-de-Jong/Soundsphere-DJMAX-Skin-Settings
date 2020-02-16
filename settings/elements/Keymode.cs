@@ -27,7 +27,7 @@ namespace elements
             List<Image> images = new List<Image>();
 
 
-            images.Add(new Image() { name = "measure", path = "resources/measure", layer = sLayer.GetAndIncrement() });
+            images.Add(new Image() { name = "measure", path = "resources/measure.png", layer = sLayers.GetAndIncrement() });
 
 
             if (keymode == 8)
@@ -35,10 +35,10 @@ namespace elements
                 for (int i = 1; i <= 2; i++)
                 {
                     string side = i == 1 ? "left" : "right";
-                    images.Add(new Image() { name = "fx" + side + "b", path = "resources/8K/fx" + side + "body.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
-                    images.Add(new Image() { name = "fx" + side + "t", path = "resources/8K/fx" + side + "tail.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
-                    images.Add(new Image() { name = "fx" + side + "h", path = "resources/8K/fx" + side + "head.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
-                    images.Add(new Image() { name = "fx" + side, path = "resources/8K/fx" + side + ".png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx" + side + "b", path = "resources/8K/fx" + side + "body.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx" + side + "t", path = "resources/8K/fx" + side + "tail.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx" + side + "h", path = "resources/8K/fx" + side + "head.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                    images.Add(new Image() { name = "fx" + side, path = "resources/8K/fx" + side + ".png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
                 }
             }
             else if (keymode == 10)
@@ -49,10 +49,10 @@ namespace elements
                     for (int j = 1; j <= 2; j++)
                     {
                         string side = j == 1 ? "left" : "right";
-                        images.Add(new Image() { name = "fx" + fxCount + side + "b", path = "resources/10K/fx" + fxCount + side + "body.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
-                        images.Add(new Image() { name = "fx" + fxCount + side + "t", path = "resources/10K/fx" + fxCount + side + "tail.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
-                        images.Add(new Image() { name = "fx" + fxCount + side + "h", path = "resources/10K/fx" + fxCount + side + "head.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
-                        images.Add(new Image() { name = "fx" + fxCount + side, path = "resources/10K/fx" + fxCount + side + ".png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayer.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "b", path = "resources/10K/fx" + fxCount + side + "body.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "t", path = "resources/10K/fx" + fxCount + side + "tail.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "h", path = "resources/10K/fx" + fxCount + side + "head.png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
+                        images.Add(new Image() { name = "fx" + fxCount + side, path = "resources/10K/fx" + fxCount + side + ".png", blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = sLayers.GetAndIncrement() });
                     }
                 }
             }
@@ -60,10 +60,10 @@ namespace elements
 
             if (sidetracks)
             {
-                images.Add(new Image() { name = "stb", path = "resources/stbody.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "stt", path = "resources/sttail.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "sth", path = "resources/sthead.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "st", path = "resources/st.png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "stb", path = "resources/stbody.png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "stt", path = "resources/sttail.png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "sth", path = "resources/sthead.png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "st", path = "resources/st.png", layer = sLayers.GetAndIncrement() });
             }
 
 
@@ -80,10 +80,10 @@ namespace elements
             for (int i=1; i <=2; i++)
             {
                 string noteCount = i.ToString();
-                images.Add(new Image() { name = "n" + noteCount + "b", path = dir + "/note" + noteCount + "body.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount + "t", path = dir + "/note" + noteCount + "tail.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount + "h", path = dir + "/note" + noteCount + "head.png", layer = sLayer.GetAndIncrement() });
-                images.Add(new Image() { name = "n" + noteCount, path = dir + "/note" + noteCount + ".png", layer = sLayer.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "b", path = dir + "/note" + noteCount + "body.png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "t", path = dir + "/note" + noteCount + "tail.png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount + "h", path = dir + "/note" + noteCount + "head.png", layer = sLayers.GetAndIncrement() });
+                images.Add(new Image() { name = "n" + noteCount, path = dir + "/note" + noteCount + ".png", layer = sLayers.GetAndIncrement() });
             }
 
 
@@ -100,6 +100,8 @@ namespace elements
             string json = File.ReadAllText(dir);
             var positions = JsonConvert.DeserializeObject<Positions>(json);
 
+            int imgIndex = 0;
+
             var measure1Pos = positions.measure1["ShortNote"]["Head"];
             notes["measure1:" + eNoteType.ShortNote] =
                 new Dictionary<string, NoteComponent>() {
@@ -112,12 +114,37 @@ namespace elements
                                 w = measure1Pos["w"], h = measure1Pos["h"],
                                 ox = measure1Pos["ox"], oy = measure1Pos["oy"]
                             },
-                            layer = images[sImgIndex.ImgIndex].layer,
-                            image = images[sImgIndex.GetAndIncrement()].name
+                            layer = images[imgIndex].layer,
+                            image = images[imgIndex].name
                         }
                     }
                 };
 
+            List<int> imgIndexes = new List<int>() { 0 };
+            switch (keymode)
+            {
+                case 4:
+                    imgIndexes.Add(imgIndex + 1);
+                    imgIndexes.Add(imgIndex + 5);
+                    imgIndexes.Add(imgIndex + 5);
+                    imgIndexes.Add(imgIndex + 1);
+                    break;
+                case 5:
+                    imgIndexes.Add(imgIndex + 1);
+                    imgIndexes.Add(imgIndex + 5);
+                    imgIndexes.Add(imgIndex + 1);
+                    imgIndexes.Add(imgIndex + 5);
+                    imgIndexes.Add(imgIndex + 1);
+                    break;
+                default:
+                    imgIndexes.Add(imgIndex + 1);
+                    imgIndexes.Add(imgIndex + 5);
+                    imgIndexes.Add(imgIndex + 1);
+                    imgIndexes.Add(imgIndex + 1);
+                    imgIndexes.Add(imgIndex + 5);
+                    imgIndexes.Add(imgIndex + 1);
+                    break;
+            }
 
             int loops = keymode >= 6 ? 6 : keymode;
             for (int i=1; i<= loops; i++)
@@ -136,8 +163,8 @@ namespace elements
                                     w = longNotePos["Body"]["w"], h = longNotePos["Body"]["h"],
                                     ox = longNotePos["Body"]["ox"], oy = longNotePos["Body"]["oy"]
                                 },
-                                layer = images[sImgIndex.ImgIndex].layer,
-                                image = images[sImgIndex.GetAndIncrement()].name
+                                layer = images[imgIndexes[i]].layer,
+                                image = images[imgIndexes[i]].name
                             }
                         },
                         {
@@ -149,8 +176,8 @@ namespace elements
                                     w = longNotePos["Tail"]["w"], h = longNotePos["Tail"]["h"],
                                     ox = longNotePos["Tail"]["ox"], oy = longNotePos["Tail"]["oy"]
                                 },
-                                layer = images[sImgIndex.ImgIndex].layer,
-                                image = images[sImgIndex.GetAndIncrement()].name
+                                layer = images[imgIndexes[i]+1].layer,
+                                image = images[imgIndexes[i]+1].name
                             }
                         },
                         {
@@ -162,8 +189,8 @@ namespace elements
                                     w = longNotePos["Head"]["w"], h = longNotePos["Head"]["h"],
                                     ox = longNotePos["Head"]["ox"], oy = longNotePos["Head"]["oy"]
                                 },
-                                layer = images[sImgIndex.ImgIndex].layer,
-                                image = images[sImgIndex.GetAndIncrement()].name
+                                layer = images[imgIndexes[i]+2].layer,
+                                image = images[imgIndexes[i]+2].name
                             }
                         }
                     };
@@ -180,8 +207,8 @@ namespace elements
                                     w = shortNotePos["Head"]["w"], h = shortNotePos["Head"]["h"],
                                     ox = shortNotePos["Head"]["ox"], oy = shortNotePos["Head"]["oy"]
                                 },
-                                layer = images[sImgIndex.ImgIndex].layer,
-                                image = images[sImgIndex.ImgIndex].name
+                                layer = images[imgIndexes[i]+3].layer,
+                                image = images[imgIndexes[i]+3].name
                             }
                         }
                     };
@@ -198,8 +225,8 @@ namespace elements
                                     w = soundNotePos["Head"]["w"], h = soundNotePos["Head"]["h"],
                                     ox = soundNotePos["Head"]["ox"], oy = soundNotePos["Head"]["oy"]
                                 },
-                                layer = images[sImgIndex.ImgIndex].layer,
-                                image = images[sImgIndex.ImgIndex].name
+                                layer = images[imgIndexes[i]+3].layer,
+                                image = images[imgIndexes[i]+3].name
                             }
                         }
                     };
