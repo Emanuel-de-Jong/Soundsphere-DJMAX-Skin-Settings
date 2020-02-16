@@ -58,8 +58,8 @@ namespace settings
             s4K.name = info.skinName + " 4K";
             s4K.playfield = info.files["playfield4K"];
             s4K.cses.Add(info.cs);
-            s4K.images = Keymode.GetImages(6, true);
-            s4K.notes = Keymode.GetNotes(6, true);
+            s4K.images = Keymode.GetImages(4, false);
+            s4K.notes = Keymode.GetNotes(4, false);
 
             return s4K;
         }
