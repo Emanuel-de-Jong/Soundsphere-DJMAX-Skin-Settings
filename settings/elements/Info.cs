@@ -63,9 +63,9 @@ namespace elements
             layers["combo"] = 100;
             layers["score"] = 100;
             layers["accuracy"] = 100;
-            layers["keynote"] = 100;
+            layers["key"] = 100;
             layers["progressbarbg"] = 100;
-            layers["keynotepressed"] = 101;
+            layers["keypressed"] = 101;
             layers["progressbar"] = 101;
             layers["fxparticle"] = 110;
             layers["stparticle"] = 111;
