@@ -1,0 +1,8 @@
+[
+	{
+		"name": "DJMAXthing 4K",
+		"inputMode": "4key",
+		"type": "json:full-v2",
+		"path": "keymodes/4K.json"
+	},
+]

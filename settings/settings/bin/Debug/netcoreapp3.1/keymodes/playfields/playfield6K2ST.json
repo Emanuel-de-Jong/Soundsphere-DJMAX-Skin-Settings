@@ -1,0 +1,298 @@
+[
+    {
+        "class": "ProgressBar",
+        "x": 0, "y": 0.47777777777, "w": 0.09074074074, "h": 0.0074074074,
+        "color": [250,200,50,250],
+       	"layer": 31,
+        "cs": [0.5, 0, 0, 0, "h"],
+        "direction": "left-right",
+        "mode": "+"
+	},
+	{
+        "class": "ProgressBar",
+        "x": -0.09074074074, "y": 0.47777777777, "w": 0.09074074074, "h": 0.0074074074,
+        "color": [250,200,50,250],
+       	"layer": 31,
+        "cs": [0.5, 0, 0, 0, "h"],
+        "direction": "right-left",
+        "mode": "+"
+	},
+	{
+		"class": "ScoreDisplay", "field": "score",
+		"format": "%07d",
+		"x": 0.1574074074, "y": 0.8722222222, "w": 0.09259259259, "h": 0.03888888889, "layer": 31,
+		"align": {"x": "right", "y": "center"},
+		"color": [255, 255, 255, 255],
+		"font": "userdata/skins/DJMAX/font/Lato-Regular.ttf",
+		"size": 16,
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "ScoreDisplay", "field": "combo",
+		"format": "%d",
+		"x": 0, "y": 0.108240209, "w": 1.777777778, "h": 1, "layer": 31,
+		"align": {"x": "center", "y": "top"},
+		"color": [200,200,200,229],
+		"font": "userdata/skins/DJMAX/font/Haettenschweiler.ttf",
+		"size": 105,
+		"cs": [0, 0, 0, 0, "h"]
+	},
+	{
+		"class": "ScoreDisplay", "field": "combo",
+		"format": "%d",
+		"x": -0.1064814815, "y": 0.8731481481, "w": 0.09259259259, "h": 0.03888888889, "layer": 31,
+		"align": {"x": "right", "y": "center"},
+		"color": [58,205,245,255],
+		"font": "userdata/skins/DJMAX/font/Lato-HeavyItalic.ttf",
+		"size": 15,
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "ScoreDisplay", "field": "accuracy",
+		"format": "%0.2f",
+		"x": 0, "y": 0.527142857, "w": 1.777777778, "h": 1, "layer": 31,
+		"align": {"x": "left", "y": "top"},
+		"color": [255,255,255,229],
+		"font": "userdata/skins/DJMAX/font/Lato-black.ttf",
+		"size": 12,
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "ScoreDisplay", "field": "timegate",
+		"format": "%s",
+		"x": 0, "y": 0.517768907, "w": 1.777777778, "h": 1, "layer": 31,
+		"align": {"x": "center", "y": "top"},
+		"color": [250,200,50,229],
+		"font": "userdata/skins/DJMAX/font/Bulo Black.otf",
+		"size": 57,
+		"cs": [0, 0, 0, 0, "h"]
+	},
+	{
+		"class": "StaticObject",
+		"x": 0, "y": 0, "w": 1.777777778, "h": 1, "layer": 30,
+		"image": "playfield.png",
+		"cs": [0, 0, 0, 0, "h"]
+	},
+	{
+		"class": "StaticObject",
+		"x": 0, "y": 0, "w": 1.777777778, "h": 1, "layer": 9,
+		"image": "judgeline.png",
+		"cs": [0, 0, 0, 0, "h"]
+	},
+	{
+		"class": "StaticObject",
+		"x": 0.6564814815, "y": 0, "w": 0.4648148148, "h": 1, "layer": 1,
+		"image": "black.png",
+		"cs": [0, 0, 0, 0, "h"]
+	},
+	{
+		"class": "StaticObject",
+        "x": -0.09259259259, "y": 0.47592592592, "w": 0.18518518518 , "h": 0.01111111111 , "layer": 30,
+        "image": "blacktimeline.png",
+        "cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "StaticObject",
+		"x": 0, "y": 0, "w": 1.777777778, "h": 1, "layer": 30,
+		"image": "combo.png",
+		"cs": [0, 0, 0, 0, "h"]
+	},
+	{
+		"class": "StaticObject",
+		"x": 0, "y": 0, "w": 1.777777778, "h": 1, "layer": 30,
+		"image": "rate.png",
+		"cs": [0, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 1,
+		"x": -0.2324074074, "y": 0.7416666667, "w": 0.2324074074, "h": 0.03333333333, "layer": 32,
+		"released": "blank.png",
+		"pressed": "blank.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 2,
+		"x": -0.2222222222, "y": 0.7787037037, "w": 0.07407407407, "h": 0.05555555556, "layer": 31,
+		"released": "6K/keynote.png",
+		"pressed": "6K/keynotepressed.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 3,
+		"x": -0.1481481481, "y": 0.7787037037, "w": 0.07407407407, "h": 0.05555555556, "layer": 31,
+		"released": "6K/keynote.png",
+		"pressed": "6K/keynotepressed.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 4,
+		"x": -0.07407407407, "y": 0.7787037037, "w": 0.07407407407, "h": 0.05555555556, "layer": 31,
+		"released": "6K/keynote.png",
+		"pressed": "6K/keynotepressed.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 5,
+		"x": 0, "y": 0.7787037037, "w": 0.07407407407, "h": 0.05555555556, "layer": 31,
+		"released": "6K/keynote.png",
+		"pressed": "6K/keynotepressed.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 6,
+		"x": 0.07407407407, "y": 0.7787037037, "w": 0.07407407407, "h": 0.05555555556, "layer": 31,
+		"released": "6K/keynote.png",
+		"pressed": "6K/keynotepressed.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 7,
+		"x": 0.1481481481, "y": 0.7787037037, "w": 0.07407407407, "h": 0.05555555556, "layer": 31,
+		"released": "6K/keynote.png",
+		"pressed": "6K/keynotepressed.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 8,
+		"x": 0, "y": 0.7787037037, "w": 0.07407407407, "h": 0.05555555556, "layer": 31,
+		"released": "blank.png",
+		"pressed": "blank.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 1,
+		"x": -0.2222222222, "y": 0, "w": 0.22222222222, "h": 0.82129629629, "layer": 10,
+		"released": "blank.png",
+		"pressed": "blank.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 2,
+		"x": -0.2222222222, "y": 0, "w": 0.07407407407, "h": 0.82129629629, "layer": 11,
+		"released": "blank.png",
+		"pressed": "6K/beam.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 3,
+		"x": -0.1481481481, "y": 0, "w": 0.07407407407, "h": 0.82129629629, "layer": 11,
+		"released": "blank.png",
+		"pressed": "6K/beam.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 4,
+		"x": -0.07407407407, "y": 0, "w": 0.07407407407, "h": 0.82129629629, "layer": 11,
+		"released": "blank.png",
+		"pressed": "6K/beam.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 5,
+		"x": 0, "y": 0, "w": 0.07407407407, "h": 0.82129629629, "layer": 11,
+		"released": "blank.png",
+		"pressed": "6K/beam.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 6,
+		"x": 0.07407407407, "y": 0, "w": 0.07407407407, "h": 0.82129629629, "layer": 11,
+		"released": "blank.png",
+		"pressed": "6K/beam.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 7,
+		"x": 0.1481481481, "y": 0, "w": 0.07407407407, "h": 0.82129629629, "layer": 11,
+		"released": "blank.png",
+		"pressed": "6K/beam.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 8,
+		"x": 0, "y": 0, "w": 0.22222222222, "h": 0.82129629629, "layer": 10,
+		"released": "blank.png",
+		"pressed": "blank.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 1,
+		"x": -0.2907407407, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 35,
+		"released": "blank.png",
+		"pressed": "STparticle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 2,
+		"x": -0.3648148148, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 33,
+		"released": "blank.png",
+		"pressed": "particle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 3,
+		"x": -0.2907407407, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 33,
+		"released": "blank.png",
+		"pressed": "particle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 4,
+		"x": -0.2166666667, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 33,
+		"released": "blank.png",
+		"pressed": "particle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 5,
+		"x": -0.1425925926, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 33,
+		"released": "blank.png",
+		"pressed": "particle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 6,
+		"x": -0.06851851852, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 33,
+		"released": "blank.png",
+		"pressed": "particle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 7,
+		"x": 0.005555555556, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 33,
+		"released": "blank.png",
+		"pressed": "particle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	},
+	{
+		"class": "InputImage",
+		"inputType": "key", "inputIndex": 8,
+		"x": -0.06851851852, "y": 0.51944444444, "w": 0.35925925925, "h": 0.35925925925, "layer": 35,
+		"released": "blank.png",
+		"pressed": "STparticle.png",
+		"cs": [0.5, 0, 0, 0, "h"]
+	}
+]
