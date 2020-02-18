@@ -37,11 +37,20 @@ namespace settings
         {
             List<MetaDataItem> sMetaData = new List<MetaDataItem>();
 
-            Keymode s4K = Get4K();
-            List<PlayfieldItem> sPlayfield4K = GetPlayfield4K();
-            sMetaData.Add(new MetaDataItem() { name = info.skinName + " 4K", inputMode = "4key", type = "json:full-v2", path = info.files["4K"] });
 
-            ShowJSON(s4K);
+            Keymode keymode4k = new Keymode() {
+                name = info.skinName + " 4K", playfield = info.files["playfield4k"],
+                images = Image.GetImages(4, false), notes = Keymode.GetNotes(4, false) };
+            keymode4k.cses.Add(info.cs);
+
+            List<PlayfieldItem> playfield4k = PlayfieldItem.GetPlayfield(4, false);
+
+            sMetaData.Add(new MetaDataItem() { 
+                name = info.skinName + " 4K", inputMode = "4key", 
+                type = "json:full-v2", path = info.files["4K"] });
+
+
+            ShowJSON(playfield4k);
         }
 
         public void ShowJSON(object objJSON)
@@ -50,25 +59,6 @@ namespace settings
             {
                 NullValueHandling = NullValueHandling.Ignore,
             });
-        }
-
-        public Keymode Get4K()
-        {
-            Keymode s4K = new Keymode();
-            s4K.name = info.skinName + " 4K";
-            s4K.playfield = info.files["playfield4K"];
-            s4K.cses.Add(info.cs);
-            s4K.images = Keymode.GetImages(4, false);
-            s4K.notes = Keymode.GetNotes(4, false);
-
-            return s4K;
-        }
-
-        public List<PlayfieldItem> GetPlayfield4K()
-        {
-            List<PlayfieldItem> sPlayfield4K = new List<PlayfieldItem>();
-
-            return sPlayfield4K;
         }
     }
 }

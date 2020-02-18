@@ -9,6 +9,9 @@ namespace elements
 {
     public class PlayfieldItem
     {
+        [JsonIgnore]
+        static Info info = new Info();
+
         [JsonConverter(typeof(StringEnumConverter))]
         public eClass classa { get; set; }
         public double x { get; set; }
@@ -26,6 +29,13 @@ namespace elements
             w = 0;
             h = 0;
             layer = 0;
+        }
+
+        public static List<PlayfieldItem> GetPlayfield(int keymode, bool sidetracks)
+        {
+            List<PlayfieldItem> playfield = new List<PlayfieldItem>();
+
+            return playfield;
         }
     }
 }
