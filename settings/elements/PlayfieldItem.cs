@@ -52,13 +52,13 @@ namespace elements
 
 
 
-            if (userSettings["novidbg"])
+            if (!userSettings["vidbg"])
             {
-                playfield.Add(new StaticObject() { classa = eClass.StaticObject, 
-                        x = positions.novidbg["x"], y = positions.novidbg["y"],
-                        w = positions.novidbg["w"], h = positions.novidbg["h"],
-                        layer = info.layers["novidbg"], cs = info.cs,
-                        image = info.files["novidbg"] });
+                playfield.Add(new StaticObject() { classa = eClass.StaticObject,
+                    x = positions.novidbg["x"], y = positions.novidbg["y"],
+                    w = positions.novidbg["w"], h = positions.novidbg["h"],
+                    layer = info.layers["novidbg"], cs = info.cs,
+                    image = info.files["novidbg"] });
             }
 
             playfield.Add(new StaticObject() { classa = eClass.StaticObject,
@@ -81,7 +81,7 @@ namespace elements
                     image = info.files["combobg"]
                 });
             }
-            
+
             playfield.Add(new StaticObject()
             {
                 classa = eClass.StaticObject,
@@ -106,17 +106,168 @@ namespace elements
                 image = info.files["playfield"]
             });
 
-            playfield.Add(new StaticObject()
+            if (userSettings["combo"])
             {
-                classa = eClass.StaticObject,
-                x = positions.combo["x"],
-                y = positions.combo["y"],
-                w = positions.combo["w"],
-                h = positions.combo["h"],
-                layer = info.layers["combo"],
+                playfield.Add(new StaticObject()
+                {
+                    classa = eClass.StaticObject,
+                    x = positions.combo["x"],
+                    y = positions.combo["y"],
+                    w = positions.combo["w"],
+                    h = positions.combo["h"],
+                    layer = info.layers["combo"],
+                    cs = info.cs,
+                    image = info.files["combo"]
+                });
+
+                playfield.Add(new ScoreDisplay()
+                {
+                    classa = eClass.ScoreDisplay,
+                    x = (int)positions.combogame["x"],
+                    y = (int)positions.combogame["y"],
+                    w = (int)positions.combogame["w"],
+                    h = (int)positions.combogame["h"],
+                    layer = info.layers["combo"],
+                    cs = info.cs,
+                    color = (int[])positions.combogame["color"],
+                    format = "%d",
+                    field = eField.combo,
+                    align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
+                    font = info.files["Haettenschweiler"],
+                    size = (int)positions.combogame["size"]
+                });
+            }
+
+            if (userSettings["progressbar"])
+            { 
+                playfield.Add(new ProgressBar()
+                {
+                    classa = eClass.ProgressBar,
+                    x = (int)positions.progressbar["x"],
+                    y = (int)positions.progressbar["y"],
+                    w = (int)positions.progressbar["w"],
+                    h = (int)positions.progressbar["h"],
+                    layer = info.layers["progressbar"],
+                    cs = info.cs,
+                    color = (int[])positions.progressbar["color"],
+                    direction = "left-right",
+                    mode = "+"
+                });
+
+                playfield.Add(new StaticObject()
+                {
+                    classa = eClass.StaticObject,
+                    x = positions.progressbarbg["x"],
+                    y = positions.progressbarbg["y"],
+                    w = positions.progressbarbg["w"],
+                    h = positions.playfield["h"],
+                    layer = info.layers["progressbarbg"],
+                    cs = info.cs,
+                    image = info.files["progressbarbg"]
+                });
+            }
+
+            playfield.Add(new ProgressBar()
+            {
+                classa = eClass.ProgressBar,
+                x = (int)positions.progressbar["x"],
+                y = (int)positions.progressbar["y"],
+                w = (int)positions.progressbar["w"],
+                h = (int)positions.progressbar["h"],
+                layer = info.layers["progressbar"],
                 cs = info.cs,
-                image = info.files["combo"]
+                color = (int[])positions.progressbar["color"],
+                direction = "right-left",
+                mode = "+"
             });
+
+            if (userSettings["accucary"])
+            {
+                playfield.Add(new StaticObject()
+                {
+                    classa = eClass.StaticObject,
+                    x = positions.rate["x"],
+                    y = positions.rate["y"],
+                    w = positions.rate["w"],
+                    h = positions.rate["h"],
+                    layer = info.layers["rate"],
+                    cs = info.cs,
+                    image = info.files["rate"]
+                });
+
+                playfield.Add(new ScoreDisplay()
+                {
+                    classa = eClass.ScoreDisplay,
+                    x = (int)positions.accuracy["x"],
+                    y = (int)positions.accuracy["y"],
+                    w = (int)positions.accuracy["w"],
+                    h = (int)positions.accuracy["h"],
+                    layer = info.layers["accuracy"],
+                    cs = info.cs,
+                    color = (int[])positions.accuracy["color"],
+                    format = "%0.2f",
+                    field = eField.accuracy,
+                    align = new Dictionary<string, string>() { { "x", "left" }, { "y", "top" } },
+                    font = info.files["Lato-black"],
+                    size = (int)positions.accuracy["size"]
+                });
+            }
+
+            if (userSettings["timegate"])
+            {
+                playfield.Add(new ScoreDisplay()
+                {
+                    classa = eClass.ScoreDisplay,
+                    x = (int)positions.timegate["x"],
+                    y = (int)positions.timegate["y"],
+                    w = (int)positions.timegate["w"],
+                    h = (int)positions.timegate["h"],
+                    layer = info.layers["timegate"],
+                    cs = info.cs,
+                    color = (int[])positions.timegate["color"],
+                    format = "%s",
+                    field = eField.timegate,
+                    align = new Dictionary<string, string>() { { "x", "center" }, { "y", "top" } },
+                    font = info.files["Bulo Black"],
+                    size = (int)positions.timegate["size"]
+                });
+            }
+
+            playfield.Add(new ScoreDisplay()
+            {
+                classa = eClass.ScoreDisplay,
+                x = (int)positions.combofield["x"],
+                y = (int)positions.combofield["y"],
+                w = (int)positions.combofield["w"],
+                h = (int)positions.combofield["h"],
+                layer = info.layers["combofield"],
+                cs = info.cs,
+                color = (int[])positions.combofield["color"],
+                format = "%d",
+                field = eField.combo,
+                align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
+                font = info.files["Lato-HeavyItalic"],
+                size = (int)positions.combofield["size"]
+            });
+
+            playfield.Add(new ScoreDisplay()
+            {
+                classa = eClass.ScoreDisplay,
+                x = (int)positions.scorefield["x"],
+                y = (int)positions.scorefield["y"],
+                w = (int)positions.scorefield["w"],
+                h = (int)positions.scorefield["h"],
+                layer = info.layers["scorefield"],
+                cs = info.cs,
+                color = (int[])positions.scorefield["color"],
+                format = "%07d",
+                field = eField.score,
+                align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
+                font = info.files["Lato-Regular"],
+                size = (int)positions.scorefield["size"]
+            });
+
+            
 
 
 

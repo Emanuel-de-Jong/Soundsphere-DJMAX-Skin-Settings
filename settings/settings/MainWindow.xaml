@@ -10,15 +10,18 @@
 
     <Window.Resources>
         <Style TargetType="Label">
+            <Setter Property="Grid.Column" Value="0"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="13"/>
         </Style>
         <Style TargetType="CheckBox">
+            <Setter Property="Grid.Column" Value="1"/>
             <Setter Property="HorizontalAlignment" Value="left"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="Image">
+            <Setter Property="Grid.Column" Value="2"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Stretch" Value="Uniform"/>
@@ -60,41 +63,41 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0">Background Video</Label>
-                <CheckBox Grid.Row="0" Grid.Column="1" Name="novidbg"/>
-                <Image Grid.Row="0" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="0">Background Video</Label>
+                <CheckBox Grid.Row="0" IsChecked="True" Name="vidbg"/>
+                <Image Grid.Row="0" Source="Images/fxbeam.png"/>
                 
-                <Label Grid.Row="1" Grid.Column="0">Combo Background</Label>
-                <CheckBox Grid.Row="1" Grid.Column="1" Name="combobg"/>
-                <Image Grid.Row="1" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="1">Combo Background</Label>
+                <CheckBox Grid.Row="1" IsChecked="True" Name="combobg"/>
+                <Image Grid.Row="1" Source="Images/fxbeam.png"/>
 
-                <Label Grid.Row="2" Grid.Column="0">Note Beam</Label>
-                <CheckBox Grid.Row="2" Grid.Column="1" Name="beam"/>
-                <Image Grid.Row="2" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="2">Note Beam</Label>
+                <CheckBox Grid.Row="2" IsChecked="True" Name="beam"/>
+                <Image Grid.Row="2" Source="Images/fxbeam.png"/>
 
-                <Label Grid.Row="4" Grid.Column="0">Combo</Label>
-                <CheckBox Grid.Row="4" Grid.Column="1" Name="combo"/>
-                <Image Grid.Row="4" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="4">Combo</Label>
+                <CheckBox Grid.Row="4" IsChecked="True" Name="combo"/>
+                <Image Grid.Row="4" Source="Images/fxbeam.png"/>
 
-                <Label Grid.Row="5" Grid.Column="0">Time Bar</Label>
-                <CheckBox Grid.Row="5" Grid.Column="1" Name="progressbar"/>
-                <Image Grid.Row="5" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="5">Time Bar</Label>
+                <CheckBox Grid.Row="5" IsChecked="True" Name="progressbar"/>
+                <Image Grid.Row="5" Source="Images/fxbeam.png"/>
 
-                <Label Grid.Row="6" Grid.Column="0">Accuracy</Label>
-                <CheckBox Grid.Row="6" Grid.Column="1" Name="accuracy"/>
-                <Image Grid.Row="6" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="6">Accuracy</Label>
+                <CheckBox Grid.Row="6" IsChecked="True" Name="accuracy"/>
+                <Image Grid.Row="6" Source="Images/fxbeam.png"/>
                 
-                <Label Grid.Row="7" Grid.Column="0">Hit Grade</Label>
-                <CheckBox Grid.Row="7" Grid.Column="1" Name="timegate"/>
-                <Image Grid.Row="7" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="7">Hit Grade</Label>
+                <CheckBox Grid.Row="7" IsChecked="True" Name="timegate"/>
+                <Image Grid.Row="7" Source="Images/fxbeam.png"/>
 
-                <Label Grid.Row="8" Grid.Column="0">Key Light</Label>
-                <CheckBox Grid.Row="8" Grid.Column="1" Name="keypressed"/>
-                <Image Grid.Row="8" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="8">Key Light</Label>
+                <CheckBox Grid.Row="8" IsChecked="True" Name="keypressed"/>
+                <Image Grid.Row="8" Source="Images/fxbeam.png"/>
 
-                <Label Grid.Row="9" Grid.Column="0">Particles</Label>
-                <CheckBox Grid.Row="9" Grid.Column="1" Name="particles"/>
-                <Image Grid.Row="9" Grid.Column="2" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="9">Particles</Label>
+                <CheckBox Grid.Row="9" IsChecked="True" Name="particles"/>
+                <Image Grid.Row="9" Source="Images/fxbeam.png"/>
 
                 <StackPanel Grid.Row="10" Grid.ColumnSpan="3">
                     <Button Click="GenerateJSON">Generate JSON</Button>

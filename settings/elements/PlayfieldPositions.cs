@@ -12,13 +12,13 @@ namespace elements
         public Dictionary<string, double> judgeline { get; set; }
         public Dictionary<string, double> playfield { get; set; }
         public Dictionary<string, double> combo { get; set; }
-        public Dictionary<string, double> combogame { get; set; }
-        public Dictionary<string, double> progressbar { get; set; }
+        public Dictionary<string, object> combogame { get; set; }
+        public Dictionary<string, object> progressbar { get; set; }
         public Dictionary<string, double> rate { get; set; }
-        public Dictionary<string, double> accuracy { get; set; }
-        public Dictionary<string, double> timegate { get; set; }
-        public Dictionary<string, double> combofield { get; set; }
-        public Dictionary<string, double> scorefield { get; set; }
+        public Dictionary<string, object> accuracy { get; set; }
+        public Dictionary<string, object> timegate { get; set; }
+        public Dictionary<string, object> combofield { get; set; }
+        public Dictionary<string, object> scorefield { get; set; }
         public Dictionary<string, double> progressbarbg { get; set; }
     }
 }
