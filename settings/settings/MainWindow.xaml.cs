@@ -35,15 +35,16 @@ namespace settings
 
         private void GenerateJSON(object sender, RoutedEventArgs e)
         {
-            List<MetaDataItem> sMetaData = new List<MetaDataItem>();
+            Dictionary<string, bool> userSettings = GetUserSettings();
 
+            List<MetaDataItem> sMetaData = new List<MetaDataItem>();
 
             Keymode keymode4k = new Keymode() {
                 name = info.skinName + " 4K", playfield = info.files["playfield4k"],
                 images = Image.GetImages(4, false), notes = Keymode.GetNotes(4, false) };
             keymode4k.cses.Add(info.cs);
 
-            List<PlayfieldItem> playfield4k = PlayfieldItem.GetPlayfield(4, false);
+            List<PlayfieldItem> playfield4k = PlayfieldItem.GetPlayfield(4, false, userSettings);
 
             sMetaData.Add(new MetaDataItem() { 
                 name = info.skinName + " 4K", inputMode = "4key", 
@@ -59,6 +60,24 @@ namespace settings
             {
                 NullValueHandling = NullValueHandling.Ignore,
             });
+        }
+
+        public Dictionary<string, bool> GetUserSettings()
+        {
+            Dictionary<string, bool> userSettings = new Dictionary<string, bool>();
+
+            userSettings["novidbg"] = (bool)novidbg.IsChecked;
+            userSettings["combobg"] = (bool)combobg.IsChecked;
+            userSettings["beam"] = (bool)beam.IsChecked;
+            userSettings["measure"] = (bool)measure.IsChecked;
+            userSettings["combo"] = (bool)combo.IsChecked;
+            userSettings["progressbar"] = (bool)progressbar.IsChecked;
+            userSettings["accuracy"] = (bool)accuracy.IsChecked;
+            userSettings["timegate"] = (bool)timegate.IsChecked;
+            userSettings["keypressed"] = (bool)keypressed.IsChecked;
+            userSettings["particles"] = (bool)particles.IsChecked;
+
+            return userSettings;
         }
     }
 }
