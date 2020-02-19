@@ -20,7 +20,7 @@ using Image = elements.Image;
 namespace settings
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml test
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
