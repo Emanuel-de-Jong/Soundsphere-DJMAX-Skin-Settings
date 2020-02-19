@@ -72,10 +72,6 @@
                 <CheckBox Grid.Row="2" Grid.Column="1" Name="beam"/>
                 <Image Grid.Row="2" Grid.Column="2" Source="Images/fxbeam.png"/>
 
-                <Label Grid.Row="3" Grid.Column="0">Measure Line</Label>
-                <CheckBox Grid.Row="3" Grid.Column="1" Name="measure"/>
-                <Image Grid.Row="3" Grid.Column="2" Source="Images/fxbeam.png"/>
-
                 <Label Grid.Row="4" Grid.Column="0">Combo</Label>
                 <CheckBox Grid.Row="4" Grid.Column="1" Name="combo"/>
                 <Image Grid.Row="4" Grid.Column="2" Source="Images/fxbeam.png"/>

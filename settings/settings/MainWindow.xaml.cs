@@ -69,7 +69,6 @@ namespace settings
             userSettings["novidbg"] = (bool)novidbg.IsChecked;
             userSettings["combobg"] = (bool)combobg.IsChecked;
             userSettings["beam"] = (bool)beam.IsChecked;
-            userSettings["measure"] = (bool)measure.IsChecked;
             userSettings["combo"] = (bool)combo.IsChecked;
             userSettings["progressbar"] = (bool)progressbar.IsChecked;
             userSettings["accuracy"] = (bool)accuracy.IsChecked;
