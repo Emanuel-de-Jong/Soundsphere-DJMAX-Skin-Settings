@@ -68,7 +68,7 @@
                 <Image Grid.Row="0" Source="Images/fxbeam.png"/>
                 
                 <Label Grid.Row="1">Combo Background</Label>
-                <CheckBox Grid.Row="1" IsChecked="True" Name="combobg"/>
+                <CheckBox Grid.Row="1" IsChecked="False" Name="combobg"/>
                 <Image Grid.Row="1" Source="Images/fxbeam.png"/>
 
                 <Label Grid.Row="2">Note Beam</Label>

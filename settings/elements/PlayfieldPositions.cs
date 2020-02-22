@@ -13,7 +13,8 @@ namespace elements
         public PlayfieldPositionsItem playfield { get; set; }
         public PlayfieldPositionsItem combo { get; set; }
         public PlayfieldPositionsItem combogame { get; set; }
-        public PlayfieldPositionsItem progressbar { get; set; }
+        public PlayfieldPositionsItem progressbarleft { get; set; }
+        public PlayfieldPositionsItem progressbarright { get; set; }
         public PlayfieldPositionsItem rate { get; set; }
         public PlayfieldPositionsItem accuracy { get; set; }
         public PlayfieldPositionsItem timegate { get; set; }

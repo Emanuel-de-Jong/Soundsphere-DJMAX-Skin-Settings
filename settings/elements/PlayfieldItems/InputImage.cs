@@ -9,6 +9,7 @@ namespace elements.PlayfieldItems
 {
     public class InputImage : PlayfieldItem
     {
+        [JsonConverter(typeof(StringEnumConverter))]
         public eInputType inputType { get; set; }
         public int inputIndex { get; set; }
         public string released { get; set; }

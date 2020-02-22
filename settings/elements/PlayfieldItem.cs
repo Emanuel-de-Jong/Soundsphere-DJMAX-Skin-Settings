@@ -50,6 +50,7 @@ namespace elements
             json = File.ReadAllText(info.files["positionsplayfield" + keymode + "k"]);
             var positionsKeymode = JsonConvert.DeserializeObject<PlayfieldKeymodePositions>(json);
 
+            string fontPath = "userdata/skins/" + info.skinName + "/";
 
 
             if (!userSettings["vidbg"])
@@ -64,7 +65,7 @@ namespace elements
             playfield.Add(new StaticObject() { classa = eClass.StaticObject,
                 x = positions.bg.x, y = positions.bg.y,
                 w = positions.bg.w, h = positions.bg.h,
-                layer = info.layers["bg"], cs = info.csMiddle,
+                layer = info.layers["bg"], cs = info.cs,
                 image = info.files["bg"] });
 
             if (userSettings["combobg"])
@@ -129,12 +130,12 @@ namespace elements
                     h = positions.combogame.h,
                     layer = info.layers["combo"],
                     cs = info.cs,
-                    color = (List<int>)positions.combogame.color,
+                    color = positions.combogame.color,
                     format = "%d",
                     field = eField.combo,
-                    align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
-                    font = info.files["Haettenschweiler"],
-                    size = (int)positions.combogame.size
+                    align = new Dictionary<string, string>() { { "x", "center" }, { "y", "top" } },
+                    font = fontPath + info.files["Haettenschweiler"],
+                    size = positions.combogame.size
                 });
             }
 
@@ -143,14 +144,28 @@ namespace elements
                 playfield.Add(new ProgressBar()
                 {
                     classa = eClass.ProgressBar,
-                    x = positions.progressbar.x,
-                    y = positions.progressbar.y,
-                    w = positions.progressbar.w,
-                    h = positions.progressbar.h,
+                    x = positions.progressbarleft.x,
+                    y = positions.progressbarleft.y,
+                    w = positions.progressbarleft.w,
+                    h = positions.progressbarleft.h,
                     layer = info.layers["progressbar"],
                     cs = info.csMiddle,
-                    color = (List<int>)positions.progressbar.color,
+                    color = positions.progressbarleft.color,
                     direction = "left-right",
+                    mode = "+"
+                });
+
+                playfield.Add(new ProgressBar()
+                {
+                    classa = eClass.ProgressBar,
+                    x = positions.progressbarright.x,
+                    y = positions.progressbarright.y,
+                    w = positions.progressbarright.w,
+                    h = positions.progressbarright.h,
+                    layer = info.layers["progressbar"],
+                    cs = info.csMiddle,
+                    color = positions.progressbarright.color,
+                    direction = "right-left",
                     mode = "+"
                 });
 
@@ -160,26 +175,12 @@ namespace elements
                     x = positions.progressbarbg.x,
                     y = positions.progressbarbg.y,
                     w = positions.progressbarbg.w,
-                    h = positions.playfield.h,
+                    h = positions.progressbarbg.h,
                     layer = info.layers["progressbarbg"],
-                    cs = info.cs,
+                    cs = info.csMiddle,
                     image = info.files["progressbarbg"]
                 });
             }
-
-            playfield.Add(new ProgressBar()
-            {
-                classa = eClass.ProgressBar,
-                x = positions.progressbar.x,
-                y = positions.progressbar.y,
-                w = positions.progressbar.w,
-                h = positions.progressbar.h,
-                layer = info.layers["progressbar"],
-                cs = info.csMiddle,
-                color = (List<int>)positions.progressbar.color,
-                direction = "right-left",
-                mode = "+"
-            });
 
             if (userSettings["accuracy"])
             {
@@ -204,12 +205,12 @@ namespace elements
                     h = positions.accuracy.h,
                     layer = info.layers["accuracy"],
                     cs = info.csMiddle,
-                    color = (List<int>)positions.accuracy.color,
+                    color = positions.accuracy.color,
                     format = "%0.2f",
                     field = eField.accuracy,
                     align = new Dictionary<string, string>() { { "x", "left" }, { "y", "top" } },
-                    font = info.files["Lato-Black"],
-                    size = (int)positions.accuracy.size
+                    font = fontPath + info.files["Lato-Black"],
+                    size = positions.accuracy.size
                 });
             }
 
@@ -224,12 +225,12 @@ namespace elements
                     h = positions.timegate.h,
                     layer = info.layers["timegate"],
                     cs = info.cs,
-                    color = (List<int>)positions.timegate.color,
+                    color = positions.timegate.color,
                     format = "%s",
                     field = eField.timegate,
                     align = new Dictionary<string, string>() { { "x", "center" }, { "y", "top" } },
-                    font = info.files["Bulo Black"],
-                    size = (int)positions.timegate.size
+                    font = fontPath + info.files["Bulo Black"],
+                    size = positions.timegate.size
                 });
             }
 
@@ -242,12 +243,12 @@ namespace elements
                 h = positions.combofield.h,
                 layer = info.layers["combo"],
                 cs = info.csMiddle,
-                color = (List<int>)positions.combofield.color,
+                color = positions.combofield.color,
                 format = "%d",
                 field = eField.combo,
                 align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
-                font = info.files["Lato-HeavyItalic"],
-                size = (int)positions.combofield.size
+                font = fontPath + info.files["Lato-HeavyItalic"],
+                size = positions.combofield.size
             });
 
             playfield.Add(new ScoreDisplay()
@@ -259,12 +260,12 @@ namespace elements
                 h = positions.scorefield.h,
                 layer = info.layers["score"],
                 cs = info.csMiddle,
-                color = (List<int>)positions.scorefield.color,
+                color = positions.scorefield.color,
                 format = "%07d",
                 field = eField.score,
                 align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
-                font = info.files["Lato-Regular"],
-                size = (int)positions.scorefield.size
+                font = fontPath + info.files["Lato-Regular"],
+                size = positions.scorefield.size
             });
 
             
@@ -285,8 +286,8 @@ namespace elements
                     cs = info.csMiddle,
                     inputType = eInputType.key,
                     inputIndex = positionsKeymode["key" + i].inputIndex,
-                    pressed = info.files["key4k"],
-                    released = info.files["keypressed4k"],
+                    pressed = info.files["keypressed4k"],
+                    released = info.files["key4k"],
                 });
             }
 

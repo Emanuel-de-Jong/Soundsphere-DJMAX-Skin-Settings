@@ -15,6 +15,7 @@ namespace elements
         public NoteComponent()
         {
             gc = new Gc();
+            sb = new Sb();
             layer = 0;
         }
     }
