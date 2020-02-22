@@ -123,10 +123,10 @@ namespace elements
                 playfield.Add(new ScoreDisplay()
                 {
                     classa = eClass.ScoreDisplay,
-                    x = (int)positions.combogame["x"],
-                    y = (int)positions.combogame["y"],
-                    w = (int)positions.combogame["w"],
-                    h = (int)positions.combogame["h"],
+                    x = Convert.ToDouble(positions.combogame["x"]),
+                    y = Convert.ToDouble(positions.combogame["y"]),
+                    w = Convert.ToDouble(positions.combogame["w"]),
+                    h = Convert.ToDouble(positions.combogame["h"]),
                     layer = info.layers["combo"],
                     cs = info.cs,
                     color = (int[])positions.combogame["color"],
@@ -143,10 +143,10 @@ namespace elements
                 playfield.Add(new ProgressBar()
                 {
                     classa = eClass.ProgressBar,
-                    x = (int)positions.progressbar["x"],
-                    y = (int)positions.progressbar["y"],
-                    w = (int)positions.progressbar["w"],
-                    h = (int)positions.progressbar["h"],
+                    x = Convert.ToDouble(positions.progressbar["x"]),
+                    y = Convert.ToDouble(positions.progressbar["y"]),
+                    w = Convert.ToDouble(positions.progressbar["w"]),
+                    h = Convert.ToDouble(positions.progressbar["h"]),
                     layer = info.layers["progressbar"],
                     cs = info.cs,
                     color = (int[])positions.progressbar["color"],
@@ -170,10 +170,10 @@ namespace elements
             playfield.Add(new ProgressBar()
             {
                 classa = eClass.ProgressBar,
-                x = (int)positions.progressbar["x"],
-                y = (int)positions.progressbar["y"],
-                w = (int)positions.progressbar["w"],
-                h = (int)positions.progressbar["h"],
+                x = Convert.ToDouble(positions.progressbar["x"]),
+                y = Convert.ToDouble(positions.progressbar["y"]),
+                w = Convert.ToDouble(positions.progressbar["w"]),
+                h = Convert.ToDouble(positions.progressbar["h"]),
                 layer = info.layers["progressbar"],
                 cs = info.cs,
                 color = (int[])positions.progressbar["color"],
@@ -198,10 +198,10 @@ namespace elements
                 playfield.Add(new ScoreDisplay()
                 {
                     classa = eClass.ScoreDisplay,
-                    x = (int)positions.accuracy["x"],
-                    y = (int)positions.accuracy["y"],
-                    w = (int)positions.accuracy["w"],
-                    h = (int)positions.accuracy["h"],
+                    x = Convert.ToDouble(positions.accuracy["x"]),
+                    y = Convert.ToDouble(positions.accuracy["y"]),
+                    w = Convert.ToDouble(positions.accuracy["w"]),
+                    h = Convert.ToDouble(positions.accuracy["h"]),
                     layer = info.layers["accuracy"],
                     cs = info.cs,
                     color = (int[])positions.accuracy["color"],
@@ -218,10 +218,10 @@ namespace elements
                 playfield.Add(new ScoreDisplay()
                 {
                     classa = eClass.ScoreDisplay,
-                    x = (int)positions.timegate["x"],
-                    y = (int)positions.timegate["y"],
-                    w = (int)positions.timegate["w"],
-                    h = (int)positions.timegate["h"],
+                    x = Convert.ToDouble(positions.timegate["x"]),
+                    y = Convert.ToDouble(positions.timegate["y"]),
+                    w = Convert.ToDouble(positions.timegate["w"]),
+                    h = Convert.ToDouble(positions.timegate["h"]),
                     layer = info.layers["timegate"],
                     cs = info.cs,
                     color = (int[])positions.timegate["color"],
@@ -236,10 +236,10 @@ namespace elements
             playfield.Add(new ScoreDisplay()
             {
                 classa = eClass.ScoreDisplay,
-                x = (int)positions.combofield["x"],
-                y = (int)positions.combofield["y"],
-                w = (int)positions.combofield["w"],
-                h = (int)positions.combofield["h"],
+                x = Convert.ToDouble(positions.combofield["x"]),
+                y = Convert.ToDouble(positions.combofield["y"]),
+                w = Convert.ToDouble(positions.combofield["w"]),
+                h = Convert.ToDouble(positions.combofield["h"]),
                 layer = info.layers["combofield"],
                 cs = info.cs,
                 color = (int[])positions.combofield["color"],
@@ -253,10 +253,10 @@ namespace elements
             playfield.Add(new ScoreDisplay()
             {
                 classa = eClass.ScoreDisplay,
-                x = (int)positions.scorefield["x"],
-                y = (int)positions.scorefield["y"],
-                w = (int)positions.scorefield["w"],
-                h = (int)positions.scorefield["h"],
+                x = Convert.ToDouble(positions.scorefield["x"]),
+                y = Convert.ToDouble(positions.scorefield["y"]),
+                w = Convert.ToDouble(positions.scorefield["w"]),
+                h = Convert.ToDouble(positions.scorefield["h"]),
                 layer = info.layers["scorefield"],
                 cs = info.cs,
                 color = (int[])positions.scorefield["color"],

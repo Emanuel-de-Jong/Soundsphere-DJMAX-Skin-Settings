@@ -66,7 +66,7 @@ namespace settings
         {
             Dictionary<string, bool> userSettings = new Dictionary<string, bool>();
 
-            userSettings["novidbg"] = (bool)vidbg.IsChecked;
+            userSettings["vidbg"] = (bool)vidbg.IsChecked;
             userSettings["combobg"] = (bool)combobg.IsChecked;
             userSettings["beam"] = (bool)beam.IsChecked;
             userSettings["combo"] = (bool)combo.IsChecked;
