@@ -271,6 +271,27 @@ namespace elements
 
 
 
+            //temp
+            for(int i=1; i<=4; i++)
+            {
+                playfield.Add(new InputImage()
+                {
+                    classa = eClass.InputImage,
+                    x = positionsKeymode["key" + i].x,
+                    y = positionsKeymode["key" + i].y,
+                    w = positionsKeymode["key" + i].w,
+                    h = positionsKeymode["key" + i].h,
+                    layer = info.layers["key"],
+                    cs = info.csMiddle,
+                    inputType = eInputType.key,
+                    inputIndex = positionsKeymode["key" + i].inputIndex,
+                    pressed = info.files["key4k"],
+                    released = info.files["keypressed4k"],
+                });
+            }
+
+
+
 
 
             return playfield;

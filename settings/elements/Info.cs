@@ -68,7 +68,6 @@ namespace elements
             layers["key"] = 100;
             layers["score"] = 100;
             layers["progressbar"] = 101;
-            layers["keypressed"] = 101;
             layers["fxparticle"] = 110;
             layers["stparticle"] = 111;
             layers["particle"] = 112;
