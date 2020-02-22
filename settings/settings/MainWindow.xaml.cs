@@ -48,7 +48,7 @@ namespace settings
 
             sMetaData.Add(new MetaDataItem() { 
                 name = info.skinName + " 4K", inputMode = "4key", 
-                type = "json:full-v2", path = info.files["4K"] });
+                type = "json:full-v2", path = info.files["4k"] });
 
 
             ShowJSON(playfield4k);

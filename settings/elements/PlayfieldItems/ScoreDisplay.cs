@@ -9,7 +9,7 @@ namespace elements.PlayfieldItems
 {
     public class ScoreDisplay:PlayfieldItem
     {
-        public int[] color { get; set; }
+        public List<int> color { get; set; }
         public string format { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
         public eField field { get; set; }
@@ -19,7 +19,7 @@ namespace elements.PlayfieldItems
 
         public ScoreDisplay():base()
         {
-            color = new int[] { 0, 0, 0, 0 };
+            color = new List<int>() { 0, 0, 0, 0 };
             format = "";
             field = eField.score;
             align = new Dictionary<string, string>() { { "x", "" }, { "y", "" } };

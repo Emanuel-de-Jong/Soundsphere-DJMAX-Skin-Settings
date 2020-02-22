@@ -6,7 +6,7 @@ namespace elements
 {
     public class PlayfieldSTPositions
     {
-        public Dictionary<string, double> stparticle1 { get; set; }
-        public Dictionary<string, double> stparticle2 { get; set; }
+        public PlayfieldPositionsItem stparticle1 { get; set; }
+        public PlayfieldPositionsItem stparticle2 { get; set; }
     }
 }

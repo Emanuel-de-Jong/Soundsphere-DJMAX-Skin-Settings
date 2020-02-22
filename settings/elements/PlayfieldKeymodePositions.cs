@@ -6,37 +6,37 @@ namespace elements
 {
     public class PlayfieldKeymodePositions
     {
-        public Dictionary<string, double> key1 { get; set; }
-        public Dictionary<string, double> key2 { get; set; }
-        public Dictionary<string, double> key3 { get; set; }
-        public Dictionary<string, double> key4 { get; set; }
-        public Dictionary<string, double> key5 { get; set; }
-        public Dictionary<string, double> key6 { get; set; }
-        public Dictionary<string, double> fxkey1 { get; set; }
-        public Dictionary<string, double> fxkey2 { get; set; }
-        public Dictionary<string, double> fxkey3 { get; set; }
-        public Dictionary<string, double> fxkey4 { get; set; }
+        public PlayfieldPositionsItem key1 { get; set; }
+        public PlayfieldPositionsItem key2 { get; set; }
+        public PlayfieldPositionsItem key3 { get; set; }
+        public PlayfieldPositionsItem key4 { get; set; }
+        public PlayfieldPositionsItem key5 { get; set; }
+        public PlayfieldPositionsItem key6 { get; set; }
+        public PlayfieldPositionsItem fxkey1 { get; set; }
+        public PlayfieldPositionsItem fxkey2 { get; set; }
+        public PlayfieldPositionsItem fxkey3 { get; set; }
+        public PlayfieldPositionsItem fxkey4 { get; set; }
 
-        public Dictionary<string, double> beam1 { get; set; }
-        public Dictionary<string, double> beam2 { get; set; }
-        public Dictionary<string, double> beam3 { get; set; }
-        public Dictionary<string, double> beam4 { get; set; }
-        public Dictionary<string, double> beam5 { get; set; }
-        public Dictionary<string, double> beam6 { get; set; }
-        public Dictionary<string, double> fxbeam1 { get; set; }
-        public Dictionary<string, double> fxbeam2 { get; set; }
-        public Dictionary<string, double> fxbeam3 { get; set; }
-        public Dictionary<string, double> fxbeam4 { get; set; }
+        public PlayfieldPositionsItem beam1 { get; set; }
+        public PlayfieldPositionsItem beam2 { get; set; }
+        public PlayfieldPositionsItem beam3 { get; set; }
+        public PlayfieldPositionsItem beam4 { get; set; }
+        public PlayfieldPositionsItem beam5 { get; set; }
+        public PlayfieldPositionsItem beam6 { get; set; }
+        public PlayfieldPositionsItem fxbeam1 { get; set; }
+        public PlayfieldPositionsItem fxbeam2 { get; set; }
+        public PlayfieldPositionsItem fxbeam3 { get; set; }
+        public PlayfieldPositionsItem fxbeam4 { get; set; }
 
-        public Dictionary<string, double> particle1 { get; set; }
-        public Dictionary<string, double> particle2 { get; set; }
-        public Dictionary<string, double> particle3 { get; set; }
-        public Dictionary<string, double> particle4 { get; set; }
-        public Dictionary<string, double> particle5 { get; set; }
-        public Dictionary<string, double> particle6 { get; set; }
-        public Dictionary<string, double> fxparticle1 { get; set; }
-        public Dictionary<string, double> fxparticle2 { get; set; }
-        public Dictionary<string, double> fxparticle3 { get; set; }
-        public Dictionary<string, double> fxparticle4 { get; set; }
+        public PlayfieldPositionsItem particle1 { get; set; }
+        public PlayfieldPositionsItem particle2 { get; set; }
+        public PlayfieldPositionsItem particle3 { get; set; }
+        public PlayfieldPositionsItem particle4 { get; set; }
+        public PlayfieldPositionsItem particle5 { get; set; }
+        public PlayfieldPositionsItem particle6 { get; set; }
+        public PlayfieldPositionsItem fxparticle1 { get; set; }
+        public PlayfieldPositionsItem fxparticle2 { get; set; }
+        public PlayfieldPositionsItem fxparticle3 { get; set; }
+        public PlayfieldPositionsItem fxparticle4 { get; set; }
     }
 }
