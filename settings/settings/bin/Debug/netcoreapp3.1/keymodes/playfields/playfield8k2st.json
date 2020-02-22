@@ -687,6 +687,63 @@
   },
   {
     "inputType": "key",
+    "inputIndex": 5,
+    "released": "resources/fxkeyright.png",
+    "pressed": "resources/fxkeyrightpressed.png",
+    "class": "InputImage",
+    "x": 0.0,
+    "y": 0.7416666667,
+    "w": 0.2324074074,
+    "h": 0.03333333333,
+    "layer": 100,
+    "cs": [
+      0.5,
+      0,
+      0,
+      0,
+      "h"
+    ]
+  },
+  {
+    "inputType": "key",
+    "inputIndex": 5,
+    "released": "resources/blank.png",
+    "pressed": "resources/fxbeam.png",
+    "class": "InputImage",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 0.22222222222,
+    "h": 0.82129629629,
+    "layer": 30,
+    "cs": [
+      0.5,
+      0,
+      0,
+      0,
+      "h"
+    ]
+  },
+  {
+    "inputType": "key",
+    "inputIndex": 5,
+    "released": "resources/blank.png",
+    "pressed": "resources/fxparticle.png",
+    "class": "InputImage",
+    "x": -0.06851851852,
+    "y": 0.51944444444,
+    "w": 0.35925925925,
+    "h": 0.35925925925,
+    "layer": 110,
+    "cs": [
+      0.5,
+      0,
+      0,
+      0,
+      "h"
+    ]
+  },
+  {
+    "inputType": "key",
     "inputIndex": 0,
     "released": "resources/blank.png",
     "pressed": "resources/stparticle.png",

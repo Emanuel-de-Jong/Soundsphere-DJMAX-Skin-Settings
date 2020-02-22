@@ -321,7 +321,7 @@ namespace elements
 
             if(keymode == 8)
             {
-                for(int i=1; i<2; i++)
+                for(int i=1; i<=2; i++)
                 {
                     string side = i == 1 ? "left" : "right";
                     playfield.Add(new InputImage()
