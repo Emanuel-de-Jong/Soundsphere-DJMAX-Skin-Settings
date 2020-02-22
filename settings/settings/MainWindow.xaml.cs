@@ -42,7 +42,7 @@ namespace settings
             Keymode keymode4k = new Keymode() {
                 name = info.skinName + " 4K", playfield = info.files["playfield4k"],
                 images = Image.GetImages(4, false), notes = Keymode.GetNotes(4, false) };
-            keymode4k.cses.Add(info.cs);
+            keymode4k.cses.Add(info.csMiddle);
 
             List<PlayfieldItem> playfield4k = PlayfieldItem.GetPlayfield(4, false, userSettings);
 

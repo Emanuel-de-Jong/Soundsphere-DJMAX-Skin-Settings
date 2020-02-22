@@ -10,6 +10,7 @@ namespace elements
         public Dictionary<string, string> files;
         public Dictionary<string, int> layers;
         public string skinName;
+        public object[] csMiddle;
         public object[] cs;
 
         public Info()
@@ -17,7 +18,8 @@ namespace elements
             files = new Dictionary<string, string>();
             layers = new Dictionary<string, int>();
             skinName = "netcoreapp3.1";
-            cs = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
+            csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
+            cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() };
             SetFiles();
             SetLayers();
         }

@@ -64,7 +64,7 @@ namespace elements
             playfield.Add(new StaticObject() { classa = eClass.StaticObject,
                 x = positions.bg.x, y = positions.bg.y,
                 w = positions.bg.w, h = positions.bg.h,
-                layer = info.layers["bg"], cs = info.cs,
+                layer = info.layers["bg"], cs = info.csMiddle,
                 image = info.files["bg"] });
 
             if (userSettings["combobg"])
@@ -77,7 +77,7 @@ namespace elements
                     w = positions.combobg.w,
                     h = positions.combobg.h,
                     layer = info.layers["combobg"],
-                    cs = info.cs,
+                    cs = info.csMiddle,
                     image = info.files["combobg"]
                 });
             }
@@ -148,7 +148,7 @@ namespace elements
                     w = positions.progressbar.w,
                     h = positions.progressbar.h,
                     layer = info.layers["progressbar"],
-                    cs = info.cs,
+                    cs = info.csMiddle,
                     color = (List<int>)positions.progressbar.color,
                     direction = "left-right",
                     mode = "+"
@@ -175,7 +175,7 @@ namespace elements
                 w = positions.progressbar.w,
                 h = positions.progressbar.h,
                 layer = info.layers["progressbar"],
-                cs = info.cs,
+                cs = info.csMiddle,
                 color = (List<int>)positions.progressbar.color,
                 direction = "right-left",
                 mode = "+"
@@ -203,7 +203,7 @@ namespace elements
                     w = positions.accuracy.w,
                     h = positions.accuracy.h,
                     layer = info.layers["accuracy"],
-                    cs = info.cs,
+                    cs = info.csMiddle,
                     color = (List<int>)positions.accuracy.color,
                     format = "%0.2f",
                     field = eField.accuracy,
@@ -241,7 +241,7 @@ namespace elements
                 w = positions.combofield.w,
                 h = positions.combofield.h,
                 layer = info.layers["combo"],
-                cs = info.cs,
+                cs = info.csMiddle,
                 color = (List<int>)positions.combofield.color,
                 format = "%d",
                 field = eField.combo,
@@ -258,7 +258,7 @@ namespace elements
                 w = positions.scorefield.w,
                 h = positions.scorefield.h,
                 layer = info.layers["score"],
-                cs = info.cs,
+                cs = info.csMiddle,
                 color = (List<int>)positions.scorefield.color,
                 format = "%07d",
                 field = eField.score,
