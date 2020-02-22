@@ -1,6 +1,6 @@
 {
-  "name": "DJMAXthing 4K",
-  "playfield": "keymodes/playfields/playfield4K.json",
+  "name": "netcoreapp3.1 4K",
+  "playfield": "keymodes/playfields/playfield4k.json",
   "cses": [
     [
       0.5,
@@ -14,47 +14,47 @@
     {
       "name": "measure",
       "path": "resources/measure.png",
-      "layer": 1
+      "layer": 40
     },
     {
-      "name": "n1b",
-      "path": "resources/4K/note1body.png",
-      "layer": 2
+      "name": "note1body",
+      "path": "resources/4k/note1body4k.png",
+      "layer": 80
     },
     {
-      "name": "n1t",
-      "path": "resources/4K/note1tail.png",
-      "layer": 3
+      "name": "note1tail",
+      "path": "resources/4k/note1tail4k.png",
+      "layer": 81
     },
     {
-      "name": "n1h",
-      "path": "resources/4K/note1head.png",
-      "layer": 4
+      "name": "note1head",
+      "path": "resources/4k/note1head4k.png",
+      "layer": 82
     },
     {
-      "name": "n1",
-      "path": "resources/4K/note1.png",
-      "layer": 5
+      "name": "note1",
+      "path": "resources/4k/note14k.png",
+      "layer": 83
     },
     {
-      "name": "n2b",
-      "path": "resources/4K/note2body.png",
-      "layer": 6
+      "name": "note2body",
+      "path": "resources/4k/note2body4k.png",
+      "layer": 80
     },
     {
-      "name": "n2t",
-      "path": "resources/4K/note2tail.png",
-      "layer": 7
+      "name": "note2tail",
+      "path": "resources/4k/note2tail4k.png",
+      "layer": 81
     },
     {
-      "name": "n2h",
-      "path": "resources/4K/note2head.png",
-      "layer": 8
+      "name": "note2head",
+      "path": "resources/4k/note2head4k.png",
+      "layer": 82
     },
     {
-      "name": "n2",
-      "path": "resources/4K/note2.png",
-      "layer": 9
+      "name": "note2",
+      "path": "resources/4k/note24k.png",
+      "layer": 83
     }
   ],
   "notes": {
@@ -82,88 +82,9 @@
             0.0
           ]
         },
-        "layer": 1,
+        "sb": {},
+        "layer": 40,
         "image": "measure"
-      }
-    },
-    "key1:LongNote": {
-      "Body": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            -0.2222222222
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.1111111111
-          ],
-          "h": [
-            0.00092592592
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            0.0
-          ]
-        },
-        "layer": 2,
-        "image": "n1b"
-      },
-      "Tail": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            -0.2222222222
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.1111111111
-          ],
-          "h": [
-            0.02222222222
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "layer": 3,
-        "image": "n1t"
-      },
-      "Head": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            -0.2222222222
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.1111111111
-          ],
-          "h": [
-            0.02222222222
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "layer": 4,
-        "image": "n1h"
       }
     },
     "key1:ShortNote": {
@@ -190,8 +111,9 @@
             -1.0
           ]
         },
-        "layer": 5,
-        "image": "n1"
+        "sb": {},
+        "layer": 83,
+        "image": "note1"
       }
     },
     "key1:SoundNote": {
@@ -218,16 +140,17 @@
             -1.0
           ]
         },
-        "layer": 5,
-        "image": "n1"
+        "sb": {},
+        "layer": 83,
+        "image": "note1"
       }
     },
-    "key2:LongNote": {
+    "key1:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
           "x": [
-            -0.1111111111
+            -0.2222222222
           ],
           "y": [
             0.6990740741,
@@ -246,14 +169,15 @@
             0.0
           ]
         },
-        "layer": 6,
-        "image": "n2b"
+        "sb": {},
+        "layer": 80,
+        "image": "note1body"
       },
       "Tail": {
         "cs": 1,
         "gc": {
           "x": [
-            -0.1111111111
+            -0.2222222222
           ],
           "y": [
             0.6990740741,
@@ -272,14 +196,15 @@
             -1.0
           ]
         },
-        "layer": 7,
-        "image": "n2t"
+        "sb": {},
+        "layer": 81,
+        "image": "note1tail"
       },
       "Head": {
         "cs": 1,
         "gc": {
           "x": [
-            -0.1111111111
+            -0.2222222222
           ],
           "y": [
             0.6990740741,
@@ -298,8 +223,9 @@
             -1.0
           ]
         },
-        "layer": 8,
-        "image": "n2h"
+        "sb": {},
+        "layer": 82,
+        "image": "note1head"
       }
     },
     "key2:ShortNote": {
@@ -326,8 +252,9 @@
             -1.0
           ]
         },
-        "layer": 9,
-        "image": "n2"
+        "sb": {},
+        "layer": 83,
+        "image": "note2"
       }
     },
     "key2:SoundNote": {
@@ -354,16 +281,17 @@
             -1.0
           ]
         },
-        "layer": 9,
-        "image": "n2"
+        "sb": {},
+        "layer": 83,
+        "image": "note2"
       }
     },
-    "key3:LongNote": {
+    "key2:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
           "x": [
-            0.0
+            -0.1111111111
           ],
           "y": [
             0.6990740741,
@@ -382,14 +310,15 @@
             0.0
           ]
         },
-        "layer": 6,
-        "image": "n2b"
+        "sb": {},
+        "layer": 80,
+        "image": "note2body"
       },
       "Tail": {
         "cs": 1,
         "gc": {
           "x": [
-            0.0
+            -0.1111111111
           ],
           "y": [
             0.6990740741,
@@ -408,14 +337,15 @@
             -1.0
           ]
         },
-        "layer": 7,
-        "image": "n2t"
+        "sb": {},
+        "layer": 81,
+        "image": "note2tail"
       },
       "Head": {
         "cs": 1,
         "gc": {
           "x": [
-            0.0
+            -0.1111111111
           ],
           "y": [
             0.6990740741,
@@ -434,8 +364,9 @@
             -1.0
           ]
         },
-        "layer": 8,
-        "image": "n2h"
+        "sb": {},
+        "layer": 82,
+        "image": "note2head"
       }
     },
     "key3:ShortNote": {
@@ -462,8 +393,9 @@
             -1.0
           ]
         },
-        "layer": 9,
-        "image": "n2"
+        "sb": {},
+        "layer": 83,
+        "image": "note2"
       }
     },
     "key3:SoundNote": {
@@ -490,16 +422,17 @@
             -1.0
           ]
         },
-        "layer": 9,
-        "image": "n2"
+        "sb": {},
+        "layer": 83,
+        "image": "note2"
       }
     },
-    "key4:LongNote": {
+    "key3:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
           "x": [
-            0.1111111111
+            0.0
           ],
           "y": [
             0.6990740741,
@@ -518,14 +451,15 @@
             0.0
           ]
         },
-        "layer": 2,
-        "image": "n1b"
+        "sb": {},
+        "layer": 80,
+        "image": "note2body"
       },
       "Tail": {
         "cs": 1,
         "gc": {
           "x": [
-            0.1111111111
+            0.0
           ],
           "y": [
             0.6990740741,
@@ -544,14 +478,15 @@
             -1.0
           ]
         },
-        "layer": 3,
-        "image": "n1t"
+        "sb": {},
+        "layer": 81,
+        "image": "note2tail"
       },
       "Head": {
         "cs": 1,
         "gc": {
           "x": [
-            0.1111111111
+            0.0
           ],
           "y": [
             0.6990740741,
@@ -570,8 +505,9 @@
             -1.0
           ]
         },
-        "layer": 4,
-        "image": "n1h"
+        "sb": {},
+        "layer": 82,
+        "image": "note2head"
       }
     },
     "key4:ShortNote": {
@@ -598,8 +534,9 @@
             -1.0
           ]
         },
-        "layer": 5,
-        "image": "n1"
+        "sb": {},
+        "layer": 83,
+        "image": "note1"
       }
     },
     "key4:SoundNote": {
@@ -626,8 +563,92 @@
             -1.0
           ]
         },
-        "layer": 5,
-        "image": "n1"
+        "sb": {},
+        "layer": 83,
+        "image": "note1"
+      }
+    },
+    "key4:LongNote": {
+      "Body": {
+        "cs": 1,
+        "gc": {
+          "x": [
+            0.1111111111
+          ],
+          "y": [
+            0.6990740741,
+            1.0
+          ],
+          "w": [
+            0.1111111111
+          ],
+          "h": [
+            0.00092592592
+          ],
+          "ox": [
+            0.0
+          ],
+          "oy": [
+            0.0
+          ]
+        },
+        "sb": {},
+        "layer": 80,
+        "image": "note1body"
+      },
+      "Tail": {
+        "cs": 1,
+        "gc": {
+          "x": [
+            0.1111111111
+          ],
+          "y": [
+            0.6990740741,
+            1.0
+          ],
+          "w": [
+            0.1111111111
+          ],
+          "h": [
+            0.02222222222
+          ],
+          "ox": [
+            0.0
+          ],
+          "oy": [
+            -1.0
+          ]
+        },
+        "sb": {},
+        "layer": 81,
+        "image": "note1tail"
+      },
+      "Head": {
+        "cs": 1,
+        "gc": {
+          "x": [
+            0.1111111111
+          ],
+          "y": [
+            0.6990740741,
+            1.0
+          ],
+          "w": [
+            0.1111111111
+          ],
+          "h": [
+            0.02222222222
+          ],
+          "ox": [
+            0.0
+          ],
+          "oy": [
+            -1.0
+          ]
+        },
+        "sb": {},
+        "layer": 82,
+        "image": "note1head"
       }
     }
   }

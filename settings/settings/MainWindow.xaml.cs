@@ -79,10 +79,10 @@ namespace settings
                 }
             }
 
-            CreateJSONs(playfields, keymodes, metaData);
+            debug.Text = CreateJSONs(playfields, keymodes, metaData);
         }
 
-        public void CreateJSONs(Dictionary<string, List<PlayfieldItem>> playfields, Dictionary<string, Keymode> keymodes, List<MetaDataItem> metaData)
+        public string CreateJSONs(Dictionary<string, List<PlayfieldItem>> playfields, Dictionary<string, Keymode> keymodes, List<MetaDataItem> metaData)
         {
             foreach(KeyValuePair<string, List<PlayfieldItem>> playfield in playfields)
             {
@@ -104,6 +104,8 @@ namespace settings
             {
                 NullValueHandling = NullValueHandling.Ignore,
             }));
+
+            return "Succes";
         }
 
         public void ShowJSON(object objJSON)

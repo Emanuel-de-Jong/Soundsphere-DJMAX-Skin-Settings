@@ -1,8 +1,50 @@
 [
-	{
-		"name": "DJMAXthing 4K",
-		"inputMode": "4key",
-		"type": "json:full-v2",
-		"path": "keymodes/4K.json"
-	},
+  {
+    "name": "netcoreapp3.1 4K",
+    "inputMode": "4key",
+    "type": "json:full-v2",
+    "path": "keymodes/4k.json"
+  },
+  {
+    "name": "netcoreapp3.1 4K2ST",
+    "inputMode": "6key",
+    "type": "json:full-v2",
+    "path": "keymodes/4k2st.json"
+  },
+  {
+    "name": "netcoreapp3.1 5K",
+    "inputMode": "5key",
+    "type": "json:full-v2",
+    "path": "keymodes/5k.json"
+  },
+  {
+    "name": "netcoreapp3.1 5K2ST",
+    "inputMode": "7key",
+    "type": "json:full-v2",
+    "path": "keymodes/5k2st.json"
+  },
+  {
+    "name": "netcoreapp3.1 6K",
+    "inputMode": "6key",
+    "type": "json:full-v2",
+    "path": "keymodes/6k.json"
+  },
+  {
+    "name": "netcoreapp3.1 6K2ST",
+    "inputMode": "8key",
+    "type": "json:full-v2",
+    "path": "keymodes/6k2st.json"
+  },
+  {
+    "name": "netcoreapp3.1 8K",
+    "inputMode": "8key",
+    "type": "json:full-v2",
+    "path": "keymodes/8k.json"
+  },
+  {
+    "name": "netcoreapp3.1 8K2ST",
+    "inputMode": "10key",
+    "type": "json:full-v2",
+    "path": "keymodes/8k2st.json"
+  }
 ]

@@ -31,6 +31,7 @@ namespace elements
             {
                 string name = Path.GetFileNameWithoutExtension(path);
                 string shortPath = path.Substring(path.LastIndexOf(skinName) + skinName.Length + 1);
+                shortPath = shortPath.Replace("\\", "/");
                 files[name] = shortPath;
             }
         }
