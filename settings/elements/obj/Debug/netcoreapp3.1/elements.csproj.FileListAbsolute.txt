@@ -1,0 +1,7 @@
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\bin\Debug\netcoreapp3.1\elements.deps.json
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\bin\Debug\netcoreapp3.1\elements.dll
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\bin\Debug\netcoreapp3.1\elements.pdb
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\obj\Debug\netcoreapp3.1\elements.AssemblyInfoInputs.cache
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\obj\Debug\netcoreapp3.1\elements.AssemblyInfo.cs
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\obj\Debug\netcoreapp3.1\elements.dll
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\obj\Debug\netcoreapp3.1\elements.pdb

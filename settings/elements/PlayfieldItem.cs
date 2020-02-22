@@ -270,10 +270,6 @@ namespace elements
             });
 
 
-
-
-
-            //temp
             int keys = keymode > 6 ? 6 : keymode;
             for (int i=1; i<=keys; i++)
             {
