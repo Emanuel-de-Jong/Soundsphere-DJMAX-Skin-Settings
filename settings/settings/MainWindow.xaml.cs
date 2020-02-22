@@ -36,8 +36,8 @@ namespace settings
         private void GenerateJSON(object sender, RoutedEventArgs e)
         {
             Dictionary<string, bool> userSettings = GetUserSettings();
+            List<MetaDataItem> metaData = new List<MetaDataItem>();
 
-            List<MetaDataItem> sMetaData = new List<MetaDataItem>();
 
             Keymode keymode4k = new Keymode() {
                 name = info.skinName + " 4K", playfield = info.files["playfield4k"],
@@ -46,7 +46,7 @@ namespace settings
 
             List<PlayfieldItem> playfield4k = PlayfieldItem.GetPlayfield(4, false, userSettings);
 
-            sMetaData.Add(new MetaDataItem() { 
+            metaData.Add(new MetaDataItem() { 
                 name = info.skinName + " 4K", inputMode = "4key", 
                 type = "json:full-v2", path = info.files["4k"] });
 
