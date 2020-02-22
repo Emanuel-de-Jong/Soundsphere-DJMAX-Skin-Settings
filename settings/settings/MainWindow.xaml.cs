@@ -36,22 +36,49 @@ namespace settings
         private void GenerateJSON(object sender, RoutedEventArgs e)
         {
             Dictionary<string, bool> userSettings = GetUserSettings();
+
+            List<List<PlayfieldItem>> playfields = new List<List<PlayfieldItem>>();
+            List<Keymode> keymodes = new List<Keymode>();
             List<MetaDataItem> metaData = new List<MetaDataItem>();
 
+            List<int> modes = new List<int>() { 4, 5, 6, 8 };
+            foreach(int mode in modes)
+            {
+                for(int i=0; i<2; i++)
+                {
+                    bool sidetracks = i == 0 ? false : true;
 
-            Keymode keymode4k = new Keymode() {
-                name = info.skinName + " 4K", playfield = info.files["playfield4k"],
-                images = Image.GetImages(4, false), notes = Keymode.GetNotes(4, false) };
-            keymode4k.cses.Add(info.csMiddle);
+                    List<PlayfieldItem> playfield = PlayfieldItem.GetPlayfield(mode, sidetracks, userSettings);
 
-            List<PlayfieldItem> playfield4k = PlayfieldItem.GetPlayfield(4, false, userSettings);
+                    string name = info.skinName + " " + mode + "K" + (sidetracks ? "2ST" : "");
+                    string playfieldName = "playfield" + mode + "k" + (sidetracks ? "2st" : "");
+                    string keymodeName = mode + "k" +(sidetracks ? "2st" : "");
+                    int inputMode = mode + (sidetracks ? 2 : 0);
 
-            metaData.Add(new MetaDataItem() { 
-                name = info.skinName + " 4K", inputMode = "4key", 
-                type = "json:full-v2", path = info.files["4k"] });
+                    Keymode keymode = new Keymode()
+                    {
+                        name = name,
+                        playfield = info.files[playfieldName],
+                        images = Image.GetImages(mode, sidetracks),
+                        notes = Keymode.GetNotes(mode, sidetracks),
+                        cses = new List<object[]>() { info.csMiddle }
+                    };
+                    
+                    MetaDataItem metaDataItem = new MetaDataItem()
+                    {
+                        name = name,
+                        inputMode = inputMode + "key",
+                        type = "json:full-v2",
+                        path = info.files[keymodeName]
+                    };
 
+                    playfields.Add(playfield);
+                    keymodes.Add(keymode);
+                    metaData.Add(metaDataItem);
+                }
+            }
 
-            ShowJSON(playfield4k);
+            string de = "bug";
         }
 
         public void ShowJSON(object objJSON)
