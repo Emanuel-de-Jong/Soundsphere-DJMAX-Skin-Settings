@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using elements;
 using Newtonsoft.Json.Converters;
 using Image = elements.Image;
+using System.IO;
 
 namespace settings
 {
@@ -37,8 +38,8 @@ namespace settings
         {
             Dictionary<string, bool> userSettings = GetUserSettings();
 
-            List<List<PlayfieldItem>> playfields = new List<List<PlayfieldItem>>();
-            List<Keymode> keymodes = new List<Keymode>();
+            Dictionary<string, List<PlayfieldItem>> playfields = new Dictionary<string, List<PlayfieldItem>>();
+            Dictionary<string, Keymode> keymodes = new Dictionary<string, Keymode>();
             List<MetaDataItem> metaData = new List<MetaDataItem>();
 
             List<int> modes = new List<int>() { 4, 5, 6, 8 };
@@ -72,13 +73,37 @@ namespace settings
                         path = info.files[keymodeName]
                     };
 
-                    playfields.Add(playfield);
-                    keymodes.Add(keymode);
+                    playfields[playfieldName] = playfield;
+                    keymodes[keymodeName] = keymode;
                     metaData.Add(metaDataItem);
                 }
             }
 
-            string de = "bug";
+            CreateJSONs(playfields, keymodes, metaData);
+        }
+
+        public void CreateJSONs(Dictionary<string, List<PlayfieldItem>> playfields, Dictionary<string, Keymode> keymodes, List<MetaDataItem> metaData)
+        {
+            foreach(KeyValuePair<string, List<PlayfieldItem>> playfield in playfields)
+            {
+                File.WriteAllText(info.files[playfield.Key], JsonConvert.SerializeObject(playfield.Value, Formatting.Indented, new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                }));
+            }
+
+            foreach (KeyValuePair<string, Keymode> keymode in keymodes)
+            {
+                File.WriteAllText(info.files[keymode.Key], JsonConvert.SerializeObject(keymode.Value, Formatting.Indented, new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                }));
+            }
+
+            File.WriteAllText(info.files["metadata"], JsonConvert.SerializeObject(metaData, Formatting.Indented, new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+            }));
         }
 
         public void ShowJSON(object objJSON)
