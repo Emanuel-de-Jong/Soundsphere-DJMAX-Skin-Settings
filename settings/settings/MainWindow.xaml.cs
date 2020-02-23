@@ -42,7 +42,7 @@ namespace settings
             Dictionary<string, Keymode> keymodes = new Dictionary<string, Keymode>();
             List<MetaDataItem> metaData = new List<MetaDataItem>();
 
-            List<int> modes = new List<int>() { 4, 5, 6, 8 };
+            List<int> modes = new List<int>() { 4, 5, 6, 8, 10 };
             foreach(int mode in modes)
             {
                 for(int i=0; i<2; i++)
@@ -54,7 +54,9 @@ namespace settings
                     string name = info.skinName + " " + mode + "K" + (sidetracks ? "2ST" : "");
                     string playfieldName = "playfield" + mode + "k" + (sidetracks ? "2st" : "");
                     string keymodeName = mode + "k" +(sidetracks ? "2st" : "");
-                    int inputMode = mode + (sidetracks ? 2 : 0);
+                    string inputMode = (mode + (sidetracks ? 2 : 0)) + "key";
+                    if(mode == 10 && sidetracks)
+                        inputMode = "10key2scratch";
 
                     Keymode keymode = new Keymode()
                     {
@@ -68,7 +70,7 @@ namespace settings
                     MetaDataItem metaDataItem = new MetaDataItem()
                     {
                         name = name,
-                        inputMode = inputMode + "key",
+                        inputMode = inputMode,
                         type = "json:full-v2",
                         path = info.files[keymodeName]
                     };

@@ -283,40 +283,45 @@ namespace elements
                     layer = info.layers["key"],
                     cs = info.csMiddle,
                     inputType = eInputType.key,
-                    inputIndex = positionsKeymode["key" + i].inputIndex + (sidetracks ? 1 : 0),
-                    pressed = info.files["keypressed" + keys + "k"],
+                    inputIndex = positionsKeymode["key" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
+                    pressed = userSettings["keypressed"] ? info.files["keypressed" + keys + "k"] : info.files["key" + keys + "k"],
                     released = info.files["key" + keys + "k"],
                 });
 
-                playfield.Add(new InputImage()
-                {
-                    classa = eClass.InputImage,
-                    x = positionsKeymode["beam" + i].x,
-                    y = positionsKeymode["beam" + i].y,
-                    w = positionsKeymode["beam" + i].w,
-                    h = positionsKeymode["beam" + i].h,
-                    layer = info.layers["beam"],
-                    cs = info.csMiddle,
-                    inputType = eInputType.key,
-                    inputIndex = positionsKeymode["beam" + i].inputIndex + (sidetracks ? 1 : 0),
-                    pressed = info.files["beam" + keys + "k"],
-                    released = info.files["blank"],
-                });
+                if (userSettings["beam"]) { 
+                    playfield.Add(new InputImage()
+                    {
+                        classa = eClass.InputImage,
+                        x = positionsKeymode["beam" + i].x,
+                        y = positionsKeymode["beam" + i].y,
+                        w = positionsKeymode["beam" + i].w,
+                        h = positionsKeymode["beam" + i].h,
+                        layer = info.layers["beam"],
+                        cs = info.csMiddle,
+                        inputType = eInputType.key,
+                        inputIndex = positionsKeymode["beam" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
+                        pressed = info.files["beam" + keys + "k"],
+                        released = info.files["blank"],
+                    });
+                }
 
-                playfield.Add(new InputImage()
+                if (userSettings["particles"])
                 {
-                    classa = eClass.InputImage,
-                    x = positionsKeymode["particle" + i].x,
-                    y = positionsKeymode["particle" + i].y,
-                    w = positionsKeymode["particle" + i].w,
-                    h = positionsKeymode["particle" + i].h,
-                    layer = info.layers["particle"],
-                    cs = info.csMiddle,
-                    inputType = eInputType.key,
-                    inputIndex = positionsKeymode["particle" + i].inputIndex + (sidetracks ? 1 : 0),
-                    pressed = info.files["particle"],
-                    released = info.files["blank"],
-                });
+                    playfield.Add(new InputImage()
+                    {
+                        classa = eClass.InputImage,
+                        x = positionsKeymode["particle" + i].x,
+                        y = positionsKeymode["particle" + i].y,
+                        w = positionsKeymode["particle" + i].w,
+                        h = positionsKeymode["particle" + i].h,
+                        layer = info.layers["particle"],
+                        cs = info.csMiddle,
+                        inputType = eInputType.key,
+                        inputIndex = positionsKeymode["particle" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
+                        pressed = info.files["particle"],
+                        released = info.files["blank"],
+                    });
+                }
             }
 
             if(keymode == 8)
@@ -324,6 +329,8 @@ namespace elements
                 for(int i=1; i<=2; i++)
                 {
                     string side = i == 1 ? "left" : "right";
+
+                    
                     playfield.Add(new InputImage()
                     {
                         classa = eClass.InputImage,
@@ -331,43 +338,128 @@ namespace elements
                         y = positionsKeymode["fxkey" + i].y,
                         w = positionsKeymode["fxkey" + i].w,
                         h = positionsKeymode["fxkey" + i].h,
-                        layer = info.layers["key"],
+                        layer = info.layers["fxkey1"],
                         cs = info.csMiddle,
                         inputType = eInputType.key,
                         inputIndex = positionsKeymode["fxkey" + i].inputIndex + (sidetracks ? 1 : 0),
-                        pressed = info.files["fxkey" + side + "pressed"],
+                        pressed = userSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : info.files["fxkey" + side],
                         released = info.files["fxkey" + side],
                     });
 
-                    playfield.Add(new InputImage()
+                    if (userSettings["beam"])
                     {
-                        classa = eClass.InputImage,
-                        x = positionsKeymode["fxbeam" + i].x,
-                        y = positionsKeymode["fxbeam" + i].y,
-                        w = positionsKeymode["fxbeam" + i].w,
-                        h = positionsKeymode["fxbeam" + i].h,
-                        layer = info.layers["fxbeam"],
-                        cs = info.csMiddle,
-                        inputType = eInputType.key,
-                        inputIndex = positionsKeymode["fxbeam" + i].inputIndex + (sidetracks ? 1 : 0),
-                        pressed = info.files["fxbeam"],
-                        released = info.files["blank"],
-                    });
+                        playfield.Add(new InputImage()
+                        {
+                            classa = eClass.InputImage,
+                            x = positionsKeymode["fxbeam" + i].x,
+                            y = positionsKeymode["fxbeam" + i].y,
+                            w = positionsKeymode["fxbeam" + i].w,
+                            h = positionsKeymode["fxbeam" + i].h,
+                            layer = info.layers["fxbeam"],
+                            cs = info.csMiddle,
+                            inputType = eInputType.key,
+                            inputIndex = positionsKeymode["fxbeam" + i].inputIndex + (sidetracks ? 1 : 0),
+                            pressed = info.files["fxbeam"],
+                            released = info.files["blank"],
+                        });
+                    }
 
-                    playfield.Add(new InputImage()
+                    if (userSettings["particles"])
                     {
-                        classa = eClass.InputImage,
-                        x = positionsKeymode["fxparticle" + i].x,
-                        y = positionsKeymode["fxparticle" + i].y,
-                        w = positionsKeymode["fxparticle" + i].w,
-                        h = positionsKeymode["fxparticle" + i].h,
-                        layer = info.layers["fxparticle"],
-                        cs = info.csMiddle,
-                        inputType = eInputType.key,
-                        inputIndex = positionsKeymode["fxparticle" + i].inputIndex + (sidetracks ? 1 : 0),
-                        pressed = info.files["fxparticle"],
-                        released = info.files["blank"],
-                    });
+                        playfield.Add(new InputImage()
+                        {
+                            classa = eClass.InputImage,
+                            x = positionsKeymode["fxparticle" + i].x,
+                            y = positionsKeymode["fxparticle" + i].y,
+                            w = positionsKeymode["fxparticle" + i].w,
+                            h = positionsKeymode["fxparticle" + i].h,
+                            layer = info.layers["fxparticle"],
+                            cs = info.csMiddle,
+                            inputType = eInputType.key,
+                            inputIndex = positionsKeymode["fxparticle" + i].inputIndex + (sidetracks ? 1 : 0),
+                            pressed = info.files["fxparticle"],
+                            released = info.files["blank"],
+                        });
+                    }
+                }
+            }
+            else if(keymode == 10)
+            {
+                for(int i=1; i<=2; i++)
+                {
+                    for (int j = 1; j <= 2; j++)
+                    {
+                        string side = j == 1 ? "left" : "right";
+
+                        int keynumber = 0;
+                        if(i == 2 && j == 1)
+                        {
+                            keynumber = 1;
+                        }
+                        else if(i == 1 && j == 1)
+                        {
+                            keynumber = 2;
+                        }
+                        else if(i == 1 && j == 2)
+                        {
+                            keynumber = 3;
+                        }
+                        else
+                        {
+                            keynumber = 4;
+                        }
+
+                        playfield.Add(new InputImage()
+                        {
+                            classa = eClass.InputImage,
+                            x = positionsKeymode["fxkey" + keynumber].x,
+                            y = positionsKeymode["fxkey" + keynumber].y,
+                            w = positionsKeymode["fxkey" + keynumber].w,
+                            h = positionsKeymode["fxkey" + keynumber].h,
+                            layer = info.layers["fxkey" + i],
+                            cs = info.csMiddle,
+                            inputType = eInputType.key,
+                            inputIndex = positionsKeymode["fxkey" + keynumber].inputIndex,
+                            pressed = userSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : (i == 1 ? info.files["fxkey" + side] : info.files["blank"]),
+                            released = i == 1 ? info.files["fxkey" + side] : info.files["blank"],
+                        });
+
+                        if (userSettings["beam"])
+                        {
+                            playfield.Add(new InputImage()
+                            {
+                                classa = eClass.InputImage,
+                                x = positionsKeymode["fxbeam" + keynumber].x,
+                                y = positionsKeymode["fxbeam" + keynumber].y,
+                                w = positionsKeymode["fxbeam" + keynumber].w,
+                                h = positionsKeymode["fxbeam" + keynumber].h,
+                                layer = info.layers["fxbeam"],
+                                cs = info.csMiddle,
+                                inputType = eInputType.key,
+                                inputIndex = positionsKeymode["fxbeam" + keynumber].inputIndex,
+                                pressed = info.files["fxbeam"],
+                                released = info.files["blank"],
+                            });
+                        }
+
+                        if (userSettings["particles"])
+                        {
+                            playfield.Add(new InputImage()
+                            {
+                                classa = eClass.InputImage,
+                                x = positionsKeymode["fxparticle" + keynumber].x,
+                                y = positionsKeymode["fxparticle" + keynumber].y,
+                                w = positionsKeymode["fxparticle" + keynumber].w,
+                                h = positionsKeymode["fxparticle" + keynumber].h,
+                                layer = info.layers["fxparticle"],
+                                cs = info.csMiddle,
+                                inputType = eInputType.key,
+                                inputIndex = positionsKeymode["fxparticle" + keynumber].inputIndex,
+                                pressed = info.files["fxparticle"],
+                                released = info.files["blank"],
+                            });
+                        }
+                    }
                 }
             }
 
@@ -382,7 +474,7 @@ namespace elements
                     h = positionsST[1].h,
                     layer = info.layers["stparticle"],
                     cs = info.csMiddle,
-                    inputType = eInputType.key,
+                    inputType = keymode == 10 ? eInputType.scratch : eInputType.key,
                     inputIndex = 1,
                     pressed = info.files["stparticle"],
                     released = info.files["blank"],
@@ -397,8 +489,8 @@ namespace elements
                     h = positionsST[2].h,
                     layer = info.layers["stparticle"],
                     cs = info.csMiddle,
-                    inputType = eInputType.key,
-                    inputIndex = keymode + 2,
+                    inputType = keymode == 10 ? eInputType.scratch : eInputType.key,
+                    inputIndex = keymode == 10 ? 2 : keymode + 2,
                     pressed = info.files["stparticle"],
                     released = info.files["blank"],
                 });

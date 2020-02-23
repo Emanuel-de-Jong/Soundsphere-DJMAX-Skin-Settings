@@ -63,15 +63,17 @@ namespace elements
             layers["note"] = 83;
             layers["playfield"] = 90;
             layers["combo"] = 100;
-            layers["progressbarbg"] = 100;
             layers["accuracy"] = 100;
             layers["timegate"] = 100;
-            layers["key"] = 100;
             layers["score"] = 100;
-            layers["progressbar"] = 101;
-            layers["particle"] = 110;
-            layers["fxparticle"] = 111;
-            layers["stparticle"] = 112;
+            layers["progressbarbg"] = 110;
+            layers["progressbar"] = 111;
+            layers["fxkey1"] = 120;
+            layers["fxkey2"] = 121;
+            layers["key"] = 122;
+            layers["particle"] = 130;
+            layers["fxparticle"] = 131;
+            layers["stparticle"] = 132;
         }
     }
 }

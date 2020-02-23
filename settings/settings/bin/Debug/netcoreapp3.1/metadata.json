@@ -46,5 +46,17 @@
     "inputMode": "10key",
     "type": "json:full-v2",
     "path": "keymodes/8k2st.json"
+  },
+  {
+    "name": "netcoreapp3.1 10K",
+    "inputMode": "10key",
+    "type": "json:full-v2",
+    "path": "keymodes/10k.json"
+  },
+  {
+    "name": "netcoreapp3.1 10K2ST",
+    "inputMode": "10key2scratch",
+    "type": "json:full-v2",
+    "path": "keymodes/10k2st.json"
   }
 ]
