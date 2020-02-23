@@ -1,0 +1,23 @@
+assets
+	note1 with red line
+	st more white
+	playfield 5x and fever 5x auto instead of off
+
+	
+positions
+	beams lower
+	st smaller height resolution
+	
+	
+program
+	save/load settings to/from cfg or json
+	
+	convert
+		per setting an image
+		position option
+
+	other settings
+		bg opacity
+		4fx fade and blue or purple
+		change customscores
+		change judgetable
