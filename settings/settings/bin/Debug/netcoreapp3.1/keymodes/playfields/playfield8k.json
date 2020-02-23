@@ -326,25 +326,6 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 1,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.3648148148,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
     "inputIndex": 2,
     "released": "resources/6k/key6k.png",
     "pressed": "resources/6k/keypressed6k.png",
@@ -373,25 +354,6 @@
     "w": 0.07407407407,
     "h": 0.82129629629,
     "layer": 31,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
-    "inputIndex": 2,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.2907407407,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
     "cs": [
       0.5,
       0,
@@ -440,25 +402,6 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 3,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.2166666667,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
     "inputIndex": 6,
     "released": "resources/6k/key6k.png",
     "pressed": "resources/6k/keypressed6k.png",
@@ -487,25 +430,6 @@
     "w": 0.07407407407,
     "h": 0.82129629629,
     "layer": 31,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
-    "inputIndex": 6,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.1425925926,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
     "cs": [
       0.5,
       0,
@@ -554,25 +478,6 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 7,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.06851851852,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
     "inputIndex": 8,
     "released": "resources/6k/key6k.png",
     "pressed": "resources/6k/keypressed6k.png",
@@ -601,25 +506,6 @@
     "w": 0.07407407407,
     "h": 0.82129629629,
     "layer": 31,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
-    "inputIndex": 8,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": 0.005555555556,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
     "cs": [
       0.5,
       0,
@@ -668,25 +554,6 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 4,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxparticle.png",
-    "class": "InputImage",
-    "x": -0.2907407407,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 131,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
     "inputIndex": 5,
     "released": "resources/fxkeyright.png",
     "pressed": "resources/fxkeyrightpressed.png",
@@ -715,25 +582,6 @@
     "w": 0.22222222222,
     "h": 0.82129629629,
     "layer": 30,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
-    "inputIndex": 5,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxparticle.png",
-    "class": "InputImage",
-    "x": -0.06851851852,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 131,
     "cs": [
       0.5,
       0,

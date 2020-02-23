@@ -326,25 +326,6 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 1,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.3583333333,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
     "inputIndex": 2,
     "released": "resources/5k/key5k.png",
     "pressed": "resources/5k/keypressed5k.png",
@@ -373,25 +354,6 @@
     "w": 0.08888888889,
     "h": 0.82129629629,
     "layer": 31,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
-    "inputIndex": 2,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.2694444444,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
     "cs": [
       0.5,
       0,
@@ -440,25 +402,6 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 3,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.1805555556,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
     "inputIndex": 4,
     "released": "resources/5k/key5k.png",
     "pressed": "resources/5k/keypressed5k.png",
@@ -497,25 +440,6 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 4,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.09166666667,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
     "inputIndex": 5,
     "released": "resources/5k/key5k.png",
     "pressed": "resources/5k/keypressed5k.png",
@@ -544,25 +468,6 @@
     "w": 0.08888888889,
     "h": 0.82129629629,
     "layer": 31,
-    "cs": [
-      0.5,
-      0,
-      0,
-      0,
-      "h"
-    ]
-  },
-  {
-    "inputType": "key",
-    "inputIndex": 5,
-    "released": "resources/blank.png",
-    "pressed": "resources/particle.png",
-    "class": "InputImage",
-    "x": -0.002777777778,
-    "y": 0.51944444444,
-    "w": 0.35925925925,
-    "h": 0.35925925925,
-    "layer": 130,
     "cs": [
       0.5,
       0,

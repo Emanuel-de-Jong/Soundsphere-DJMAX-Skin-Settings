@@ -95,7 +95,7 @@
                 <Image Grid.Row="7" Source="Images/fxbeam.png"/>
 
                 <Label Grid.Row="8">Particles</Label>
-                <CheckBox Grid.Row="8" IsChecked="True" Name="particles"/>
+                <CheckBox Grid.Row="8" IsChecked="False" Name="particles"/>
                 <Image Grid.Row="8" Source="Images/fxbeam.png"/>
 
                 <StackPanel Grid.Row="9" Grid.ColumnSpan="3">

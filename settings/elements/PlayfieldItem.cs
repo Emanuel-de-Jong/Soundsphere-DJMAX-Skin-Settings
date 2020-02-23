@@ -79,7 +79,7 @@ namespace elements
                     w = positions.combobg.w,
                     h = positions.combobg.h,
                     layer = info.layers["combobg"],
-                    cs = info.csMiddle,
+                    cs = info.cs,
                     image = info.files["combobg"]
                 });
             }
