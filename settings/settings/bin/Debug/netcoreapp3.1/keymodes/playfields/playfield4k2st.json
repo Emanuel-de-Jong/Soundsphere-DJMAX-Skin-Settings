@@ -288,7 +288,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 1,
+    "inputIndex": 2,
     "released": "resources/4k/key4k.png",
     "pressed": "resources/4k/keypressed4k.png",
     "class": "InputImage",
@@ -307,7 +307,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 1,
+    "inputIndex": 2,
     "released": "resources/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
@@ -326,7 +326,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 1,
+    "inputIndex": 2,
     "released": "resources/blank.png",
     "pressed": "resources/particle.png",
     "class": "InputImage",
@@ -345,7 +345,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 2,
+    "inputIndex": 3,
     "released": "resources/4k/key4k.png",
     "pressed": "resources/4k/keypressed4k.png",
     "class": "InputImage",
@@ -364,7 +364,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 2,
+    "inputIndex": 3,
     "released": "resources/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
@@ -383,7 +383,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 2,
+    "inputIndex": 3,
     "released": "resources/blank.png",
     "pressed": "resources/particle.png",
     "class": "InputImage",
@@ -402,7 +402,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 3,
+    "inputIndex": 4,
     "released": "resources/4k/key4k.png",
     "pressed": "resources/4k/keypressed4k.png",
     "class": "InputImage",
@@ -421,7 +421,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 3,
+    "inputIndex": 4,
     "released": "resources/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
@@ -440,7 +440,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 3,
+    "inputIndex": 4,
     "released": "resources/blank.png",
     "pressed": "resources/particle.png",
     "class": "InputImage",
@@ -459,7 +459,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 4,
+    "inputIndex": 5,
     "released": "resources/4k/key4k.png",
     "pressed": "resources/4k/keypressed4k.png",
     "class": "InputImage",
@@ -478,7 +478,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 4,
+    "inputIndex": 5,
     "released": "resources/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
@@ -497,7 +497,7 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 4,
+    "inputIndex": 5,
     "released": "resources/blank.png",
     "pressed": "resources/particle.png",
     "class": "InputImage",
@@ -516,11 +516,30 @@
   },
   {
     "inputType": "key",
-    "inputIndex": 0,
+    "inputIndex": 1,
     "released": "resources/blank.png",
     "pressed": "resources/stparticle.png",
     "class": "InputImage",
     "x": -0.2907407407,
+    "y": 0.51944444444,
+    "w": 0.35925925925,
+    "h": 0.35925925925,
+    "layer": 111,
+    "cs": [
+      0.5,
+      0,
+      0,
+      0,
+      "h"
+    ]
+  },
+  {
+    "inputType": "key",
+    "inputIndex": 6,
+    "released": "resources/blank.png",
+    "pressed": "resources/stparticle.png",
+    "class": "InputImage",
+    "x": -0.06851851852,
     "y": 0.51944444444,
     "w": 0.35925925925,
     "h": 0.35925925925,

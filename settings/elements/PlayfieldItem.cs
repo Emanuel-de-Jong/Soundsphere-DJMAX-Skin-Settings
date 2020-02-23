@@ -283,7 +283,7 @@ namespace elements
                     layer = info.layers["key"],
                     cs = info.csMiddle,
                     inputType = eInputType.key,
-                    inputIndex = positionsKeymode["key" + i].inputIndex,
+                    inputIndex = positionsKeymode["key" + i].inputIndex + (sidetracks ? 1 : 0),
                     pressed = info.files["keypressed" + keys + "k"],
                     released = info.files["key" + keys + "k"],
                 });
@@ -298,7 +298,7 @@ namespace elements
                     layer = info.layers["beam"],
                     cs = info.csMiddle,
                     inputType = eInputType.key,
-                    inputIndex = positionsKeymode["beam" + i].inputIndex,
+                    inputIndex = positionsKeymode["beam" + i].inputIndex + (sidetracks ? 1 : 0),
                     pressed = info.files["beam" + keys + "k"],
                     released = info.files["blank"],
                 });
@@ -313,7 +313,7 @@ namespace elements
                     layer = info.layers["particle"],
                     cs = info.csMiddle,
                     inputType = eInputType.key,
-                    inputIndex = positionsKeymode["particle" + i].inputIndex,
+                    inputIndex = positionsKeymode["particle" + i].inputIndex + (sidetracks ? 1 : 0),
                     pressed = info.files["particle"],
                     released = info.files["blank"],
                 });
@@ -334,7 +334,7 @@ namespace elements
                         layer = info.layers["key"],
                         cs = info.csMiddle,
                         inputType = eInputType.key,
-                        inputIndex = positionsKeymode["fxkey" + i].inputIndex,
+                        inputIndex = positionsKeymode["fxkey" + i].inputIndex + (sidetracks ? 1 : 0),
                         pressed = info.files["fxkey" + side + "pressed"],
                         released = info.files["fxkey" + side],
                     });
@@ -349,7 +349,7 @@ namespace elements
                         layer = info.layers["fxbeam"],
                         cs = info.csMiddle,
                         inputType = eInputType.key,
-                        inputIndex = positionsKeymode["fxbeam" + i].inputIndex,
+                        inputIndex = positionsKeymode["fxbeam" + i].inputIndex + (sidetracks ? 1 : 0),
                         pressed = info.files["fxbeam"],
                         released = info.files["blank"],
                     });
@@ -364,7 +364,7 @@ namespace elements
                         layer = info.layers["fxparticle"],
                         cs = info.csMiddle,
                         inputType = eInputType.key,
-                        inputIndex = positionsKeymode["fxparticle" + i].inputIndex,
+                        inputIndex = positionsKeymode["fxparticle" + i].inputIndex + (sidetracks ? 1 : 0),
                         pressed = info.files["fxparticle"],
                         released = info.files["blank"],
                     });
@@ -373,23 +373,35 @@ namespace elements
 
             if (sidetracks)
             {
-                for(int i=1; i<2; i++)
+                playfield.Add(new InputImage()
                 {
-                    playfield.Add(new InputImage()
-                    {
-                        classa = eClass.InputImage,
-                        x = positionsST[i].x,
-                        y = positionsST[i].y,
-                        w = positionsST[i].w,
-                        h = positionsST[i].h,
-                        layer = info.layers["stparticle"],
-                        cs = info.csMiddle,
-                        inputType = eInputType.key,
-                        inputIndex = positionsST[i].inputIndex,
-                        pressed = info.files["stparticle"],
-                        released = info.files["blank"],
-                    });
-                }
+                    classa = eClass.InputImage,
+                    x = positionsST[1].x,
+                    y = positionsST[1].y,
+                    w = positionsST[1].w,
+                    h = positionsST[1].h,
+                    layer = info.layers["stparticle"],
+                    cs = info.csMiddle,
+                    inputType = eInputType.key,
+                    inputIndex = 1,
+                    pressed = info.files["stparticle"],
+                    released = info.files["blank"],
+                });
+
+                playfield.Add(new InputImage()
+                {
+                    classa = eClass.InputImage,
+                    x = positionsST[2].x,
+                    y = positionsST[2].y,
+                    w = positionsST[2].w,
+                    h = positionsST[2].h,
+                    layer = info.layers["stparticle"],
+                    cs = info.csMiddle,
+                    inputType = eInputType.key,
+                    inputIndex = keymode + 2,
+                    pressed = info.files["stparticle"],
+                    released = info.files["blank"],
+                });
             }
 
 
