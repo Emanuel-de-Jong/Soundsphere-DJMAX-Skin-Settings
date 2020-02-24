@@ -1,5 +1,4 @@
-﻿
-<Window x:Class="settings.MainWindow"
+﻿<Window x:Class="settings.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -65,7 +64,7 @@
                 <Label Grid.Row="0">Background Video</Label>
                 <CheckBox Grid.Row="0" IsChecked="True" Name="vidbg"/>
                 <Image Grid.Row="0" Source="Images/fxbeam.png"/>
-                
+
                 <Label Grid.Row="1">Combo Background</Label>
                 <CheckBox Grid.Row="1" IsChecked="False" Name="combobg"/>
                 <Image Grid.Row="1" Source="Images/fxbeam.png"/>
@@ -85,7 +84,7 @@
                 <Label Grid.Row="5">Accuracy</Label>
                 <CheckBox Grid.Row="5" IsChecked="True" Name="accuracy"/>
                 <Image Grid.Row="5" Source="Images/fxbeam.png"/>
-                
+
                 <Label Grid.Row="6">Hit Grade</Label>
                 <CheckBox Grid.Row="6" IsChecked="True" Name="timegate"/>
                 <Image Grid.Row="6" Source="Images/fxbeam.png"/>
@@ -103,8 +102,26 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Debug">
-            <TextBox TextWrapping="Wrap" Name="debug" />
+        <TabItem Header="BG" IsSelected="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="0" Name="bgimgbg" 
+                       Height="200" Width="100"
+                       Source="Images/background1by2.png"/>
+                <Image Grid.Row="0" Grid.Column="0" Name="bgimg" 
+                       Height="200" Width="100"
+                       Stretch="Fill"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Name="debug"/>
+            </Grid>
         </TabItem>
     </TabControl>
 </Window>

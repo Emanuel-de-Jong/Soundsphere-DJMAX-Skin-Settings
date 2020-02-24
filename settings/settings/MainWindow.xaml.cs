@@ -32,6 +32,10 @@ namespace settings
             InitializeComponent();
 
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            string currentDir = Directory.GetCurrentDirectory() + "\\";
+
+            //bgimg.Source = new BitmapImage(new Uri(currentDir + info.files["bg"], UriKind.Absolute));
         }
 
         private void GenerateJSON(object sender, RoutedEventArgs e)
