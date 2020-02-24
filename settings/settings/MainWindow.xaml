@@ -108,6 +108,7 @@
                     <RowDefinition Height="2*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -120,7 +121,13 @@
                        Height="200" Width="100"
                        Stretch="Fill"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Name="debug"/>
+                <Slider Grid.Row="1" Grid.Column="0" Name="OpacityVal" 
+                        Minimum="0" Maximum="100"
+                        VerticalAlignment="Center" Margin="60,0,60,0"></Slider>
+
+                <Button Grid.Row="2" Grid.Column="0" Click="ChangeBG">Change</Button>
+
+                <Label Grid.Row="3" Grid.Column="0" Name="debug"/>
             </Grid>
         </TabItem>
     </TabControl>

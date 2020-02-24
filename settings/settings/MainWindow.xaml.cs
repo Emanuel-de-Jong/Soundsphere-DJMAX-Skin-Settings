@@ -17,6 +17,12 @@ using elements;
 using Newtonsoft.Json.Converters;
 using Image = elements.Image;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
+using Microsoft.Win32;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using System.Windows.Interop;
 
 namespace settings
 {
@@ -127,6 +133,11 @@ namespace settings
             userSettings["particles"] = (bool)particles.IsChecked;
 
             return userSettings;
+        }
+
+        private void ChangeBG(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
