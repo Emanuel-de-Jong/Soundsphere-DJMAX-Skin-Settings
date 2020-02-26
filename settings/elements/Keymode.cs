@@ -220,23 +220,23 @@ namespace elements
                         }
                     };
 
-                itemPositions = positions[values["name"]]["SoundNote"];
-                notes[values["name"] + ":" + eNoteType.SoundNote] =
-                    new Dictionary<string, NoteComponent>() {
-                        {
-                            eNoteComponent.Head.ToString(),
-                            new NoteComponent() {
-                                cs = 1,
-                                gc = new Gc {
-                                    x = itemPositions["Head"]["x"], y = itemPositions["Head"]["y"],
-                                    w = itemPositions["Head"]["w"], h = itemPositions["Head"]["h"],
-                                    ox = itemPositions["Head"]["ox"], oy = itemPositions["Head"]["oy"]
-                                },
-                                layer = info.layers[values["layer"]],
-                                image = values["image"]
-                            }
-                        }
-                    };
+                //itemPositions = positions[values["name"]]["SoundNote"];
+                //notes[values["name"] + ":" + eNoteType.SoundNote] =
+                //    new Dictionary<string, NoteComponent>() {
+                //        {
+                //            eNoteComponent.Head.ToString(),
+                //            new NoteComponent() {
+                //                cs = 1,
+                //                gc = new Gc {
+                //                    x = itemPositions["Head"]["x"], y = itemPositions["Head"]["y"],
+                //                    w = itemPositions["Head"]["w"], h = itemPositions["Head"]["h"],
+                //                    ox = itemPositions["Head"]["ox"], oy = itemPositions["Head"]["oy"]
+                //                },
+                //                layer = info.layers[values["layer"]],
+                //                image = values["image"]
+                //            }
+                //        }
+                //    };
 
                 itemPositions = positions[values["name"]]["LongNote"];
                 notes[values["name"] + ":" + eNoteType.LongNote] =

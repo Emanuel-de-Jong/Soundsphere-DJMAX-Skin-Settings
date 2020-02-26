@@ -29,9 +29,11 @@
                     <Setter Property="HorizontalAlignment" Value="Left"/>
                     <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
-                <Style TargetType="RadioButton">
+                <Style TargetType="ComboBox">
                     <Setter Property="HorizontalAlignment" Value="Center"/>
                     <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Width" Value="70"/>
+                    <Setter Property="Height" Value="22"/>
                 </Style>
                 <Style TargetType="CheckBox">
                     <Setter Property="Grid.Column" Value="1"/>
@@ -66,13 +68,11 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Row="0">Position (WIP)</Label>
-                <UniformGrid Grid.Row="0" Grid.Column="1" Columns="3">
-                    <RadioButton Grid.Column="0" Name="posLeft"></RadioButton>
-
-                    <RadioButton Grid.Column="1" Name="posMiddle"></RadioButton>
-
-                    <RadioButton Grid.Column="2" Name="posRight"></RadioButton>
-                </UniformGrid>
+                <ComboBox Grid.Row="0" Grid.Column="1" Name="position">
+                    <ComboBoxItem>Left</ComboBoxItem>
+                    <ComboBoxItem>Middle</ComboBoxItem>
+                    <ComboBoxItem>Right</ComboBoxItem>
+                </ComboBox>
                 <Image Grid.Row="0" Source="Images/background.png"/>
                 
                 <Label Grid.Row="1">Background Video</Label>
@@ -262,6 +262,59 @@
                 <Button Grid.Row="1" Click="InsertCustomScores">Insert Custom Scores</Button>
 
                 <Button Grid.Row="2" Click="InsertJudgeTable">Insert JugeTable</Button>
+            </Grid>
+        </TabItem>
+
+
+        <TabItem Header="Mods (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Grid.Column" Value="0"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="RadioButton">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="CheckBox">
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="Image">
+                    <Setter Property="Grid.Column" Value="2"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Stretch" Value="Uniform"/>
+                </Style>
+            </TabItem.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0">Background Video</Label>
+                <CheckBox Grid.Row="0" IsChecked="True" Name="fadein"/>
+                <Image Grid.Row="0" Source="Images/background.png"/>
+
+                <Label Grid.Row="1">Combo Background</Label>
+                <CheckBox Grid.Row="1" IsChecked="False" Name="fadeout"/>
+                <Image Grid.Row="1" Source="Images/background.png"/>
+
+                <Label Grid.Row="2">Note Beam</Label>
+                <CheckBox Grid.Row="2" IsChecked="True" Name="blind"/>
+                <Image Grid.Row="2" Source="Images/background.png"/>
+
+                <Button Grid.Row="3" Grid.ColumnSpan="3" Click="GenerateJSON">Apply</Button>
             </Grid>
         </TabItem>
     </TabControl>

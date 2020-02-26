@@ -1,6 +1,6 @@
 [
   {
-    "image": "resources/bg.png",
+    "image": "resources/all/bg.png",
     "class": "StaticObject",
     "x": 0.6564814815,
     "y": 0.0,
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "image": "resources/judgeline.png",
+    "image": "resources/all/judgeline.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "image": "resources/playfield.png",
+    "image": "resources/all/playfield.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "image": "resources/combo.png",
+    "image": "resources/all/combo.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -139,7 +139,7 @@
     ]
   },
   {
-    "image": "resources/progressbarbg.png",
+    "image": "resources/all/progressbarbg.png",
     "class": "StaticObject",
     "x": -0.09259259259,
     "y": 0.47592592592,
@@ -155,7 +155,7 @@
     ]
   },
   {
-    "image": "resources/rate.png",
+    "image": "resources/all/rate.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -308,7 +308,7 @@
   {
     "inputType": "key",
     "inputIndex": 2,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/6k/beam6k.png",
     "class": "InputImage",
     "x": -0.2222222222,
@@ -346,7 +346,7 @@
   {
     "inputType": "key",
     "inputIndex": 3,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/6k/beam6k.png",
     "class": "InputImage",
     "x": -0.1481481481,
@@ -384,7 +384,7 @@
   {
     "inputType": "key",
     "inputIndex": 4,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/6k/beam6k.png",
     "class": "InputImage",
     "x": -0.07407407407,
@@ -422,7 +422,7 @@
   {
     "inputType": "key",
     "inputIndex": 7,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/6k/beam6k.png",
     "class": "InputImage",
     "x": 0.0,
@@ -460,7 +460,7 @@
   {
     "inputType": "key",
     "inputIndex": 8,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/6k/beam6k.png",
     "class": "InputImage",
     "x": 0.07407407407,
@@ -498,7 +498,7 @@
   {
     "inputType": "key",
     "inputIndex": 9,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/6k/beam6k.png",
     "class": "InputImage",
     "x": 0.1481481481,
@@ -517,8 +517,8 @@
   {
     "inputType": "key",
     "inputIndex": 5,
-    "released": "resources/fxkeyleft.png",
-    "pressed": "resources/fxkeyleftpressed.png",
+    "released": "resources/all/fxkeyleft.png",
+    "pressed": "resources/all/fxkeyleftpressed.png",
     "class": "InputImage",
     "x": -0.2324074074,
     "y": 0.7416666667,
@@ -536,8 +536,8 @@
   {
     "inputType": "key",
     "inputIndex": 5,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxbeam.png",
+    "released": "resources/all/blank.png",
+    "pressed": "resources/all/fxbeam.png",
     "class": "InputImage",
     "x": -0.2222222222,
     "y": 0.0,
@@ -555,8 +555,8 @@
   {
     "inputType": "key",
     "inputIndex": 6,
-    "released": "resources/fxkeyright.png",
-    "pressed": "resources/fxkeyrightpressed.png",
+    "released": "resources/all/fxkeyright.png",
+    "pressed": "resources/all/fxkeyrightpressed.png",
     "class": "InputImage",
     "x": 0.0,
     "y": 0.7416666667,
@@ -574,8 +574,8 @@
   {
     "inputType": "key",
     "inputIndex": 6,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxbeam.png",
+    "released": "resources/all/blank.png",
+    "pressed": "resources/all/fxbeam.png",
     "class": "InputImage",
     "x": 0.0,
     "y": 0.0,
@@ -593,8 +593,8 @@
   {
     "inputType": "key",
     "inputIndex": 1,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxkeyleftpressed.png",
+    "released": "resources/all/blank.png",
+    "pressed": "resources/all/fxkeyleftpressed.png",
     "class": "InputImage",
     "x": -0.2324074074,
     "y": 0.7416666667,
@@ -612,8 +612,8 @@
   {
     "inputType": "key",
     "inputIndex": 1,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxbeam.png",
+    "released": "resources/all/blank.png",
+    "pressed": "resources/all/fxbeam.png",
     "class": "InputImage",
     "x": -0.2222222222,
     "y": 0.0,
@@ -631,8 +631,8 @@
   {
     "inputType": "key",
     "inputIndex": 10,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxkeyrightpressed.png",
+    "released": "resources/all/blank.png",
+    "pressed": "resources/all/fxkeyrightpressed.png",
     "class": "InputImage",
     "x": 0.0,
     "y": 0.7416666667,
@@ -650,8 +650,8 @@
   {
     "inputType": "key",
     "inputIndex": 10,
-    "released": "resources/blank.png",
-    "pressed": "resources/fxbeam.png",
+    "released": "resources/all/blank.png",
+    "pressed": "resources/all/fxbeam.png",
     "class": "InputImage",
     "x": 0.0,
     "y": 0.0,
