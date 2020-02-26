@@ -5,6 +5,8 @@ using elements;
 using Image = elements.Image;
 using System.IO;
 using logger;
+using System.Windows.Media.Imaging;
+using System;
 
 namespace settings
 {
@@ -30,7 +32,9 @@ namespace settings
             string currentDir = Directory.GetCurrentDirectory() + "\\";
             Logger.Add(eMessageType.value, "Current directory: " + currentDir);
 
-            //bgimg.Source = new BitmapImage(new Uri(currentDir + info.files["bg"], UriKind.Absolute));
+            imgBg.Source = new BitmapImage(new Uri(currentDir + info.files["bg"], UriKind.Absolute));
+            imgFX1.Source = new BitmapImage(new Uri(currentDir + info.files["fx1right"], UriKind.Absolute));
+            imgFX2.Source = new BitmapImage(new Uri(currentDir + info.files["fx2right"], UriKind.Absolute));
         }
 
         private void GenerateJSON(object sender, RoutedEventArgs e)

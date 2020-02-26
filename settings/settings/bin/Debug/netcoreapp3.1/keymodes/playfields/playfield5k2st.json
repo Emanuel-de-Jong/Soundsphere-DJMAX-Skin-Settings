@@ -16,6 +16,22 @@
     ]
   },
   {
+    "image": "resources/all/combobg.png",
+    "class": "StaticObject",
+    "x": 0.0,
+    "y": 0.0,
+    "w": 1.777777778,
+    "h": 1.0,
+    "layer": 10,
+    "cs": [
+      0,
+      0,
+      0,
+      0,
+      "h"
+    ]
+  },
+  {
     "image": "resources/all/judgeline.png",
     "class": "StaticObject",
     "x": 0.0,

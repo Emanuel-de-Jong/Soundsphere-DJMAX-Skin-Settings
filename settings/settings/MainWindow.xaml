@@ -15,26 +15,28 @@
             <Setter Property="Width" Value="110"/>
             <Setter Property="Height" Value="25"/>
         </Style>
-        <Style TargetType="Label">
+        <Style TargetType="CheckBox">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="13"/>
         </Style>
         <Style TargetType="ComboBox">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="CheckBox">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="Image">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Stretch" Value="Uniform"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="ListBox">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="350"/>
+            <Setter Property="Height" Value="170"/>
         </Style>
         <Style TargetType="StackPanel">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -43,6 +45,10 @@
         <Style TargetType="Slider">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Minimum" Value="0"/>
+            <Setter Property="Maximum" Value="100"/>
+            <Setter Property="Value" Value="50"/>
         </Style>
     </Window.Resources>
 
@@ -52,21 +58,29 @@
             <TabItem.Resources>
                 <Style TargetType="Label">
                     <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Grid.Column" Value="0"/>
                 </Style>
                 <Style TargetType="CheckBox">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Grid.Column" Value="1"/>
                 </Style>
                 <Style TargetType="ComboBox">
-                    <Setter Property="Grid.Column" Value="2"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Grid.Column" Value="1"/>
                     <Setter Property="Width" Value="70"/>
                     <Setter Property="Height" Value="22"/>
                 </Style>
                 <Style TargetType="Image">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Grid.Column" Value="2"/>
                     <Setter Property="Stretch" Value="Uniform"/>
                 </Style>
             </TabItem.Resources>
+            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -134,197 +148,16 @@
                 <Button Grid.Row="10" Grid.ColumnSpan="3" Click="GenerateJSON">Apply</Button>
             </Grid>
         </TabItem>
-        
-        
-        <TabItem Header="Opacity (WIP)">
-            <TabItem.Resources>
-                <Style TargetType="Image">
-                    <Setter Property="Stretch" Value="Fill"/>
-                </Style>
-                <Style TargetType="Slider">
-                    <Setter Property="Width" Value="300"/>
-                </Style>
-            </TabItem.Resources>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Image Grid.Row="0" Height="180" Width="350" Source="Images/background1by2.png"/>
-
-                <StackPanel Grid.Row="1">
-                    <Label>Playfield Opacity</Label>
-                    <Slider Name="playfieldOpacity" Minimum="0" Maximum="100"></Slider>
-                </StackPanel>
-
-                <StackPanel Grid.Row="2">
-                    <Label>Video Opacity</Label>
-                    <Slider Name="videoOpacity" Minimum="0" Maximum="100"></Slider>
-                </StackPanel>
-
-                <Button Grid.Row="3" Click="ChangeBGOpacity">Apply</Button>
-            </Grid>
-        </TabItem>
-
-        
-        <TabItem Header="4FX (WIP)">
-            <TabItem.Resources>
-                <Style TargetType="Image">
-                    <Setter Property="Stretch" Value="Fill"/>
-                </Style>
-                <Style TargetType="Slider">
-                    <Setter Property="Width" Value="300"/>
-                </Style>
-            </TabItem.Resources>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Image Grid.Row="0" Grid.ColumnSpan="2" Height="40" Width="250" Source="Images/background1by2.png"/>
-
-                <Label Grid.Row="1" Grid.Column="0">FX 1</Label>
-                
-                <Image Grid.Row="2" Grid.Column="0" Height="25" Width="150" Source="Images/background1by2.png"/>
-                <Image Grid.Row="2" Grid.Column="1" Height="25" Width="150" Source="Images/background1by2.png"/>
 
 
-                <StackPanel Grid.Row="3">
-                    <Label>Fade</Label>
-                    <Slider Name="fade" Minimum="0" Maximum="100"></Slider>
-                </StackPanel>
-
-                <StackPanel Grid.Row="4">
-                    <Label>Second FX Color</Label>
-                    <Slider Name="fx2HUE" Minimum="0" Maximum="100"></Slider>
-                </StackPanel>
-
-                <Button Grid.Row="5" Click="Change4FXImages">Apply</Button>
-            </Grid>
-        </TabItem>
-
-
-        <TabItem Header="SS Files (WIP)">
-            <TabItem.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="HorizontalAlignment" Value="Left"/>
-                </Style>
-                <Style TargetType="ListBox">
-                    <Setter Property="Width" Value="300"/>
-                    <Setter Property="Height" Value="150"/>
-                </Style>
-            </TabItem.Resources>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Row="0">
-                    <Label>Custom Scores</Label>
-                    <ListBox>
-                        <ListBoxItem>ListBox Item #1</ListBoxItem>
-                        <ListBoxItem>ListBox Item #2</ListBoxItem>
-                        <ListBoxItem>ListBox Item #3</ListBoxItem>
-                    </ListBox>
-                </StackPanel>
-
-                <Button Grid.Row="1" Click="InsertCustomScores">Insert Custom Scores</Button>
-
-                <Button Grid.Row="2" Click="InsertJudgeTable">Insert JugeTable</Button>
-            </Grid>
-        </TabItem>
-
-
-        <TabItem Header="Mods (WIP)">
-            <TabItem.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="Grid.Column" Value="0"/>
-                    <Setter Property="HorizontalAlignment" Value="Left"/>
-                </Style>
-                <Style TargetType="ComboBox">
-                    <Setter Property="Grid.Column" Value="1"/>
-                    <Setter Property="Width" Value="70"/>
-                    <Setter Property="Height" Value="22"/>
-                </Style>
-                <Style TargetType="CheckBox">
-                    <Setter Property="Grid.Column" Value="1"/>
-                </Style>
-                <Style TargetType="Image">
-                    <Setter Property="Grid.Column" Value="2"/>
-                    <Setter Property="Stretch" Value="Uniform"/>
-                </Style>
-            </TabItem.Resources>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="3*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="2*" />
-                </Grid.ColumnDefinitions>
-
-                <Label Grid.Row="0">Fade In</Label>
-                <ComboBox Grid.Row="0">
-                    <ComboBoxItem IsSelected="True" Name="fadeIn">Off</ComboBoxItem>
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>2</ComboBoxItem>
-                </ComboBox>
-                <Image Grid.Row="0" Source="Images/background.png"/>
-
-                <Label Grid.Row="1">Fade Out</Label>
-                <ComboBox Grid.Row="1">
-                    <ComboBoxItem IsSelected="True" Name="fadeOut">Off</ComboBoxItem>
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>2</ComboBoxItem>
-                </ComboBox>
-                <Image Grid.Row="1" Source="Images/background.png"/>
-
-                <Label Grid.Row="2">Blind</Label>
-                <CheckBox Grid.Row="2" IsChecked="True" Name="blind"/>
-                <Image Grid.Row="2" Source="Images/background.png"/>
-
-                <Button Grid.Row="3" Grid.ColumnSpan="3" Click="GenerateJSON">Apply</Button>
-            </Grid>
-        </TabItem>
         <TabItem Header="Skin (WIP)">
             <TabItem.Resources>
-                <Style TargetType="ComboBox">
-                    <Setter Property="Width" Value="70"/>
-                    <Setter Property="Height" Value="22"/>
-                </Style>
-                <Style TargetType="Image">
-                    <Setter Property="Stretch" Value="Uniform"/>
-                </Style>
             </TabItem.Resources>
+
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -344,7 +177,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="1">
-                    <Label>Gear</Label>
+                    <Label>Note</Label>
                     <ListBox Name="note">
                         <ListBoxItem>DEFAULT</ListBoxItem>
                         <ListBoxItem>Overload</ListBoxItem>
@@ -353,8 +186,214 @@
                     </ListBox>
                 </StackPanel>
 
+                <Button Grid.Row="3" Grid.ColumnSpan="3">Apply</Button>
+            </Grid>
+        </TabItem>
 
-                <Button Grid.Row="3" Grid.ColumnSpan="3" Click="GenerateJSON">Apply</Button>
+
+        <TabItem Header="SS Files (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="UniformGrid">
+                    <Setter Property="VerticalAlignment" Value="top"/>
+                </Style>
+            </TabItem.Resources>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <Label>Custom Scores</Label>
+                    <ListBox Name="customScore">
+                        <ListBoxItem>CustomScore HARD</ListBoxItem>
+                        <ListBoxItem>CustomScore HARD clean</ListBoxItem>
+                        <ListBoxItem>CustomScore VERY HARD</ListBoxItem>
+                        <ListBoxItem>CustomScore VERY HARD clean</ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+
+                <UniformGrid Grid.Row="1" Columns="2">
+                    <Button>Insert JugeTable</Button>
+                    <Button>Insert Custom Scores</Button>
+                </UniformGrid>
+            </Grid>
+        </TabItem>
+
+        
+        <TabItem Header="Mods (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Grid.Column" Value="0"/>
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Width" Value="70"/>
+                    <Setter Property="Height" Value="22"/>
+                </Style>
+                <Style TargetType="CheckBox">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                </Style>
+                <Style TargetType="Image">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Grid.Column" Value="2"/>
+                    <Setter Property="Stretch" Value="Uniform"/>
+                </Style>
+            </TabItem.Resources>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0">Fade In</Label>
+                <ComboBox Grid.Row="0" Name="fadeIn">
+                    <ComboBoxItem IsSelected="True">Off</ComboBoxItem>
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                </ComboBox>
+                <Image Grid.Row="0" Source="Images/background.png"/>
+
+                <Label Grid.Row="1">Fade Out</Label>
+                <ComboBox Grid.Row="1" Name="fadeOut">
+                    <ComboBoxItem IsSelected="True">Off</ComboBoxItem>
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                </ComboBox>
+                <Image Grid.Row="1" Source="Images/background.png"/>
+
+                <Label Grid.Row="2">Blind</Label>
+                <CheckBox Grid.Row="2" Name="blind"/>
+                <Image Grid.Row="2" Source="Images/background.png"/>
+
+                <Button Grid.Row="3" Grid.ColumnSpan="3">Apply</Button>
+            </Grid>
+        </TabItem>
+
+
+        <TabItem Header="Opacity (WIP)">
+            <TabItem.Resources>
+            </TabItem.Resources>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Height="190" Stretch="Fill" Name="imgBg"/>
+
+                <StackPanel Grid.Row="1">
+                    <Label>Playfield Opacity</Label>
+                    <Slider Value="75" Name="playfieldOpacity"></Slider>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2">
+                    <Label>Video Opacity</Label>
+                    <Slider Value="0" Name="videoOpacity"></Slider>
+                </StackPanel>
+
+                <Button Grid.Row="3">Apply</Button>
+            </Grid>
+        </TabItem>
+
+
+        <TabItem Header="4FX (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="Slider">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Width" Value="150"/>
+                    <Setter Property="Minimum" Value="0"/>
+                    <Setter Property="Maximum" Value="100"/>
+                    <Setter Property="Value" Value="50"/>
+                </Style>
+            </TabItem.Resources>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.ColumnSpan="2" Width="200" Source="Images/fx1fx2.png"/>
+
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <Label >FX 1</Label>
+                    <Image Name="imgFX1"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Grid.Column="0">
+                    <Label>Fade</Label>
+                    <Slider Name="fx1Fade"></Slider>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Grid.Column="0">
+                    <Label>Strength</Label>
+                    <Slider Name="fx1Strength"></Slider>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Grid.Column="0">
+                    <Label>Color</Label>
+                    <Slider Name="fx1Color" Minimum="-180" Maximum="180" Value="0"></Slider>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <Label >FX 2</Label>
+                    <Image Name="imgFX2"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Grid.Column="1">
+                    <Label>Fade</Label>
+                    <Slider Name="fx2Fade"></Slider>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Grid.Column="1">
+                    <Label>Strength</Label>
+                    <Slider Name="fx2Strength"></Slider>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Grid.Column="1">
+                    <Label>Color</Label>
+                    <Slider Name="fx2Color" Minimum="-180" Maximum="180" Value="0"></Slider>
+                </StackPanel>
+
+                <Button Grid.Row="5" Grid.ColumnSpan="2">Apply</Button>
             </Grid>
         </TabItem>
     </TabControl>
