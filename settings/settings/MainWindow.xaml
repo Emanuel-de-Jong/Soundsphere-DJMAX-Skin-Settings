@@ -9,41 +9,61 @@
 
     
     <Window.Resources>
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="13"/>
-        </Style>
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Width" Value="110"/>
             <Setter Property="Height" Value="25"/>
         </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="CheckBox">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Slider">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
     </Window.Resources>
 
     
     <TabControl>
-        <TabItem Header="Components">
+        <TabItem Header="Components" IsSelected="True">
             <TabItem.Resources>
                 <Style TargetType="Label">
-                    <Setter Property="Grid.Column" Value="0"/>
                     <Setter Property="HorizontalAlignment" Value="Left"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                </Style>
-                <Style TargetType="ComboBox">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                    <Setter Property="Width" Value="70"/>
-                    <Setter Property="Height" Value="22"/>
+                    <Setter Property="Grid.Column" Value="0"/>
                 </Style>
                 <Style TargetType="CheckBox">
                     <Setter Property="Grid.Column" Value="1"/>
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="Grid.Column" Value="2"/>
+                    <Setter Property="Width" Value="70"/>
+                    <Setter Property="Height" Value="22"/>
                 </Style>
                 <Style TargetType="Image">
                     <Setter Property="Grid.Column" Value="2"/>
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Stretch" Value="Uniform"/>
                 </Style>
             </TabItem.Resources>
@@ -68,9 +88,9 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Row="0">Position (WIP)</Label>
-                <ComboBox Grid.Row="0" Grid.Column="1" Name="position">
+                <ComboBox Grid.Row="0" Name="position">
                     <ComboBoxItem>Left</ComboBoxItem>
-                    <ComboBoxItem>Middle</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">Middle</ComboBoxItem>
                     <ComboBoxItem>Right</ComboBoxItem>
                 </ComboBox>
                 <Image Grid.Row="0" Source="Images/background.png"/>
@@ -119,21 +139,9 @@
         <TabItem Header="Opacity (WIP)">
             <TabItem.Resources>
                 <Style TargetType="Image">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Stretch" Value="Fill"/>
                 </Style>
-                <Style TargetType="StackPanel">
-                    <Setter Property="HorizontalAlignment" Value="center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                </Style>
-                <Style TargetType="Label">
-                    <Setter Property="HorizontalAlignment" Value="center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                </Style>
                 <Style TargetType="Slider">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Width" Value="300"/>
                 </Style>
             </TabItem.Resources>
@@ -168,21 +176,9 @@
         <TabItem Header="4FX (WIP)">
             <TabItem.Resources>
                 <Style TargetType="Image">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Stretch" Value="Fill"/>
                 </Style>
-                <Style TargetType="StackPanel">
-                    <Setter Property="HorizontalAlignment" Value="center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                </Style>
-                <Style TargetType="Label">
-                    <Setter Property="HorizontalAlignment" Value="center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                </Style>
                 <Style TargetType="Slider">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Width" Value="300"/>
                 </Style>
             </TabItem.Resources>
@@ -225,17 +221,10 @@
 
         <TabItem Header="SS Files (WIP)">
             <TabItem.Resources>
-                <Style TargetType="StackPanel">
-                    <Setter Property="HorizontalAlignment" Value="center"/>
-                    <Setter Property="VerticalAlignment" Value="Top"/>
-                </Style>
                 <Style TargetType="Label">
                     <Setter Property="HorizontalAlignment" Value="Left"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
                 <Style TargetType="ListBox">
-                    <Setter Property="HorizontalAlignment" Value="center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Width" Value="300"/>
                     <Setter Property="Height" Value="150"/>
                 </Style>
@@ -271,21 +260,17 @@
                 <Style TargetType="Label">
                     <Setter Property="Grid.Column" Value="0"/>
                     <Setter Property="HorizontalAlignment" Value="Left"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
-                <Style TargetType="RadioButton">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
+                <Style TargetType="ComboBox">
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Width" Value="70"/>
+                    <Setter Property="Height" Value="22"/>
                 </Style>
                 <Style TargetType="CheckBox">
                     <Setter Property="Grid.Column" Value="1"/>
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
                 <Style TargetType="Image">
                     <Setter Property="Grid.Column" Value="2"/>
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Stretch" Value="Uniform"/>
                 </Style>
             </TabItem.Resources>
@@ -295,6 +280,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="3*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*" />
@@ -302,17 +288,71 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0">Background Video</Label>
-                <CheckBox Grid.Row="0" IsChecked="True" Name="fadein"/>
+                <Label Grid.Row="0">Fade In</Label>
+                <ComboBox Grid.Row="0">
+                    <ComboBoxItem IsSelected="True" Name="fadeIn">Off</ComboBoxItem>
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                </ComboBox>
                 <Image Grid.Row="0" Source="Images/background.png"/>
 
-                <Label Grid.Row="1">Combo Background</Label>
-                <CheckBox Grid.Row="1" IsChecked="False" Name="fadeout"/>
+                <Label Grid.Row="1">Fade Out</Label>
+                <ComboBox Grid.Row="1">
+                    <ComboBoxItem IsSelected="True" Name="fadeOut">Off</ComboBoxItem>
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                </ComboBox>
                 <Image Grid.Row="1" Source="Images/background.png"/>
 
-                <Label Grid.Row="2">Note Beam</Label>
+                <Label Grid.Row="2">Blind</Label>
                 <CheckBox Grid.Row="2" IsChecked="True" Name="blind"/>
                 <Image Grid.Row="2" Source="Images/background.png"/>
+
+                <Button Grid.Row="3" Grid.ColumnSpan="3" Click="GenerateJSON">Apply</Button>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Skin (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="ComboBox">
+                    <Setter Property="Width" Value="70"/>
+                    <Setter Property="Height" Value="22"/>
+                </Style>
+                <Style TargetType="Image">
+                    <Setter Property="Stretch" Value="Uniform"/>
+                </Style>
+            </TabItem.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <Label>Gear</Label>
+                    <ListBox Name="gear">
+                        <ListBoxItem>V</ListBoxItem>
+                        <ListBoxItem>Overload</ListBoxItem>
+                        <ListBoxItem>LOL</ListBoxItem>
+                        <ListBoxItem>PORTABLE 1</ListBoxItem>
+                        <ListBoxItem>PORTABLE 2</ListBoxItem>
+                        <ListBoxItem>PORTABLE 3</ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1">
+                    <Label>Gear</Label>
+                    <ListBox Name="note">
+                        <ListBoxItem>DEFAULT</ListBoxItem>
+                        <ListBoxItem>Overload</ListBoxItem>
+                        <ListBoxItem>LOL</ListBoxItem>
+                        <ListBoxItem>CLASSIC</ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+
 
                 <Button Grid.Row="3" Grid.ColumnSpan="3" Click="GenerateJSON">Apply</Button>
             </Grid>
