@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace elements.Enums
+﻿namespace elements.Enums
 {
     public enum eField
     {
