@@ -20,7 +20,7 @@ namespace elements
             Logger.Add(eMessageType.process, "Initializing Info");
             files = new Dictionary<string, string>();
             layers = new Dictionary<string, int>();
-            skinName = "DJMAXwApp";     //  "netcoreapp3.1"  "DJMAXwApp"
+            skinName = Path.GetFileName(Directory.GetCurrentDirectory());
             fontPath = "userdata/skins/" + skinName + "/";
             Logger.Add(eMessageType.value, "Skin name: " + skinName);
             csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };

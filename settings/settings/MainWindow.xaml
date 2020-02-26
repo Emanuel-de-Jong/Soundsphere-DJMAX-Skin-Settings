@@ -264,5 +264,52 @@
                 <Button Grid.Row="2" Click="InsertJudgeTable">Insert JugeTable</Button>
             </Grid>
         </TabItem>
+
+
+        <TabItem Header="Mods (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Stretch" Value="Fill"/>
+                </Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="ListView">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Width" Value="350"/>
+                    <Setter Property="Height" Value="200"/>
+                </Style>
+            </TabItem.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ListView Name="lvUsers">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Name" Width="200" DisplayMemberBinding="{Binding Name}" />
+                            <GridViewColumn Header="Preview" Width="150" DisplayMemberBinding="{Binding Age}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <Button Grid.Row="3" Click="ChangeBGOpacity">Apply</Button>
+            </Grid>
+        </TabItem>
     </TabControl>
 </Window>

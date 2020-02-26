@@ -40,7 +40,7 @@ namespace elements
             Logger.Add(eMessageType.process, "Making playfield");
             List<PlayfieldItem> playfield = new List<PlayfieldItem>();
 
-            Logger.Add(eMessageType.process, "Getting position jsons");
+            Logger.Add(eMessageType.process, "Getting playfield position jsons");
             string json = File.ReadAllText(info.files["positionsplayfield"]);
             var positions = JsonConvert.DeserializeObject<PlayfieldPositions>(json);
 
