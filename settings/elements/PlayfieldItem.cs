@@ -464,7 +464,7 @@ namespace elements
                 }
             }
 
-            if (sidetracks)
+            if (sidetracks && userSettings["particles"])
             {
                 playfield.Add(new InputImage()
                 {
