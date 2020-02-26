@@ -36,3 +36,5 @@ D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\settings\bin\Debug
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\settings\bin\Debug\netcoreapp3.1\elements.dll
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\settings\bin\Debug\netcoreapp3.1\elements.pdb
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\settings\obj\Debug\netcoreapp3.1\settings.csproj.CopyComplete
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\settings\bin\Debug\netcoreapp3.1\logger.dll
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\settings\bin\Debug\netcoreapp3.1\logger.pdb

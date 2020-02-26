@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.IO;
 using elements.PlayfieldItems;
+using logger;
 
 namespace elements
 {
@@ -36,8 +37,10 @@ namespace elements
 
         public static List<PlayfieldItem> GetPlayfield(int keymode, bool sidetracks, Dictionary<string, bool> userSettings)
         {
+            Logger.Add(eMessageType.process, "Making playfield");
             List<PlayfieldItem> playfield = new List<PlayfieldItem>();
 
+            Logger.Add(eMessageType.process, "Getting position jsons");
             string json = File.ReadAllText(info.files["positionsplayfield"]);
             var positions = JsonConvert.DeserializeObject<PlayfieldPositions>(json);
 
@@ -50,8 +53,6 @@ namespace elements
 
             json = File.ReadAllText(info.files["positionsplayfield" + keymode + "k"]);
             var positionsKeymode = JsonConvert.DeserializeObject<PlayfieldKeymodePositions>(json);
-
-            string fontPath = "userdata/skins/" + info.skinName + "/";
 
 
             if (!userSettings["vidbg"])
@@ -135,7 +136,7 @@ namespace elements
                     format = "%d",
                     field = eField.combo,
                     align = new Dictionary<string, string>() { { "x", "center" }, { "y", "top" } },
-                    font = fontPath + info.files["Haettenschweiler"],
+                    font = info.fontPath + info.files["Haettenschweiler"],
                     size = positions.combogame.size
                 });
             }
@@ -210,7 +211,7 @@ namespace elements
                     format = "%0.2f",
                     field = eField.accuracy,
                     align = new Dictionary<string, string>() { { "x", "left" }, { "y", "top" } },
-                    font = fontPath + info.files["Lato-Black"],
+                    font = info.fontPath + info.files["Lato-Black"],
                     size = positions.accuracy.size
                 });
             }
@@ -230,7 +231,7 @@ namespace elements
                     format = "%s",
                     field = eField.timegate,
                     align = new Dictionary<string, string>() { { "x", "center" }, { "y", "top" } },
-                    font = fontPath + info.files["Bulo Black"],
+                    font = info.fontPath + info.files["Bulo Black"],
                     size = positions.timegate.size
                 });
             }
@@ -248,7 +249,7 @@ namespace elements
                 format = "%d",
                 field = eField.combo,
                 align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
-                font = fontPath + info.files["Lato-HeavyItalic"],
+                font = info.fontPath + info.files["Lato-HeavyItalic"],
                 size = positions.combofield.size
             });
 
@@ -265,7 +266,7 @@ namespace elements
                 format = "%07d",
                 field = eField.score,
                 align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
-                font = fontPath + info.files["Lato-Regular"],
+                font = info.fontPath + info.files["Lato-Regular"],
                 size = positions.scorefield.size
             });
 
@@ -496,7 +497,7 @@ namespace elements
                 });
             }
 
-
+            Logger.Add(eMessageType.completion, "Making playfield complete");
             return playfield;
         }
     }

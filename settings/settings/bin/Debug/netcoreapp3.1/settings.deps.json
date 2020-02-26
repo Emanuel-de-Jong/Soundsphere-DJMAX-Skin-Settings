@@ -9,7 +9,8 @@
       "settings/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
-          "elements": "1.0.0"
+          "elements": "1.0.0",
+          "logger": "1.0.0"
         },
         "runtime": {
           "settings.dll": {}
@@ -25,10 +26,16 @@
       },
       "elements/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "logger": "1.0.0"
         },
         "runtime": {
           "elements.dll": {}
+        }
+      },
+      "logger/1.0.0": {
+        "runtime": {
+          "logger.dll": {}
         }
       }
     }
@@ -47,6 +54,11 @@
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "elements/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "logger/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

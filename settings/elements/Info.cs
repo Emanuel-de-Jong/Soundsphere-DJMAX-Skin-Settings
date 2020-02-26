@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using logger;
 
 namespace elements
 {
@@ -10,23 +11,31 @@ namespace elements
         public Dictionary<string, string> files;
         public Dictionary<string, int> layers;
         public string skinName;
+        public string fontPath;
         public object[] csMiddle;
         public object[] cs;
 
         public Info()
         {
+            Logger.Add(eMessageType.process, "Initializing Info");
             files = new Dictionary<string, string>();
             layers = new Dictionary<string, int>();
             skinName = "netcoreapp3.1";
+            fontPath = "userdata/skins/" + skinName + "/";
+            Logger.Add(eMessageType.value, "Skin name: " + skinName);
             csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
             cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() };
             SetFiles();
             SetLayers();
+            Logger.Add(eMessageType.completion, "Initialization complete");
         }
 
         public void SetFiles()
         {
+            Logger.Add(eMessageType.process, "Getting all file paths in current directory");
             string[] paths = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.*", SearchOption.AllDirectories);
+
+            Logger.Add(eMessageType.process, "Changeing the file paths to a <file name without extension, relative path from current directory> dictionary");
             foreach (string path in paths)
             {
                 string name = Path.GetFileNameWithoutExtension(path);
@@ -38,6 +47,7 @@ namespace elements
 
         public void SetLayers()
         {
+            Logger.Add(eMessageType.process, "Setting layers");
             layers["novidbg"] = 0;
             layers["bg"] = 1;
             layers["combobg"] = 10;

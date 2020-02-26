@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\elements\elements.csproj" />
+    <ProjectReference Include="..\logger\logger.csproj" />
   </ItemGroup>
 
   <ItemGroup>

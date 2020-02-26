@@ -10,6 +10,16 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "logger/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/logger.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/logger.dll": {}
+        }
       }
     }
   },
@@ -44,11 +54,17 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "logger/1.0.0": {
+      "type": "project",
+      "path": "../logger/logger.csproj",
+      "msbuildProject": "../logger/logger.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "logger >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -80,7 +96,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Programming\\Repos\\Soundsphere-DJMAX-Skin-Settings\\settings\\logger\\logger.csproj": {
+              "projectPath": "D:\\Programming\\Repos\\Soundsphere-DJMAX-Skin-Settings\\settings\\logger\\logger.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

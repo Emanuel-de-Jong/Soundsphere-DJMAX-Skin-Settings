@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using logger;
 
 namespace elements
 {
@@ -27,10 +28,16 @@ namespace elements
 
         public static Dictionary<string, Dictionary<string, NoteComponent>> GetNotes(int keymode, bool sidetracks)
         {
+            Logger.Add(eMessageType.process, "Getting notes for keymode");
+
             Dictionary<string, Dictionary<string, NoteComponent>> notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
 
+            Logger.Add(eMessageType.process, "Getting position json path from Info");
             string dir = info.files["positions" + keymode + "k" + (sidetracks ? "2st" : "")];
+            Logger.Add(eMessageType.value, "Position json path: " + dir);
+            Logger.Add(eMessageType.process, "Reading position json");
             string json = File.ReadAllText(dir);
+            Logger.Add(eMessageType.process, "Deserializing position json to object");
             var positions = JsonConvert.DeserializeObject<Positions>(json);
 
             var measure1Pos = positions.measure1["ShortNote"]["Head"];
@@ -277,7 +284,7 @@ namespace elements
             }
 
 
-
+            Logger.Add(eMessageType.completion, "Getting notes for keymode complete");
             return notes;
         }
     }

@@ -15,13 +15,24 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "logger": "1.0.0"
         },
         "compile": {
           "bin/placeholder/elements.dll": {}
         },
         "runtime": {
           "bin/placeholder/elements.dll": {}
+        }
+      },
+      "logger/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/logger.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/logger.dll": {}
         }
       }
     }
@@ -62,12 +73,18 @@
       "type": "project",
       "path": "../elements/elements.csproj",
       "msbuildProject": "../elements/elements.csproj"
+    },
+    "logger/1.0.0": {
+      "type": "project",
+      "path": "../logger/logger.csproj",
+      "msbuildProject": "../logger/logger.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Newtonsoft.Json >= 12.0.3",
-      "elements >= 1.0.0"
+      "elements >= 1.0.0",
+      "logger >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -102,6 +119,9 @@
           "projectReferences": {
             "D:\\Programming\\Repos\\Soundsphere-DJMAX-Skin-Settings\\settings\\elements\\elements.csproj": {
               "projectPath": "D:\\Programming\\Repos\\Soundsphere-DJMAX-Skin-Settings\\settings\\elements\\elements.csproj"
+            },
+            "D:\\Programming\\Repos\\Soundsphere-DJMAX-Skin-Settings\\settings\\logger\\logger.csproj": {
+              "projectPath": "D:\\Programming\\Repos\\Soundsphere-DJMAX-Skin-Settings\\settings\\logger\\logger.csproj"
             }
           }
         }

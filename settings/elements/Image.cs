@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using logger;
 
 namespace elements
 {
@@ -28,6 +29,7 @@ namespace elements
 
         public static List<Image> GetImages(int keymode = 10, bool sidetracks = false)
         {
+            Logger.Add(eMessageType.process, "Getting images for keymode");
             List<Image> images = new List<Image>();
 
 
@@ -80,7 +82,7 @@ namespace elements
                 images.Add(new Image() { name = "note" + noteCount, path = info.files["note" + noteCount + noteKey + "k"], layer = info.layers["note"] });
             }
 
-
+            Logger.Add(eMessageType.completion, "Getting images for keymode complete");
             return images;
         }
     }
