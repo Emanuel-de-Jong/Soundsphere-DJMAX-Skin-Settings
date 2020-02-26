@@ -1,0 +1,8 @@
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\bin\Release\netcoreapp3.1\logger.deps.json
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\bin\Release\netcoreapp3.1\logger.dll
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\bin\Release\netcoreapp3.1\logger.pdb
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Release\netcoreapp3.1\logger.csprojAssemblyReference.cache
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Release\netcoreapp3.1\logger.AssemblyInfoInputs.cache
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Release\netcoreapp3.1\logger.AssemblyInfo.cs
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Release\netcoreapp3.1\logger.dll
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Release\netcoreapp3.1\logger.pdb

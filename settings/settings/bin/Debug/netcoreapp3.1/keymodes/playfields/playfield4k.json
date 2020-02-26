@@ -1,6 +1,6 @@
 [
   {
-    "image": "resources/bg.png",
+    "image": "resources/all/bg.png",
     "class": "StaticObject",
     "x": 0.6564814815,
     "y": 0.0,
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "image": "resources/judgeline.png",
+    "image": "resources/all/judgeline.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "image": "resources/playfield.png",
+    "image": "resources/all/playfield.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "image": "resources/combo.png",
+    "image": "resources/all/combo.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -139,7 +139,7 @@
     ]
   },
   {
-    "image": "resources/progressbarbg.png",
+    "image": "resources/all/progressbarbg.png",
     "class": "StaticObject",
     "x": -0.09259259259,
     "y": 0.47592592592,
@@ -155,7 +155,7 @@
     ]
   },
   {
-    "image": "resources/rate.png",
+    "image": "resources/all/rate.png",
     "class": "StaticObject",
     "x": 0.0,
     "y": 0.0,
@@ -308,7 +308,7 @@
   {
     "inputType": "key",
     "inputIndex": 1,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
     "x": -0.2222222222,
@@ -346,7 +346,7 @@
   {
     "inputType": "key",
     "inputIndex": 2,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
     "x": -0.1111111111,
@@ -384,7 +384,7 @@
   {
     "inputType": "key",
     "inputIndex": 3,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
     "x": 0.0,
@@ -422,7 +422,7 @@
   {
     "inputType": "key",
     "inputIndex": 4,
-    "released": "resources/blank.png",
+    "released": "resources/all/blank.png",
     "pressed": "resources/4k/beam4k.png",
     "class": "InputImage",
     "x": 0.1111111111,
