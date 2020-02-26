@@ -12,26 +12,26 @@ namespace logger
 
         public Message()
         {
-            Time = DateTime.UtcNow;
+            Time = DateTime.Now;
         }
 
         public Message(eMessageType type)
         {
             Type = type;
-            Time = DateTime.UtcNow;
+            Time = DateTime.Now;
         }
 
         public Message(string text)
         {
             Text = text;
-            Time = DateTime.UtcNow;
+            Time = DateTime.Now;
         }
 
         public Message(eMessageType type, string text)
         {
             Type = type;
             Text = text;
-            Time = DateTime.UtcNow;
+            Time = DateTime.Now;
         }
 
         public override string ToString()

@@ -18,6 +18,8 @@ namespace settings
 
         public MainWindow()
         {
+            Logger.RefreshFile();
+
             Logger.Add(eMessageType.process, "Initializing components");
             InitializeComponent();
             Logger.Add(eMessageType.completion, "Initialization complete");
@@ -27,8 +29,6 @@ namespace settings
             Logger.Add(eMessageType.process, "Getting current directory");
             string currentDir = Directory.GetCurrentDirectory() + "\\";
             Logger.Add(eMessageType.value, "Current directory: " + currentDir);
-
-            Logger.FilePath = currentDir + info.files["log"];
 
             //bgimg.Source = new BitmapImage(new Uri(currentDir + info.files["bg"], UriKind.Absolute));
         }
