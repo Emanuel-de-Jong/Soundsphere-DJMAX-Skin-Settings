@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\fx1fx2.png" />
     <None Remove="test.png" />
   </ItemGroup>
 
@@ -17,6 +18,10 @@
   <ItemGroup>
     <ProjectReference Include="..\elements\elements.csproj" />
     <ProjectReference Include="..\logger\logger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\fx1fx2.png" />
   </ItemGroup>
 
 </Project>
