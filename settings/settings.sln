@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "settings", "settings\settings.csproj", "{4C7641F3-C85A-41F8-9352-3CE7408E100E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elements", "elements\elements.csproj", "{DE2E6137-E8CF-49AB-839B-BCD122C3850E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "elements", "elements\elements.csproj", "{DE2E6137-E8CF-49AB-839B-BCD122C3850E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logger", "logger\logger.csproj", "{BE6A77B6-0980-438E-968C-13766385D659}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DE2E6137-E8CF-49AB-839B-BCD122C3850E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2E6137-E8CF-49AB-839B-BCD122C3850E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2E6137-E8CF-49AB-839B-BCD122C3850E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE6A77B6-0980-438E-968C-13766385D659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE6A77B6-0980-438E-968C-13766385D659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE6A77B6-0980-438E-968C-13766385D659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE6A77B6-0980-438E-968C-13766385D659}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

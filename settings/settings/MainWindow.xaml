@@ -5,45 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:settings"
         mc:Ignorable="d"
-        Title="settings" Height="500" Width="400" ResizeMode="CanResize">
+        Title="settings" Height="600" Width="400" ResizeMode="NoResize">
 
+    
     <Window.Resources>
         <Style TargetType="Label">
-            <Setter Property="Grid.Column" Value="0"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="13"/>
         </Style>
-        <Style TargetType="CheckBox">
-            <Setter Property="Grid.Column" Value="1"/>
-            <Setter Property="HorizontalAlignment" Value="left"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-        <Style TargetType="Image">
-            <Setter Property="Grid.Column" Value="2"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Stretch" Value="Uniform"/>
-        </Style>
-
-        <Style TargetType="StackPanel">
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-
         <Style TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Width" Value="110"/>
             <Setter Property="Height" Value="25"/>
-            <Setter Property="Margin" Value="0,10,0,0"/>
         </Style>
     </Window.Resources>
 
+    
     <TabControl>
-        <TabItem Header="JSON">
+        <TabItem Header="Components">
+            <TabItem.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Grid.Column" Value="0"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="RadioButton">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="CheckBox">
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="Image">
+                    <Setter Property="Grid.Column" Value="2"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Stretch" Value="Uniform"/>
+                </Style>
+            </TabItem.Resources>
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
@@ -61,48 +65,78 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0">Background Video</Label>
-                <CheckBox Grid.Row="0" IsChecked="True" Name="vidbg"/>
-                <Image Grid.Row="0" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="0">Position (WIP)</Label>
+                <UniformGrid Grid.Row="0" Grid.Column="1" Columns="3">
+                    <RadioButton Grid.Column="0" Name="posLeft"></RadioButton>
 
-                <Label Grid.Row="1">Combo Background</Label>
-                <CheckBox Grid.Row="1" IsChecked="False" Name="combobg"/>
-                <Image Grid.Row="1" Source="Images/fxbeam.png"/>
+                    <RadioButton Grid.Column="1" Name="posMiddle"></RadioButton>
 
-                <Label Grid.Row="2">Note Beam</Label>
-                <CheckBox Grid.Row="2" IsChecked="True" Name="beam"/>
-                <Image Grid.Row="2" Source="Images/fxbeam.png"/>
+                    <RadioButton Grid.Column="2" Name="posRight"></RadioButton>
+                </UniformGrid>
+                <Image Grid.Row="0" Source="Images/background.png"/>
+                
+                <Label Grid.Row="1">Background Video</Label>
+                <CheckBox Grid.Row="1" IsChecked="True" Name="vidbg"/>
+                <Image Grid.Row="1" Source="Images/background.png"/>
 
-                <Label Grid.Row="3">Combo</Label>
-                <CheckBox Grid.Row="3" IsChecked="True" Name="combo"/>
-                <Image Grid.Row="3" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="2">Combo Background</Label>
+                <CheckBox Grid.Row="2" IsChecked="False" Name="combobg"/>
+                <Image Grid.Row="2" Source="Images/background.png"/>
 
-                <Label Grid.Row="4">Time Bar</Label>
-                <CheckBox Grid.Row="4" IsChecked="True" Name="progressbar"/>
-                <Image Grid.Row="4" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="3">Note Beam</Label>
+                <CheckBox Grid.Row="3" IsChecked="True" Name="beam"/>
+                <Image Grid.Row="3" Source="Images/background.png"/>
 
-                <Label Grid.Row="5">Accuracy</Label>
-                <CheckBox Grid.Row="5" IsChecked="True" Name="accuracy"/>
-                <Image Grid.Row="5" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="4">Combo</Label>
+                <CheckBox Grid.Row="4" IsChecked="True" Name="combo"/>
+                <Image Grid.Row="4" Source="Images/background.png"/>
 
-                <Label Grid.Row="6">Hit Grade</Label>
-                <CheckBox Grid.Row="6" IsChecked="True" Name="timegate"/>
-                <Image Grid.Row="6" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="5">Time Bar</Label>
+                <CheckBox Grid.Row="5" IsChecked="True" Name="progressbar"/>
+                <Image Grid.Row="5" Source="Images/background.png"/>
 
-                <Label Grid.Row="7">Key Light</Label>
-                <CheckBox Grid.Row="7" IsChecked="True" Name="keypressed"/>
-                <Image Grid.Row="7" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="6">Accuracy</Label>
+                <CheckBox Grid.Row="6" IsChecked="True" Name="accuracy"/>
+                <Image Grid.Row="6" Source="Images/background.png"/>
 
-                <Label Grid.Row="8">Particles</Label>
-                <CheckBox Grid.Row="8" IsChecked="False" Name="particles"/>
-                <Image Grid.Row="8" Source="Images/fxbeam.png"/>
+                <Label Grid.Row="7">Hit Grade</Label>
+                <CheckBox Grid.Row="7" IsChecked="True" Name="timegate"/>
+                <Image Grid.Row="7" Source="Images/background.png"/>
 
-                <StackPanel Grid.Row="9" Grid.ColumnSpan="3">
-                    <Button Click="GenerateJSON">Generate JSON</Button>
-                </StackPanel>
+                <Label Grid.Row="8">Key Light</Label>
+                <CheckBox Grid.Row="8" IsChecked="True" Name="keypressed"/>
+                <Image Grid.Row="8" Source="Images/background.png"/>
+
+                <Label Grid.Row="9">Particles</Label>
+                <CheckBox Grid.Row="9" IsChecked="False" Name="particles"/>
+                <Image Grid.Row="9" Source="Images/background.png"/>
+
+                <Button Grid.Row="10" Grid.ColumnSpan="3" Click="GenerateJSON">Apply</Button>
             </Grid>
         </TabItem>
-        <TabItem Header="BG" IsSelected="True">
+        
+        
+        <TabItem Header="Opacity (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Stretch" Value="Fill"/>
+                </Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="Slider">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Width" Value="300"/>
+                </Style>
+            </TabItem.Resources>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
@@ -114,20 +148,120 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Row="0" Grid.Column="0" Name="bgimgbg" 
-                       Height="200" Width="100"
-                       Source="Images/background1by2.png"/>
-                <Image Grid.Row="0" Grid.Column="0" Name="bgimg" 
-                       Height="200" Width="100"
-                       Stretch="Fill"/>
+                <Image Grid.Row="0" Height="180" Width="350" Source="Images/background1by2.png"/>
 
-                <Slider Grid.Row="1" Grid.Column="0" Name="OpacityVal" 
-                        Minimum="0" Maximum="100"
-                        VerticalAlignment="Center" Margin="60,0,60,0"></Slider>
+                <StackPanel Grid.Row="1">
+                    <Label>Playfield Opacity</Label>
+                    <Slider Name="playfieldOpacity" Minimum="0" Maximum="100"></Slider>
+                </StackPanel>
 
-                <Button Grid.Row="2" Grid.Column="0" Click="ChangeBG">Change</Button>
+                <StackPanel Grid.Row="2">
+                    <Label>Video Opacity</Label>
+                    <Slider Name="videoOpacity" Minimum="0" Maximum="100"></Slider>
+                </StackPanel>
 
-                <Label Grid.Row="3" Grid.Column="0" Name="debug"/>
+                <Button Grid.Row="3" Click="ChangeBGOpacity">Apply</Button>
+            </Grid>
+        </TabItem>
+
+        
+        <TabItem Header="4FX (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Stretch" Value="Fill"/>
+                </Style>
+                <Style TargetType="StackPanel">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="Slider">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Width" Value="300"/>
+                </Style>
+            </TabItem.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.ColumnSpan="2" Height="40" Width="250" Source="Images/background1by2.png"/>
+
+                <Label Grid.Row="1" Grid.Column="0">FX 1</Label>
+                
+                <Image Grid.Row="2" Grid.Column="0" Height="25" Width="150" Source="Images/background1by2.png"/>
+                <Image Grid.Row="2" Grid.Column="1" Height="25" Width="150" Source="Images/background1by2.png"/>
+
+
+                <StackPanel Grid.Row="3">
+                    <Label>Fade</Label>
+                    <Slider Name="fade" Minimum="0" Maximum="100"></Slider>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4">
+                    <Label>Second FX Color</Label>
+                    <Slider Name="fx2HUE" Minimum="0" Maximum="100"></Slider>
+                </StackPanel>
+
+                <Button Grid.Row="5" Click="Change4FXImages">Apply</Button>
+            </Grid>
+        </TabItem>
+
+
+        <TabItem Header="SS Files (WIP)">
+            <TabItem.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="ListBox">
+                    <Setter Property="HorizontalAlignment" Value="center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Width" Value="300"/>
+                    <Setter Property="Height" Value="150"/>
+                </Style>
+            </TabItem.Resources>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <Label>Custom Scores</Label>
+                    <ListBox>
+                        <ListBoxItem>ListBox Item #1</ListBoxItem>
+                        <ListBoxItem>ListBox Item #2</ListBoxItem>
+                        <ListBoxItem>ListBox Item #3</ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+
+                <Button Grid.Row="1" Click="InsertCustomScores">Insert Custom Scores</Button>
+
+                <Button Grid.Row="2" Click="InsertJudgeTable">Insert JugeTable</Button>
             </Grid>
         </TabItem>
     </TabControl>

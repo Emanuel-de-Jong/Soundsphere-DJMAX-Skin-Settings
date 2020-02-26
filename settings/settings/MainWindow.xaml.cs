@@ -1,28 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Newtonsoft.Json;
 using elements;
-using Newtonsoft.Json.Converters;
 using Image = elements.Image;
 using System.IO;
-using System.Drawing;
-using System.Drawing.Imaging;
-using Microsoft.Win32;
-using System.ComponentModel;
-using System.Runtime.InteropServices;
-using System.Windows.Interop;
 
 namespace settings
 {
@@ -135,7 +116,22 @@ namespace settings
             return userSettings;
         }
 
-        private void ChangeBG(object sender, RoutedEventArgs e)
+        private void ChangeBGOpacity(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
+        private void Change4FXImages(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void InsertCustomScores(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void InsertJudgeTable(object sender, RoutedEventArgs e)
         {
 
         }
