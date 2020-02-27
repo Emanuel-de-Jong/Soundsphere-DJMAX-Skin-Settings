@@ -10,9 +10,6 @@ namespace elements
 {
     public class PlayfieldItem
     {
-        [JsonIgnore]
-        static Info info = new Info();
-
         [JsonProperty("class")]
         [JsonConverter(typeof(StringEnumConverter))]
         public eClass classa { get; set; }
@@ -39,17 +36,17 @@ namespace elements
             List<PlayfieldItem> playfield = new List<PlayfieldItem>();
 
             Logger.Add(eMessageType.process, "Getting playfield position jsons");
-            string json = File.ReadAllText(info.files["positionsplayfield"]);
+            string json = File.ReadAllText(Info.files["positionsplayfield"]);
             var positions = JsonConvert.DeserializeObject<PlayfieldPositions>(json);
 
             var positionsST = new PlayfieldSTPositions();
             if (sidetracks)
             {
-                json = File.ReadAllText(info.files["positionsplayfield2st"]);
+                json = File.ReadAllText(Info.files["positionsplayfield2st"]);
                 positionsST = JsonConvert.DeserializeObject<PlayfieldSTPositions>(json);
             }
 
-            json = File.ReadAllText(info.files["positionsplayfield" + keymode + "k"]);
+            json = File.ReadAllText(Info.files["positionsplayfield" + keymode + "k"]);
             var positionsKeymode = JsonConvert.DeserializeObject<PlayfieldKeymodePositions>(json);
 
 
@@ -58,15 +55,15 @@ namespace elements
                 playfield.Add(new StaticObject() { classa = eClass.StaticObject,
                     x = positions.novidbg.x, y = positions.novidbg.y,
                     w = positions.novidbg.w, h = positions.novidbg.h,
-                    layer = info.layers["novidbg"], cs = info.cs,
-                    image = info.files["novidbg"] });
+                    layer = Info.layers["novidbg"], cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() },
+                    image = Info.files["novidbg"] });
             }
 
             playfield.Add(new StaticObject() { classa = eClass.StaticObject,
                 x = positions.bg.x, y = positions.bg.y,
                 w = positions.bg.w, h = positions.bg.h,
-                layer = info.layers["bg"], cs = info.cs,
-                image = info.files["bg"] });
+                layer = Info.layers["bg"], cs = Info.cs,
+                image = Info.files["bg"] });
 
             if (componentsSettings["combobg"])
             {
@@ -77,9 +74,9 @@ namespace elements
                     y = positions.combobg.y,
                     w = positions.combobg.w,
                     h = positions.combobg.h,
-                    layer = info.layers["combobg"],
-                    cs = info.cs,
-                    image = info.files["combobg"]
+                    layer = Info.layers["combobg"],
+                    cs = Info.cs,
+                    image = Info.files["combobg"]
                 });
             }
 
@@ -90,9 +87,9 @@ namespace elements
                 y = positions.judgeline.y,
                 w = positions.judgeline.w,
                 h = positions.judgeline.h,
-                layer = info.layers["judgeline"],
-                cs = info.cs,
-                image = info.files["judgeline"]
+                layer = Info.layers["judgeline"],
+                cs = Info.cs,
+                image = Info.files["judgeline"]
             });
 
             playfield.Add(new StaticObject()
@@ -102,9 +99,9 @@ namespace elements
                 y = positions.playfield.y,
                 w = positions.playfield.w,
                 h = positions.playfield.h,
-                layer = info.layers["playfield"],
-                cs = info.cs,
-                image = info.files["playfield"]
+                layer = Info.layers["playfield"],
+                cs = Info.cs,
+                image = Info.files["playfield"]
             });
 
             if (componentsSettings["combo"])
@@ -116,9 +113,9 @@ namespace elements
                     y = positions.combo.y,
                     w = positions.combo.w,
                     h = positions.combo.h,
-                    layer = info.layers["combo"],
-                    cs = info.cs,
-                    image = info.files["combo"]
+                    layer = Info.layers["combo"],
+                    cs = Info.cs,
+                    image = Info.files["combo"]
                 });
 
                 playfield.Add(new ScoreDisplay()
@@ -128,13 +125,13 @@ namespace elements
                     y = positions.combogame.y,
                     w = positions.combogame.w,
                     h = positions.combogame.h,
-                    layer = info.layers["combo"],
-                    cs = info.cs,
+                    layer = Info.layers["combo"],
+                    cs = Info.cs,
                     color = positions.combogame.color,
                     format = "%d",
                     field = eField.combo,
                     align = new Dictionary<string, string>() { { "x", "center" }, { "y", "top" } },
-                    font = info.fontPath + info.files["Haettenschweiler"],
+                    font = Info.soundspherePath + Info.files["Haettenschweiler"],
                     size = positions.combogame.size
                 });
             }
@@ -148,8 +145,8 @@ namespace elements
                     y = positions.progressbarleft.y,
                     w = positions.progressbarleft.w,
                     h = positions.progressbarleft.h,
-                    layer = info.layers["progressbar"],
-                    cs = info.csMiddle,
+                    layer = Info.layers["progressbar"],
+                    cs = Info.csMiddle,
                     color = positions.progressbarleft.color,
                     direction = "left-right",
                     mode = "+"
@@ -162,8 +159,8 @@ namespace elements
                     y = positions.progressbarright.y,
                     w = positions.progressbarright.w,
                     h = positions.progressbarright.h,
-                    layer = info.layers["progressbar"],
-                    cs = info.csMiddle,
+                    layer = Info.layers["progressbar"],
+                    cs = Info.csMiddle,
                     color = positions.progressbarright.color,
                     direction = "right-left",
                     mode = "+"
@@ -176,9 +173,9 @@ namespace elements
                     y = positions.progressbarbg.y,
                     w = positions.progressbarbg.w,
                     h = positions.progressbarbg.h,
-                    layer = info.layers["progressbarbg"],
-                    cs = info.csMiddle,
-                    image = info.files["progressbarbg"]
+                    layer = Info.layers["progressbarbg"],
+                    cs = Info.csMiddle,
+                    image = Info.files["progressbarbg"]
                 });
             }
 
@@ -191,9 +188,9 @@ namespace elements
                     y = positions.rate.y,
                     w = positions.rate.w,
                     h = positions.rate.h,
-                    layer = info.layers["accuracy"],
-                    cs = info.cs,
-                    image = info.files["rate"]
+                    layer = Info.layers["accuracy"],
+                    cs = Info.cs,
+                    image = Info.files["rate"]
                 });
 
                 playfield.Add(new ScoreDisplay()
@@ -203,13 +200,13 @@ namespace elements
                     y = positions.accuracy.y,
                     w = positions.accuracy.w,
                     h = positions.accuracy.h,
-                    layer = info.layers["accuracy"],
-                    cs = info.csMiddle,
+                    layer = Info.layers["accuracy"],
+                    cs = Info.csMiddle,
                     color = positions.accuracy.color,
                     format = "%0.2f",
                     field = eField.accuracy,
                     align = new Dictionary<string, string>() { { "x", "left" }, { "y", "top" } },
-                    font = info.fontPath + info.files["Lato-Black"],
+                    font = Info.soundspherePath + Info.files["Lato-Black"],
                     size = positions.accuracy.size
                 });
             }
@@ -223,13 +220,13 @@ namespace elements
                     y = positions.timegate.y,
                     w = positions.timegate.w,
                     h = positions.timegate.h,
-                    layer = info.layers["timegate"],
-                    cs = info.cs,
+                    layer = Info.layers["timegate"],
+                    cs = Info.cs,
                     color = positions.timegate.color,
                     format = "%s",
                     field = eField.timegate,
                     align = new Dictionary<string, string>() { { "x", "center" }, { "y", "top" } },
-                    font = info.fontPath + info.files["Bulo Black"],
+                    font = Info.soundspherePath + Info.files["Bulo Black"],
                     size = positions.timegate.size
                 });
             }
@@ -241,13 +238,13 @@ namespace elements
                 y = positions.combofield.y,
                 w = positions.combofield.w,
                 h = positions.combofield.h,
-                layer = info.layers["combo"],
-                cs = info.csMiddle,
+                layer = Info.layers["combo"],
+                cs = Info.csMiddle,
                 color = positions.combofield.color,
                 format = "%d",
                 field = eField.combo,
                 align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
-                font = info.fontPath + info.files["Lato-HeavyItalic"],
+                font = Info.soundspherePath + Info.files["Lato-HeavyItalic"],
                 size = positions.combofield.size
             });
 
@@ -258,13 +255,13 @@ namespace elements
                 y = positions.scorefield.y,
                 w = positions.scorefield.w,
                 h = positions.scorefield.h,
-                layer = info.layers["score"],
-                cs = info.csMiddle,
+                layer = Info.layers["score"],
+                cs = Info.csMiddle,
                 color = positions.scorefield.color,
                 format = "%07d",
                 field = eField.score,
                 align = new Dictionary<string, string>() { { "x", "right" }, { "y", "center" } },
-                font = info.fontPath + info.files["Lato-Regular"],
+                font = Info.soundspherePath + Info.files["Lato-Regular"],
                 size = positions.scorefield.size
             });
 
@@ -279,12 +276,12 @@ namespace elements
                     y = positionsKeymode["key" + i].y,
                     w = positionsKeymode["key" + i].w,
                     h = positionsKeymode["key" + i].h,
-                    layer = info.layers["key"],
-                    cs = info.csMiddle,
+                    layer = Info.layers["key"],
+                    cs = Info.csMiddle,
                     inputType = eInputType.key,
                     inputIndex = positionsKeymode["key" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
-                    pressed = componentsSettings["keypressed"] ? info.files["keypressed" + keys + "k"] : info.files["key" + keys + "k"],
-                    released = info.files["key" + keys + "k"],
+                    pressed = componentsSettings["keypressed"] ? Info.files["keypressed" + keys + "k"] : Info.files["key" + keys + "k"],
+                    released = Info.files["key" + keys + "k"],
                 });
 
                 if (componentsSettings["beam"]) { 
@@ -295,12 +292,12 @@ namespace elements
                         y = positionsKeymode["beam" + i].y,
                         w = positionsKeymode["beam" + i].w,
                         h = positionsKeymode["beam" + i].h,
-                        layer = info.layers["beam"],
-                        cs = info.csMiddle,
+                        layer = Info.layers["beam"],
+                        cs = Info.csMiddle,
                         inputType = eInputType.key,
                         inputIndex = positionsKeymode["beam" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
-                        pressed = info.files["beam" + keys + "k"],
-                        released = info.files["blank"],
+                        pressed = Info.files["beam" + keys + "k"],
+                        released = Info.files["blank"],
                     });
                 }
 
@@ -313,12 +310,12 @@ namespace elements
                         y = positionsKeymode["particle" + i].y,
                         w = positionsKeymode["particle" + i].w,
                         h = positionsKeymode["particle" + i].h,
-                        layer = info.layers["particle"],
-                        cs = info.csMiddle,
+                        layer = Info.layers["particle"],
+                        cs = Info.csMiddle,
                         inputType = eInputType.key,
                         inputIndex = positionsKeymode["particle" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
-                        pressed = info.files["particle"],
-                        released = info.files["blank"],
+                        pressed = Info.files["particle"],
+                        released = Info.files["blank"],
                     });
                 }
             }
@@ -337,12 +334,12 @@ namespace elements
                         y = positionsKeymode["fxkey" + i].y,
                         w = positionsKeymode["fxkey" + i].w,
                         h = positionsKeymode["fxkey" + i].h,
-                        layer = info.layers["fxkey1"],
-                        cs = info.csMiddle,
+                        layer = Info.layers["fxkey1"],
+                        cs = Info.csMiddle,
                         inputType = eInputType.key,
                         inputIndex = positionsKeymode["fxkey" + i].inputIndex + (sidetracks ? 1 : 0),
-                        pressed = componentsSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : info.files["fxkey" + side],
-                        released = info.files["fxkey" + side],
+                        pressed = componentsSettings["keypressed"] ? Info.files["fxkey" + side + "pressed"] : Info.files["fxkey" + side],
+                        released = Info.files["fxkey" + side],
                     });
 
                     if (componentsSettings["beam"])
@@ -354,12 +351,12 @@ namespace elements
                             y = positionsKeymode["fxbeam" + i].y,
                             w = positionsKeymode["fxbeam" + i].w,
                             h = positionsKeymode["fxbeam" + i].h,
-                            layer = info.layers["fxbeam"],
-                            cs = info.csMiddle,
+                            layer = Info.layers["fxbeam"],
+                            cs = Info.csMiddle,
                             inputType = eInputType.key,
                             inputIndex = positionsKeymode["fxbeam" + i].inputIndex + (sidetracks ? 1 : 0),
-                            pressed = info.files["fxbeam"],
-                            released = info.files["blank"],
+                            pressed = Info.files["fxbeam"],
+                            released = Info.files["blank"],
                         });
                     }
 
@@ -372,12 +369,12 @@ namespace elements
                             y = positionsKeymode["fxparticle" + i].y,
                             w = positionsKeymode["fxparticle" + i].w,
                             h = positionsKeymode["fxparticle" + i].h,
-                            layer = info.layers["fxparticle"],
-                            cs = info.csMiddle,
+                            layer = Info.layers["fxparticle"],
+                            cs = Info.csMiddle,
                             inputType = eInputType.key,
                             inputIndex = positionsKeymode["fxparticle" + i].inputIndex + (sidetracks ? 1 : 0),
-                            pressed = info.files["fxparticle"],
-                            released = info.files["blank"],
+                            pressed = Info.files["fxparticle"],
+                            released = Info.files["blank"],
                         });
                     }
                 }
@@ -415,12 +412,12 @@ namespace elements
                             y = positionsKeymode["fxkey" + keynumber].y,
                             w = positionsKeymode["fxkey" + keynumber].w,
                             h = positionsKeymode["fxkey" + keynumber].h,
-                            layer = info.layers["fxkey" + i],
-                            cs = info.csMiddle,
+                            layer = Info.layers["fxkey" + i],
+                            cs = Info.csMiddle,
                             inputType = eInputType.key,
                             inputIndex = positionsKeymode["fxkey" + keynumber].inputIndex,
-                            pressed = componentsSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : (i == 1 ? info.files["fxkey" + side] : info.files["blank"]),
-                            released = i == 1 ? info.files["fxkey" + side] : info.files["blank"],
+                            pressed = componentsSettings["keypressed"] ? Info.files["fxkey" + side + "pressed"] : (i == 1 ? Info.files["fxkey" + side] : Info.files["blank"]),
+                            released = i == 1 ? Info.files["fxkey" + side] : Info.files["blank"],
                         });
 
                         if (componentsSettings["beam"])
@@ -432,12 +429,12 @@ namespace elements
                                 y = positionsKeymode["fxbeam" + keynumber].y,
                                 w = positionsKeymode["fxbeam" + keynumber].w,
                                 h = positionsKeymode["fxbeam" + keynumber].h,
-                                layer = info.layers["fxbeam"],
-                                cs = info.csMiddle,
+                                layer = Info.layers["fxbeam"],
+                                cs = Info.csMiddle,
                                 inputType = eInputType.key,
                                 inputIndex = positionsKeymode["fxbeam" + keynumber].inputIndex,
-                                pressed = info.files["fxbeam"],
-                                released = info.files["blank"],
+                                pressed = Info.files["fxbeam"],
+                                released = Info.files["blank"],
                             });
                         }
 
@@ -450,12 +447,12 @@ namespace elements
                                 y = positionsKeymode["fxparticle" + keynumber].y,
                                 w = positionsKeymode["fxparticle" + keynumber].w,
                                 h = positionsKeymode["fxparticle" + keynumber].h,
-                                layer = info.layers["fxparticle"],
-                                cs = info.csMiddle,
+                                layer = Info.layers["fxparticle"],
+                                cs = Info.csMiddle,
                                 inputType = eInputType.key,
                                 inputIndex = positionsKeymode["fxparticle" + keynumber].inputIndex,
-                                pressed = info.files["fxparticle"],
-                                released = info.files["blank"],
+                                pressed = Info.files["fxparticle"],
+                                released = Info.files["blank"],
                             });
                         }
                     }
@@ -471,12 +468,12 @@ namespace elements
                     y = positionsST[1].y,
                     w = positionsST[1].w,
                     h = positionsST[1].h,
-                    layer = info.layers["stparticle"],
-                    cs = info.csMiddle,
+                    layer = Info.layers["stparticle"],
+                    cs = Info.csMiddle,
                     inputType = keymode == 10 ? eInputType.scratch : eInputType.key,
                     inputIndex = 1,
-                    pressed = info.files["stparticle"],
-                    released = info.files["blank"],
+                    pressed = Info.files["stparticle"],
+                    released = Info.files["blank"],
                 });
 
                 playfield.Add(new InputImage()
@@ -486,12 +483,12 @@ namespace elements
                     y = positionsST[2].y,
                     w = positionsST[2].w,
                     h = positionsST[2].h,
-                    layer = info.layers["stparticle"],
-                    cs = info.csMiddle,
+                    layer = Info.layers["stparticle"],
+                    cs = Info.csMiddle,
                     inputType = keymode == 10 ? eInputType.scratch : eInputType.key,
                     inputIndex = keymode == 10 ? 2 : keymode + 2,
-                    pressed = info.files["stparticle"],
-                    released = info.files["blank"],
+                    pressed = Info.files["stparticle"],
+                    released = Info.files["blank"],
                 });
             }
 

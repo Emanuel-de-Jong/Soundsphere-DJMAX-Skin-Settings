@@ -4,41 +4,21 @@ using logger;
 
 namespace elements
 {
-    public class Info
+    public static class Info
     {
-        public Dictionary<string, string> files;
-        public Dictionary<string, int> layers;
-        public string absolutePath;
-        public string skinName;
-        public string soundspherePath;
-        public object[] csMiddle;
-        public object[] cs;
-        public List<int> modes;
+        public static string absolutePath = Directory.GetCurrentDirectory();
+        public static string skinName = Path.GetFileName(absolutePath);
+        public static string soundspherePath = "userdata/skins/" + skinName + "/";
+        public static object[] csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
+        public static object[] cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() };
+        public static List<int> modes = new List<int>() { 4, 5, 6, 8, 10 }; 
+        public static Dictionary<string, string> files = SetFiles();
+        public static Dictionary<string, int> layers = SetLayers();
 
-        public Info()
+
+        public static Dictionary<string, string> SetFiles()
         {
-            Logger.Add(eMessageType.process, "Initializing Info");
-
-            absolutePath = Directory.GetCurrentDirectory();
-
-            skinName = Path.GetFileName(absolutePath);
-            Logger.Add(eMessageType.value, "Skin name: " + skinName);
-
-            soundspherePath = "userdata/skins/" + skinName + "/";
-
-            csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
-            cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() };
-
-            modes = new List<int>() { 4, 5, 6, 8, 10 };
-
-            SetFiles();
-            SetLayers();
-            Logger.Add(eMessageType.completion, "Initialization complete");
-        }
-
-        public void SetFiles()
-        {
-            files = new Dictionary<string, string>();
+            Dictionary<string, string> tempFiles = new Dictionary<string, string>();
 
             Logger.Add(eMessageType.process, "Getting all file paths in current directory");
             string[] paths = Directory.GetFiles(absolutePath, "*.*", SearchOption.AllDirectories);
@@ -49,51 +29,55 @@ namespace elements
                 string name = Path.GetFileNameWithoutExtension(path);
                 string shortPath = path.Substring(path.LastIndexOf(skinName) + skinName.Length + 1);
                 shortPath = shortPath.Replace("\\", "/");
-                files[name] = shortPath;
+                tempFiles[name] = shortPath;
             }
+
+            return tempFiles;
         }
 
-        public void SetLayers()
+        public static Dictionary<string, int> SetLayers()
         {
-            layers = new Dictionary<string, int>();
+            Dictionary<string, int> tempLayers = new Dictionary<string, int>();
 
             Logger.Add(eMessageType.process, "Setting layers");
-            layers["novidbg"] = 0;
-            layers["bg"] = 1;
-            layers["combobg"] = 10;
-            layers["judgeline"] = 20;
-            layers["fxbeam"] = 30;
-            layers["beam"] = 31;
-            layers["measure"] = 40;
-            layers["fx2body"] = 50;
-            layers["fx2tail"] = 51;
-            layers["fx2head"] = 52;
-            layers["fx2"] = 53; 
-            layers["fx1body"] = 60;
-            layers["fx1tail"] = 61;
-            layers["fx1head"] = 62;
-            layers["fx1"] = 63;
-            layers["stbody"] = 70;
-            layers["sttail"] = 71;
-            layers["sthead"] = 72;
-            layers["st"] = 73;
-            layers["notebody"] = 80;
-            layers["notetail"] = 81;
-            layers["notehead"] = 82;
-            layers["note"] = 83;
-            layers["playfield"] = 90;
-            layers["combo"] = 100;
-            layers["accuracy"] = 100;
-            layers["timegate"] = 100;
-            layers["score"] = 100;
-            layers["progressbarbg"] = 110;
-            layers["progressbar"] = 111;
-            layers["fxkey1"] = 120;
-            layers["fxkey2"] = 121;
-            layers["key"] = 122;
-            layers["particle"] = 130;
-            layers["fxparticle"] = 131;
-            layers["stparticle"] = 132;
+            tempLayers["novidbg"] = 0;
+            tempLayers["bg"] = 1;
+            tempLayers["combobg"] = 10;
+            tempLayers["judgeline"] = 20;
+            tempLayers["fxbeam"] = 30;
+            tempLayers["beam"] = 31;
+            tempLayers["measure"] = 40;
+            tempLayers["fx2body"] = 50;
+            tempLayers["fx2tail"] = 51;
+            tempLayers["fx2head"] = 52;
+            tempLayers["fx2"] = 53; 
+            tempLayers["fx1body"] = 60;
+            tempLayers["fx1tail"] = 61;
+            tempLayers["fx1head"] = 62;
+            tempLayers["fx1"] = 63;
+            tempLayers["stbody"] = 70;
+            tempLayers["sttail"] = 71;
+            tempLayers["sthead"] = 72;
+            tempLayers["st"] = 73;
+            tempLayers["notebody"] = 80;
+            tempLayers["notetail"] = 81;
+            tempLayers["notehead"] = 82;
+            tempLayers["note"] = 83;
+            tempLayers["playfield"] = 90;
+            tempLayers["combo"] = 100;
+            tempLayers["accuracy"] = 100;
+            tempLayers["timegate"] = 100;
+            tempLayers["score"] = 100;
+            tempLayers["progressbarbg"] = 110;
+            tempLayers["progressbar"] = 111;
+            tempLayers["fxkey1"] = 120;
+            tempLayers["fxkey2"] = 121;
+            tempLayers["key"] = 122;
+            tempLayers["particle"] = 130;
+            tempLayers["fxparticle"] = 131;
+            tempLayers["stparticle"] = 132;
+
+            return tempLayers;
         }
     }
 }

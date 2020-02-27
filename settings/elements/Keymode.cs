@@ -7,9 +7,6 @@ namespace elements
 {
     public class Keymode
     {
-        [JsonIgnore]
-        static Info info = new Info();
-
         public string name { get; set; }
         public string playfield { get; set; }
         public List<object[]> cses { get; set; }
@@ -32,7 +29,7 @@ namespace elements
             Dictionary<string, Dictionary<string, NoteComponent>> notes = new Dictionary<string, Dictionary<string, NoteComponent>>();
 
             Logger.Add(eMessageType.process, "Getting position json path from Info");
-            string dir = info.files["positions" + keymode + "k" + (sidetracks ? "2st" : "")];
+            string dir = Info.files["positions" + keymode + "k" + (sidetracks ? "2st" : "")];
             Logger.Add(eMessageType.value, "Position json path: " + dir);
             Logger.Add(eMessageType.process, "Reading position json");
             string json = File.ReadAllText(dir);
@@ -51,7 +48,7 @@ namespace elements
                                 w = measure1Pos["w"], h = measure1Pos["h"],
                                 ox = measure1Pos["ox"], oy = measure1Pos["oy"]
                             },
-                            layer = info.layers["measure"],
+                            layer = Info.layers["measure"],
                             image = "measure"
                         }
                     }
@@ -213,7 +210,7 @@ namespace elements
                                     w = itemPositions["Head"]["w"], h = itemPositions["Head"]["h"],
                                     ox = itemPositions["Head"]["ox"], oy = itemPositions["Head"]["oy"]
                                 },
-                                layer = info.layers[values["layer"]],
+                                layer = Info.layers[values["layer"]],
                                 image = values["image"]
                             }
                         }
@@ -249,7 +246,7 @@ namespace elements
                                     w = itemPositions["Body"]["w"], h = itemPositions["Body"]["h"],
                                     ox = itemPositions["Body"]["ox"], oy = itemPositions["Body"]["oy"]
                                 },
-                                layer = info.layers[values["lnBodyLayer"]],
+                                layer = Info.layers[values["lnBodyLayer"]],
                                 image = values["lnBodyImage"]
                             }
                         },
@@ -262,7 +259,7 @@ namespace elements
                                     w = itemPositions["Tail"]["w"], h = itemPositions["Tail"]["h"],
                                     ox = itemPositions["Tail"]["ox"], oy = itemPositions["Tail"]["oy"]
                                 },
-                                layer = info.layers[values["lnTailLayer"]],
+                                layer = Info.layers[values["lnTailLayer"]],
                                 image = values["lnTailImage"]
                             }
                         },
@@ -275,7 +272,7 @@ namespace elements
                                     w = itemPositions["Head"]["w"], h = itemPositions["Head"]["h"],
                                     ox = itemPositions["Head"]["ox"], oy = itemPositions["Head"]["oy"]
                                 },
-                                layer = info.layers[values["lnHeadLayer"]],
+                                layer = Info.layers[values["lnHeadLayer"]],
                                 image = values["lnHeadImage"]
                             }
                         }

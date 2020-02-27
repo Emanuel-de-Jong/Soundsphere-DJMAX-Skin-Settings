@@ -145,7 +145,7 @@
                 <CheckBox Grid.Row="9" IsChecked="False" Name="particles"/>
                 <Image Grid.Row="9" Source="Images/background.png"/>
 
-                <Button Grid.Row="10" Grid.ColumnSpan="3" Click="GenerateJSONs">Apply</Button>
+                <Button Grid.Row="10" Grid.ColumnSpan="3" Click="ComponentsPressed">Apply</Button>
             </Grid>
         </TabItem>
 
