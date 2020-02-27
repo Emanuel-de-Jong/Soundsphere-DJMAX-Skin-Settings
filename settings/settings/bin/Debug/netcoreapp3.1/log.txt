@@ -1,7 +1,7 @@
-16:01:41 - <<PROCESS>>: Initializing components
-16:01:41 - <<COMPLETION>>: Initialization complete
-16:01:41 - <<PROCESS>>: Initializing images
-16:01:41 - <<PROCESS>>: Getting all file paths in current directory
-16:01:41 - <<PROCESS>>: Changeing the file paths to a <file name without extension, relative path from current directory> dictionary
-16:01:41 - <<PROCESS>>: Setting layers
-16:01:41 - <<COMPLETION>>: Initializing images complete
+16:05:04 - <<PROCESS>>: Initializing components
+16:05:05 - <<COMPLETION>>: Initialization complete
+16:05:05 - <<PROCESS>>: Initializing images
+16:05:05 - <<PROCESS>>: Getting all file paths in current directory
+16:05:05 - <<PROCESS>>: Changeing the file paths to a <file name without extension, relative path from current directory> dictionary
+16:05:05 - <<PROCESS>>: Setting layers
+16:05:05 - <<COMPLETION>>: Initializing images complete
