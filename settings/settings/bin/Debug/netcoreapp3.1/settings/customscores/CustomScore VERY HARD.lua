@@ -12,67 +12,47 @@ CustomScore.timegates = {
 	},
 	{
 		time = 0.024,
-		name = "MAX 90%",
-		nameLate = "SLOW 90%",
-		nameEarly = "FAST 90%"
+		name = "MAX 90%"
 	},
 	{
 		time = 0.040,
-		name = "MAX 80%",
-		nameLate = "SLOW 80%",
-		nameEarly = "FAST 80%"
+		name = "MAX 80%"
 	},
 	{
 		time = 0.056,
-		name = "MAX 70%",
-		nameLate = "SLOW 70%",
-		nameEarly = "FAST 70%"
+		name = "MAX 70%"
 	},
 	{
 		time = 0.072,
-		name = "MAX 60%",
-		nameLate = "SLOW 60%",
-		nameEarly = "FAST 60%"
+		name = "MAX 60%"
 	},
 	{
 		time = 0.088,
-		name = "MAX 50%",
-		nameLate = "SLOW 50%",
-		nameEarly = "FAST 50%"
+		name = "MAX 50%"
 	},
 	{
 		time = 0.104,
-		name = "MAX 40%",
-		nameLate = "SLOW 40%",
-		nameEarly = "FAST 40%"
+		name = "MAX 40%"
 	},
 	{
 		time = 0.120,
-		name = "MAX 30%",
-		nameLate = "SLOW 30%",
-		nameEarly = "FAST 30%"
+		name = "MAX 30%"
 	},
 	{
 		time = 0.136,
-		name = "MAX 20%",
-		nameLate = "SLOW 20%",
-		nameEarly = "FAST 20%"
+		name = "MAX 20%"
 	},
 	{
 		time = 0.152,
-		name = "MAX 10%",
-		nameLate = "SLOW 10%",
-		nameEarly = "FAST 10%"
+		name = "MAX 10%"
 	},
 	{
 		time = 0.168,
-		name = "MAX 1%",
-		nameLate = "SLOW 1%",
-		nameEarly = "FAST 1%"
+		name = "MAX 1%"
 	},
 	{
 		time = 0.200,
-		name = "BREAK"
+		name = "MISS"
 	}
 }
 
