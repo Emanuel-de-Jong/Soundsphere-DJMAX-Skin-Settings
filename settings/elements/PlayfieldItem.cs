@@ -33,7 +33,7 @@ namespace elements
             layer = 0;
         }
 
-        public static List<PlayfieldItem> GetPlayfield(int keymode, bool sidetracks, Dictionary<string, bool> userSettings)
+        public static List<PlayfieldItem> GetPlayfield(int keymode, bool sidetracks, Dictionary<string, bool> componentsSettings)
         {
             Logger.Add(eMessageType.process, "Making playfield");
             List<PlayfieldItem> playfield = new List<PlayfieldItem>();
@@ -53,7 +53,7 @@ namespace elements
             var positionsKeymode = JsonConvert.DeserializeObject<PlayfieldKeymodePositions>(json);
 
 
-            if (!userSettings["vidbg"])
+            if (!componentsSettings["vidbg"])
             {
                 playfield.Add(new StaticObject() { classa = eClass.StaticObject,
                     x = positions.novidbg.x, y = positions.novidbg.y,
@@ -68,7 +68,7 @@ namespace elements
                 layer = info.layers["bg"], cs = info.cs,
                 image = info.files["bg"] });
 
-            if (userSettings["combobg"])
+            if (componentsSettings["combobg"])
             {
                 playfield.Add(new StaticObject()
                 {
@@ -107,7 +107,7 @@ namespace elements
                 image = info.files["playfield"]
             });
 
-            if (userSettings["combo"])
+            if (componentsSettings["combo"])
             {
                 playfield.Add(new StaticObject()
                 {
@@ -139,7 +139,7 @@ namespace elements
                 });
             }
 
-            if (userSettings["progressbar"])
+            if (componentsSettings["progressbar"])
             { 
                 playfield.Add(new ProgressBar()
                 {
@@ -182,7 +182,7 @@ namespace elements
                 });
             }
 
-            if (userSettings["accuracy"])
+            if (componentsSettings["accuracy"])
             {
                 playfield.Add(new StaticObject()
                 {
@@ -214,7 +214,7 @@ namespace elements
                 });
             }
 
-            if (userSettings["timegate"])
+            if (componentsSettings["timegate"])
             {
                 playfield.Add(new ScoreDisplay()
                 {
@@ -283,11 +283,11 @@ namespace elements
                     cs = info.csMiddle,
                     inputType = eInputType.key,
                     inputIndex = positionsKeymode["key" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
-                    pressed = userSettings["keypressed"] ? info.files["keypressed" + keys + "k"] : info.files["key" + keys + "k"],
+                    pressed = componentsSettings["keypressed"] ? info.files["keypressed" + keys + "k"] : info.files["key" + keys + "k"],
                     released = info.files["key" + keys + "k"],
                 });
 
-                if (userSettings["beam"]) { 
+                if (componentsSettings["beam"]) { 
                     playfield.Add(new InputImage()
                     {
                         classa = eClass.InputImage,
@@ -304,7 +304,7 @@ namespace elements
                     });
                 }
 
-                if (userSettings["particles"])
+                if (componentsSettings["particles"])
                 {
                     playfield.Add(new InputImage()
                     {
@@ -341,11 +341,11 @@ namespace elements
                         cs = info.csMiddle,
                         inputType = eInputType.key,
                         inputIndex = positionsKeymode["fxkey" + i].inputIndex + (sidetracks ? 1 : 0),
-                        pressed = userSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : info.files["fxkey" + side],
+                        pressed = componentsSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : info.files["fxkey" + side],
                         released = info.files["fxkey" + side],
                     });
 
-                    if (userSettings["beam"])
+                    if (componentsSettings["beam"])
                     {
                         playfield.Add(new InputImage()
                         {
@@ -363,7 +363,7 @@ namespace elements
                         });
                     }
 
-                    if (userSettings["particles"])
+                    if (componentsSettings["particles"])
                     {
                         playfield.Add(new InputImage()
                         {
@@ -419,11 +419,11 @@ namespace elements
                             cs = info.csMiddle,
                             inputType = eInputType.key,
                             inputIndex = positionsKeymode["fxkey" + keynumber].inputIndex,
-                            pressed = userSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : (i == 1 ? info.files["fxkey" + side] : info.files["blank"]),
+                            pressed = componentsSettings["keypressed"] ? info.files["fxkey" + side + "pressed"] : (i == 1 ? info.files["fxkey" + side] : info.files["blank"]),
                             released = i == 1 ? info.files["fxkey" + side] : info.files["blank"],
                         });
 
-                        if (userSettings["beam"])
+                        if (componentsSettings["beam"])
                         {
                             playfield.Add(new InputImage()
                             {
@@ -441,7 +441,7 @@ namespace elements
                             });
                         }
 
-                        if (userSettings["particles"])
+                        if (componentsSettings["particles"])
                         {
                             playfield.Add(new InputImage()
                             {
@@ -462,7 +462,7 @@ namespace elements
                 }
             }
 
-            if (sidetracks && userSettings["particles"])
+            if (sidetracks && componentsSettings["particles"])
             {
                 playfield.Add(new InputImage()
                 {

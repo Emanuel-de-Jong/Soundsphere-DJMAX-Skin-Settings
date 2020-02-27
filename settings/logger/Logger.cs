@@ -5,7 +5,7 @@ namespace logger
 {
     public static class Logger
     {
-        public static string FilePath = Directory.GetCurrentDirectory() + "\\" + "settings\\log.txt";
+        public static string FilePath = Directory.GetCurrentDirectory() + "\\" + "log.txt";
 
         public static List<Message> Messages = new List<Message>();
 

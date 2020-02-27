@@ -8,21 +8,29 @@ namespace elements
     {
         public Dictionary<string, string> files;
         public Dictionary<string, int> layers;
+        public string absolutePath;
         public string skinName;
-        public string fontPath;
+        public string soundspherePath;
         public object[] csMiddle;
         public object[] cs;
+        public List<int> modes;
 
         public Info()
         {
             Logger.Add(eMessageType.process, "Initializing Info");
-            files = new Dictionary<string, string>();
-            layers = new Dictionary<string, int>();
-            skinName = Path.GetFileName(Directory.GetCurrentDirectory());
-            fontPath = "userdata/skins/" + skinName + "/";
+
+            absolutePath = Directory.GetCurrentDirectory();
+
+            skinName = Path.GetFileName(absolutePath);
             Logger.Add(eMessageType.value, "Skin name: " + skinName);
+
+            soundspherePath = "userdata/skins/" + skinName + "/";
+
             csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
             cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() };
+
+            modes = new List<int>() { 4, 5, 6, 8, 10 };
+
             SetFiles();
             SetLayers();
             Logger.Add(eMessageType.completion, "Initialization complete");
@@ -30,8 +38,10 @@ namespace elements
 
         public void SetFiles()
         {
+            files = new Dictionary<string, string>();
+
             Logger.Add(eMessageType.process, "Getting all file paths in current directory");
-            string[] paths = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.*", SearchOption.AllDirectories);
+            string[] paths = Directory.GetFiles(absolutePath, "*.*", SearchOption.AllDirectories);
 
             Logger.Add(eMessageType.process, "Changeing the file paths to a <file name without extension, relative path from current directory> dictionary");
             foreach (string path in paths)
@@ -45,6 +55,8 @@ namespace elements
 
         public void SetLayers()
         {
+            layers = new Dictionary<string, int>();
+
             Logger.Add(eMessageType.process, "Setting layers");
             layers["novidbg"] = 0;
             layers["bg"] = 1;

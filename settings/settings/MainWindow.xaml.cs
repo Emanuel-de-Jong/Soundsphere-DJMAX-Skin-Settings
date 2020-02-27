@@ -28,41 +28,44 @@ namespace settings
 
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-            Logger.Add(eMessageType.process, "Getting current directory");
-            string currentDir = Directory.GetCurrentDirectory() + "\\";
-            Logger.Add(eMessageType.value, "Current directory: " + currentDir);
-
-            imgBg.Source = new BitmapImage(new Uri(currentDir + info.files["bg"], UriKind.Absolute));
-            imgFX1.Source = new BitmapImage(new Uri(currentDir + info.files["fx1right"], UriKind.Absolute));
-            imgFX2.Source = new BitmapImage(new Uri(currentDir + info.files["fx2right"], UriKind.Absolute));
+            InitializeImages();
         }
 
-        private void GenerateJSON(object sender, RoutedEventArgs e)
+
+
+        public void InitializeImages()
+        {
+            Logger.Add(eMessageType.process, "Initializing images");
+            imgBg.Source = new BitmapImage(new Uri(info.absolutePath + "\\" + info.files["bg"], UriKind.Absolute));
+            imgFX1.Source = new BitmapImage(new Uri(info.absolutePath + "\\" + info.files["fx1right"], UriKind.Absolute));
+            imgFX2.Source = new BitmapImage(new Uri(info.absolutePath + "\\" + info.files["fx2right"], UriKind.Absolute));
+            Logger.Add(eMessageType.completion, "Initializing images complete");
+        }
+
+
+
+        private void GenerateJSONs(object sender, RoutedEventArgs e)
         {
             Logger.Add(eMessageType.note, "GenerateJSON pressed");
 
-            Dictionary<string, bool> userSettings = GetUserSettings();
+            Dictionary<string, bool> componentsSettings = GetComponentsSettings();
 
             Dictionary<string, List<PlayfieldItem>> playfields = new Dictionary<string, List<PlayfieldItem>>();
             Dictionary<string, Keymode> keymodes = new Dictionary<string, Keymode>();
             List<MetaDataItem> metaData = new List<MetaDataItem>();
 
-            Logger.Add(eMessageType.process, "Listing modes");
-            List<int> modes = new List<int>() { 4, 5, 6, 8, 10 };
-            Logger.Add(eMessageType.value, "Modes: " + modes.ToString());
-
             Logger.Add(eMessageType.process, "Making playfield, keymode and metadataitem for each mode");
-            foreach (int mode in modes)
+            foreach (int mode in info.modes)
             {
                 Logger.Add(eMessageType.value, "Mode: " + mode);
                 for (int i=0; i<2; i++)
                 {
                     bool sidetracks = i == 0 ? false : true;
 
-                    Logger.Add(eMessageType.value, "Sidetracjs: " + sidetracks);
+                    Logger.Add(eMessageType.value, "Sidetracks: " + sidetracks);
 
                     Logger.Add(eMessageType.process, "Making playfield");
-                    List<PlayfieldItem> playfield = PlayfieldItem.GetPlayfield(mode, sidetracks, userSettings);
+                    List<PlayfieldItem> playfield = PlayfieldItem.GetPlayfield(mode, sidetracks, componentsSettings);
 
                     string name = info.skinName + " " + mode + "K" + (sidetracks ? "2ST" : "");
                     string playfieldName = "playfield" + mode + "k" + (sidetracks ? "2st" : "");
@@ -100,6 +103,8 @@ namespace settings
             CreateJSONs(playfields, keymodes, metaData);
         }
 
+
+
         public void CreateJSONs(Dictionary<string, List<PlayfieldItem>> playfields, Dictionary<string, Keymode> keymodes, List<MetaDataItem> metaData)
         {
             Logger.Add(eMessageType.process, "Creating JSONs");
@@ -129,43 +134,25 @@ namespace settings
             Logger.Add(eMessageType.completion, "Creating JSONs complete");
         }
 
-        public Dictionary<string, bool> GetUserSettings()
+
+
+        public Dictionary<string, bool> GetComponentsSettings()
         {
             Logger.Add(eMessageType.process, "Getting user settings");
-            Dictionary<string, bool> userSettings = new Dictionary<string, bool>();
+            Dictionary<string, bool> componentsSettings = new Dictionary<string, bool>();
 
-            userSettings["vidbg"] = (bool)vidbg.IsChecked;
-            userSettings["combobg"] = (bool)combobg.IsChecked;
-            userSettings["beam"] = (bool)beam.IsChecked;
-            userSettings["combo"] = (bool)combo.IsChecked;
-            userSettings["progressbar"] = (bool)progressbar.IsChecked;
-            userSettings["accuracy"] = (bool)accuracy.IsChecked;
-            userSettings["timegate"] = (bool)timegate.IsChecked;
-            userSettings["keypressed"] = (bool)keypressed.IsChecked;
-            userSettings["particles"] = (bool)particles.IsChecked;
-            Logger.Add(eMessageType.value, "User settings: " + userSettings.ToString());
+            componentsSettings["vidbg"] = (bool)vidbg.IsChecked;
+            componentsSettings["combobg"] = (bool)combobg.IsChecked;
+            componentsSettings["beam"] = (bool)beam.IsChecked;
+            componentsSettings["combo"] = (bool)combo.IsChecked;
+            componentsSettings["progressbar"] = (bool)progressbar.IsChecked;
+            componentsSettings["accuracy"] = (bool)accuracy.IsChecked;
+            componentsSettings["timegate"] = (bool)timegate.IsChecked;
+            componentsSettings["keypressed"] = (bool)keypressed.IsChecked;
+            componentsSettings["particles"] = (bool)particles.IsChecked;
+            Logger.Add(eMessageType.value, "User settings: " + componentsSettings.ToString());
 
-            return userSettings;
-        }
-
-        private void ChangeBGOpacity(object sender, RoutedEventArgs e)
-        {
-
-        }
-        
-        private void Change4FXImages(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void InsertCustomScores(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void InsertJudgeTable(object sender, RoutedEventArgs e)
-        {
-
+            return componentsSettings;
         }
     }
 }
