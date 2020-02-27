@@ -101,8 +101,8 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0">Position (WIP)</Label>
-                <ComboBox Grid.Row="0" Name="position">
+                <Label Grid.Row="0">Position</Label>
+                <ComboBox Grid.Row="0" Name="position" SelectionChanged="ComponentsPositionChanged">
                     <ComboBoxItem>Left</ComboBoxItem>
                     <ComboBoxItem IsSelected="True">Middle</ComboBoxItem>
                     <ComboBoxItem>Right</ComboBoxItem>

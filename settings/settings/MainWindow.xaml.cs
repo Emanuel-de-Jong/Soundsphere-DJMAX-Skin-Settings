@@ -4,6 +4,7 @@ using logger;
 using System.Windows.Media.Imaging;
 using System;
 using System.Collections.Generic;
+using System.Windows.Controls;
 
 namespace settings
 {
@@ -25,8 +26,6 @@ namespace settings
             InitializeImages();
         }
 
-
-
         public void InitializeImages()
         {
             Logger.Add(eMessageType.process, "Initializing images");
@@ -42,6 +41,7 @@ namespace settings
         {
             Components.GenerateJSONs(GetComponentsSettings());
         }
+
         public Dictionary<string, bool> GetComponentsSettings()
         {
             Logger.Add(eMessageType.process, "Getting components settings");
@@ -58,6 +58,32 @@ namespace settings
             componentsSettings["particles"] = (bool)particles.IsChecked;
 
             return componentsSettings;
+        }
+
+        private void ComponentsPositionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            double cs = 0;
+            double csMiddle = 0.5;
+            double left = -0.320;
+            double right = 0.325;
+
+            string position = (e.AddedItems[0] as ComboBoxItem).Content as string;
+
+            switch (position)
+            {
+                case "Left":
+                    Info.cs[0] = cs + left;
+                    Info.csMiddle[0] = csMiddle + left;
+                    break;
+                case "Middle":
+                    Info.cs[0] = cs;
+                    Info.csMiddle[0] = csMiddle;
+                    break;
+                case "Right":
+                    Info.cs[0] = cs + right;
+                    Info.csMiddle[0] = csMiddle + right;
+                    break;
+            }
         }
     }
 }
