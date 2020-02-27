@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Components\accuracy.png" />
+    <None Remove="Images\Components\beam.png" />
+    <None Remove="Images\Components\combo.png" />
+    <None Remove="Images\Components\combobg.png" />
+    <None Remove="Images\Components\keypressed.png" />
+    <None Remove="Images\Components\novidbg.png" />
+    <None Remove="Images\Components\particles.png" />
+    <None Remove="Images\Components\positionLeft.png" />
+    <None Remove="Images\Components\positionMiddle.png" />
+    <None Remove="Images\Components\positionRight.png" />
+    <None Remove="Images\Components\progressbar.png" />
+    <None Remove="Images\Components\timegate.png" />
     <None Remove="Images\fx1fx2.png" />
     <None Remove="test.png" />
   </ItemGroup>
@@ -21,7 +33,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\fx1fx2.png" />
+    <Resource Include="Images\4FX\fx1fx2.png" />
+    <Resource Include="Images\Components\accuracy.png" />
+    <Resource Include="Images\Components\beam.png" />
+    <Resource Include="Images\Components\combo.png" />
+    <Resource Include="Images\Components\combobg.png" />
+    <Resource Include="Images\Components\keypressed.png" />
+    <Resource Include="Images\Components\novidbg.png" />
+    <Resource Include="Images\Components\particles.png" />
+    <Resource Include="Images\Components\positionLeft.png" />
+    <Resource Include="Images\Components\positionMiddle.png" />
+    <Resource Include="Images\Components\positionRight.png" />
+    <Resource Include="Images\Components\progressbar.png" />
+    <Resource Include="Images\Components\timegate.png" />
   </ItemGroup>
 
 </Project>

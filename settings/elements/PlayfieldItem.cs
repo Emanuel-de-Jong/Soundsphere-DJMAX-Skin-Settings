@@ -50,7 +50,7 @@ namespace elements
             var positionsKeymode = JsonConvert.DeserializeObject<PlayfieldKeymodePositions>(json);
 
 
-            if (!componentsSettings["vidbg"])
+            if (componentsSettings["novidbg"])
             {
                 playfield.Add(new StaticObject() { classa = eClass.StaticObject,
                     x = positions.novidbg.x, y = positions.novidbg.y,

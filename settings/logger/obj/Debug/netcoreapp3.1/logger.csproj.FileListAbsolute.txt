@@ -5,4 +5,3 @@ D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Debug\n
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Debug\netcoreapp3.1\logger.AssemblyInfo.cs
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Debug\netcoreapp3.1\logger.dll
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Debug\netcoreapp3.1\logger.pdb
-D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\logger\obj\Debug\netcoreapp3.1\logger.csprojAssemblyReference.cache

@@ -78,6 +78,7 @@
                     <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Grid.Column" Value="2"/>
                     <Setter Property="Stretch" Value="Uniform"/>
+                    <Setter Property="Margin" Value="0,2,0,2"/>
                 </Style>
             </TabItem.Resources>
             
@@ -107,43 +108,43 @@
                     <ComboBoxItem IsSelected="True">Middle</ComboBoxItem>
                     <ComboBoxItem>Right</ComboBoxItem>
                 </ComboBox>
-                <Image Grid.Row="0" Source="Images/background.png"/>
+                <Image Grid.Row="0" Source="Images/Components/positionMiddle.png" Name="imgPosition"/>
                 
-                <Label Grid.Row="1">Background Video</Label>
-                <CheckBox Grid.Row="1" IsChecked="True" Name="vidbg"/>
-                <Image Grid.Row="1" Source="Images/background.png"/>
+                <Label Grid.Row="1">No Background Video</Label>
+                <CheckBox Grid.Row="1" IsChecked="False" Name="novidbg"/>
+                <Image Grid.Row="1" Source="Images/Components/novidbg.png"/>
 
                 <Label Grid.Row="2">Combo Background</Label>
                 <CheckBox Grid.Row="2" IsChecked="False" Name="combobg"/>
-                <Image Grid.Row="2" Source="Images/background.png"/>
+                <Image Grid.Row="2" Source="Images/Components/combobg.png"/>
 
                 <Label Grid.Row="3">Note Beam</Label>
                 <CheckBox Grid.Row="3" IsChecked="True" Name="beam"/>
-                <Image Grid.Row="3" Source="Images/background.png"/>
+                <Image Grid.Row="3" Source="Images/Components/beam.png"/>
 
                 <Label Grid.Row="4">Combo</Label>
                 <CheckBox Grid.Row="4" IsChecked="True" Name="combo"/>
-                <Image Grid.Row="4" Source="Images/background.png"/>
+                <Image Grid.Row="4" Source="Images/Components/combo.png"/>
 
                 <Label Grid.Row="5">Time Bar</Label>
                 <CheckBox Grid.Row="5" IsChecked="True" Name="progressbar"/>
-                <Image Grid.Row="5" Source="Images/background.png"/>
+                <Image Grid.Row="5" Source="Images/Components/progressbar.png"/>
 
                 <Label Grid.Row="6">Accuracy</Label>
                 <CheckBox Grid.Row="6" IsChecked="True" Name="accuracy"/>
-                <Image Grid.Row="6" Source="Images/background.png"/>
+                <Image Grid.Row="6" Source="Images/Components/accuracy.png"/>
 
                 <Label Grid.Row="7">Hit Grade</Label>
                 <CheckBox Grid.Row="7" IsChecked="True" Name="timegate"/>
-                <Image Grid.Row="7" Source="Images/background.png"/>
+                <Image Grid.Row="7" Source="Images/Components/timegate.png"/>
 
-                <Label Grid.Row="8">Key Light</Label>
+                <Label Grid.Row="8">Key Lights</Label>
                 <CheckBox Grid.Row="8" IsChecked="True" Name="keypressed"/>
-                <Image Grid.Row="8" Source="Images/background.png"/>
+                <Image Grid.Row="8" Source="Images/Components/keypressed.png"/>
 
                 <Label Grid.Row="9">Particles</Label>
                 <CheckBox Grid.Row="9" IsChecked="False" Name="particles"/>
-                <Image Grid.Row="9" Source="Images/background.png"/>
+                <Image Grid.Row="9" Source="Images/Components/particles.png"/>
 
                 <Button Grid.Row="10" Grid.ColumnSpan="3" Click="ComponentsPressed">Apply</Button>
             </Grid>
@@ -309,29 +310,23 @@
             
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="5*" />
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Row="0" Height="190" Stretch="Fill" Name="imgBg"/>
+                <Image Grid.Row="0" Width="150" Height="250" Stretch="Fill" Name="imgBg"/>
 
                 <StackPanel Grid.Row="1">
-                    <Label>Playfield Opacity</Label>
-                    <Slider Value="75" Name="playfieldOpacity"></Slider>
+                    <Label>Opacity</Label>
+                    <Slider Value="25" Name="opacity"></Slider>
                 </StackPanel>
 
-                <StackPanel Grid.Row="2">
-                    <Label>Video Opacity</Label>
-                    <Slider Value="0" Name="videoOpacity"></Slider>
-                </StackPanel>
-
-                <Button Grid.Row="3">Apply</Button>
+                <Button Grid.Row="2">Apply</Button>
             </Grid>
         </TabItem>
 
@@ -362,7 +357,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Row="0" Grid.ColumnSpan="2" Width="200" Source="Images/fx1fx2.png"/>
+                <Image Grid.Row="0" Grid.ColumnSpan="2" Width="200" Source="Images/4FX/fx1fx2.png"/>
 
                 <StackPanel Grid.Row="1" Grid.Column="0">
                     <Label >FX 1</Label>

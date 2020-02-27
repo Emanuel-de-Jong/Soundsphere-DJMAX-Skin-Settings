@@ -47,7 +47,7 @@ namespace settings
             Logger.Add(eMessageType.process, "Getting components settings");
             Dictionary<string, bool> componentsSettings = new Dictionary<string, bool>();
 
-            componentsSettings["vidbg"] = (bool)vidbg.IsChecked;
+            componentsSettings["novidbg"] = (bool)novidbg.IsChecked;
             componentsSettings["combobg"] = (bool)combobg.IsChecked;
             componentsSettings["beam"] = (bool)beam.IsChecked;
             componentsSettings["combo"] = (bool)combo.IsChecked;
@@ -59,11 +59,11 @@ namespace settings
 
             return componentsSettings;
         }
-
         private void ComponentsPositionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             double cs = 0;
             double csMiddle = 0.5;
+
             double left = -0.320;
             double right = 0.325;
 
@@ -74,14 +74,17 @@ namespace settings
                 case "Left":
                     Info.cs[0] = cs + left;
                     Info.csMiddle[0] = csMiddle + left;
+                    imgPosition.Source = new BitmapImage(new Uri("Images/Components/positionLeft.png", UriKind.Relative));
                     break;
                 case "Middle":
                     Info.cs[0] = cs;
                     Info.csMiddle[0] = csMiddle;
+                    imgPosition.Source = new BitmapImage(new Uri("Images/Components/positionMiddle.png", UriKind.Relative));
                     break;
                 case "Right":
                     Info.cs[0] = cs + right;
                     Info.csMiddle[0] = csMiddle + right;
+                    imgPosition.Source = new BitmapImage(new Uri("Images/Components/positionRight.png", UriKind.Relative));
                     break;
             }
         }
