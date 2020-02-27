@@ -20,14 +20,18 @@ In this readme, we will be explaining how to use it.
 
 II. Setting the skin up
 1. Put this folder in soundsphere\userdata\skins.
-2. Go to DJMAX\settings\customscores and choose a custom score* of your liking.
-"with early and late" means that it will show MIN if you hit too early.
+
+(optional but recommended)2. Go to DJMAX\settings\customscores and 
+choose a custom score* of your liking. "with early and late" means 
+that it will show MIN if you hit too early.
 DJMAX does not have this feature, so it is not the default.
-3. Override CustomScore.lua in soundsphere\sphere\screen\gameplay 
+Now override CustomScore.lua in soundsphere\sphere\screen\gameplay 
 with your chosen custom score. Make sure you rename it to CustomScore.lua.
-4. Override soundsphere\sphere\screen\result\JudgeTable.lua* with 
+
+(optional)3. Override soundsphere\sphere\screen\result\JudgeTable.lua* with 
 DJMAX\settings\JudgeTable.lua
-5. Start up soundsphere and select one of the keymodes this skin offers.
+
+4. Start up soundsphere and select one of the keymodes this skin offers.
 
 custom score*:
 The grade you see after hitting a note.
@@ -58,7 +62,16 @@ change the name of the skin inside soundsphere.
 
 
 
-IV. End note
+IV. troubleshooting
+Most often, the problem has one of the following causes:
+- You are not playing in 1920 x 1080
+- A file is missing or named incorrectly (including json files)
+- You haven't used settings.exe after changing a name or position something
+If you are still having problems, you can contact us via discord.
+
+
+
+V. End note
 You should know enough to start using the skin now.
-If you run into any trouble or find a bug, you can contact us via discord.
+If you find any bugs or want to help with the skin, you can contact us via discord.
 Thank you for using our skin and have a good time playing!
