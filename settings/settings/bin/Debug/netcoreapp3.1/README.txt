@@ -25,15 +25,15 @@ II. Setting the skin up
 choose a custom score* of your liking. "with early and late" means 
 that it will show MIN if you hit too early.
 DJMAX does not have this feature, so it is not the default.
-Now override CustomScore.lua in soundsphere\sphere\screen\gameplay 
+Now overwrite CustomScore.lua in soundsphere\sphere\screen\gameplay 
 with your chosen custom score. Make sure you rename it to CustomScore.lua.
 
-(optional)3. Override soundsphere\sphere\screen\result\JudgeTable.lua* 
+(optional)3. Overwrite soundsphere\sphere\screen\result\JudgeTable.lua* 
 with DJMAX\settings\JudgeTable.lua
 Do the same for soundsphere\userdata\interface\result.json 
-and DJMAX\settings\result.json*
+with DJMAX\settings\result.json*
 
-4. Start up soundsphere and select one of the keymodes this skin offers.
+4. Start up soundsphere and select one of the keymodes this skin supports.
 
 custom score*:
 The grade you see after hitting a note.
@@ -41,7 +41,7 @@ In DJMAX this is displayed as MAX100% - MAX1% but you may also know it as
 Great - Bad.
 
 judge table and result*:
-Style the result screen and set the grades you can get (e.g. A+).
+Styles the result screen and sets the grades you can get (e.g. A+).
 
 
 
@@ -51,16 +51,16 @@ on or off. You might have to install .NET Core before being able to use it.
 .NET Core is a very popular framework from micorsoft that you will likely
 need in the near future anyways.
 
-You can also change the images used by the skin by overriding them with your own images.
+You can also change the images used by the skin by overwriting them with your own images.
 
-Most files can be moved arround and put into different sub folders as long as
-they are not put outside the DJMAX folder.
+Most files can be moved around and put into different sub folders as long as
+they are not outside the DJMAX folder.
 Exceptions for this are: settings.exe, log.txt and metadata.json.
 After restructuring the files, you will need to press Apply in the settings.exe.
 
 The name of the folder represents the name of the skin.
-If you change the folder name and press Apply in the settings.exe, it should
-change the name of the skin inside soundsphere.
+If you change the folder name, it should change the name of the skin inside soundsphere.
+You have to press Apply in the settings.exe here as well.
 
 
 
@@ -68,12 +68,15 @@ IV. troubleshooting
 Most often, the problem has one of the following causes:
 - You are not playing in 1920 x 1080
 - A file is missing or named incorrectly (including json files)
-- You haven't used settings.exe after changing a name or position something
+- You haven't used settings.exe after changing a name or the
+position of a file.
+
 If you are still having problems, you can contact us via discord.
 
 
 
 V. End note
 You should know enough to start using the skin now.
-If you find any bugs or want to help with the skin, you can contact us via discord.
+If you find any bugs or or have questions about the skin, 
+you can contact us via discord.
 Thank you for using our skin and have a good time playing!
