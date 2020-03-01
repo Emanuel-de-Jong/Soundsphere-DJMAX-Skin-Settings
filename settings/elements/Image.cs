@@ -50,10 +50,10 @@ namespace elements
                     for (int j = 1; j <= 2; j++)
                     {
                         string side = j == 1 ? "left" : "right";
-                        images.Add(new Image() { name = "fx" + fxCount + side + "body", path = Info.files["fx" + fxCount + side + "body" + (keymode == "10kfade" ? "10kfade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount + "body"] });
-                        images.Add(new Image() { name = "fx" + fxCount + side + "tail", path = Info.files["fx" + fxCount + side + "tail" + (keymode == "10kfade" ? "10kfade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount + "tail"] });
-                        images.Add(new Image() { name = "fx" + fxCount + side + "head", path = Info.files["fx" + fxCount + side + "head" + (keymode == "10kfade" ? "10kfade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount + "head"] });
-                        images.Add(new Image() { name = "fx" + fxCount + side, path = Info.files["fx" + fxCount + side + (keymode == "10kfade" ? "10kfade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount] });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "body", path = Info.files["fx" + fxCount + side + "body" + (keymode.Contains("fade") ? "fade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount + "body"] });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "tail", path = Info.files["fx" + fxCount + side + "tail" + (keymode.Contains("fade") ? "fade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount + "tail"] });
+                        images.Add(new Image() { name = "fx" + fxCount + side + "head", path = Info.files["fx" + fxCount + side + "head" + (keymode.Contains("fade") ? "fade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount + "head"] });
+                        images.Add(new Image() { name = "fx" + fxCount + side, path = Info.files["fx" + fxCount + side + (keymode.Contains("fade") ? "fade" : "")], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx" + fxCount] });
                     }
                 }
             }

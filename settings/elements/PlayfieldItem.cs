@@ -466,27 +466,26 @@ namespace elements
             
             if (sidetracks && componentsSettings["particles"])
             {
-                int keyAmount = 0;
-                switch (keymode)
+                int keyAmount;
+                if(keymode == "4k")
                 {
-                    case "4k":
-                        keyAmount = 4;
-                        break;
-                    case "5k":
-                        keyAmount = 5;
-                        break;
-                    case "6k":
-                        keyAmount = 6;
-                        break;
-                    case "8k":
-                        keyAmount = 8;
-                        break;
-                    case "10k":
-                        keyAmount = 10;
-                        break;
-                    case "10kfade":
-                        keyAmount = 10;
-                        break;
+                    keyAmount = 4;
+                }
+                else if(keymode == "5k")
+                {
+                    keyAmount = 5;
+                }
+                else if(keymode == "6k")
+                {
+                    keyAmount = 6;
+                }
+                else if (keymode == "8k")
+                {
+                    keyAmount = 8;
+                }
+                else
+                {
+                    keyAmount = 10;
                 }
 
                 playfield.Add(new InputImage()

@@ -18,97 +18,97 @@
     },
     {
       "name": "fx2leftbody",
-      "path": "resources/10kfade/fx2leftbody10kfade.png",
+      "path": "resources/fxfade/fx2leftbodyfade.png",
       "layer": 50,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2lefttail",
-      "path": "resources/10kfade/fx2lefttail10kfade.png",
+      "path": "resources/fxfade/fx2lefttailfade.png",
       "layer": 51,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2lefthead",
-      "path": "resources/10kfade/fx2lefthead10kfade.png",
+      "path": "resources/fxfade/fx2leftheadfade.png",
       "layer": 52,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2left",
-      "path": "resources/10kfade/fx2left10kfade.png",
+      "path": "resources/fxfade/fx2leftfade.png",
       "layer": 53,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2rightbody",
-      "path": "resources/10kfade/fx2rightbody10kfade.png",
+      "path": "resources/fxfade/fx2rightbodyfade.png",
       "layer": 50,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2righttail",
-      "path": "resources/10kfade/fx2righttail10kfade.png",
+      "path": "resources/fxfade/fx2righttailfade.png",
       "layer": 51,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2righthead",
-      "path": "resources/10kfade/fx2righthead10kfade.png",
+      "path": "resources/fxfade/fx2rightheadfade.png",
       "layer": 52,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2right",
-      "path": "resources/10kfade/fx2right10kfade.png",
+      "path": "resources/fxfade/fx2rightfade.png",
       "layer": 53,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1leftbody",
-      "path": "resources/10kfade/fx1leftbody10kfade.png",
+      "path": "resources/fxfade/fx1leftbodyfade.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1lefttail",
-      "path": "resources/10kfade/fx1lefttail10kfade.png",
+      "path": "resources/fxfade/fx1lefttailfade.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1lefthead",
-      "path": "resources/10kfade/fx1lefthead10kfade.png",
+      "path": "resources/fxfade/fx1leftheadfade.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1left",
-      "path": "resources/10kfade/fx1left10kfade.png",
+      "path": "resources/fxfade/fx1leftfade.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1rightbody",
-      "path": "resources/10kfade/fx1rightbody10kfade.png",
+      "path": "resources/fxfade/fx1rightbodyfade.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1righttail",
-      "path": "resources/10kfade/fx1righttail10kfade.png",
+      "path": "resources/fxfade/fx1righttailfade.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1righthead",
-      "path": "resources/10kfade/fx1righthead10kfade.png",
+      "path": "resources/fxfade/fx1rightheadfade.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1right",
-      "path": "resources/10kfade/fx1right10kfade.png",
+      "path": "resources/fxfade/fx1rightfade.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
     },
@@ -209,7 +209,7 @@
         },
         "sb": {},
         "layer": 53,
-        "image": "fx2left10kfade"
+        "image": "fx2leftfade"
       }
     },
     "key1:LongNote": {
@@ -238,7 +238,7 @@
         },
         "sb": {},
         "layer": 50,
-        "image": "fx2leftbody10kfade"
+        "image": "fx2leftbodyfade"
       },
       "Tail": {
         "cs": 1,
@@ -265,7 +265,7 @@
         },
         "sb": {},
         "layer": 51,
-        "image": "fx2lefttail10kfade"
+        "image": "fx2lefttailfade"
       },
       "Head": {
         "cs": 1,
@@ -292,7 +292,7 @@
         },
         "sb": {},
         "layer": 52,
-        "image": "fx2lefthead10kfade"
+        "image": "fx2leftheadfade"
       }
     },
     "key2:ShortNote": {
@@ -657,7 +657,7 @@
         },
         "sb": {},
         "layer": 63,
-        "image": "fx1left10kfade"
+        "image": "fx1leftfade"
       }
     },
     "key5:LongNote": {
@@ -686,7 +686,7 @@
         },
         "sb": {},
         "layer": 60,
-        "image": "fx1leftbody10kfade"
+        "image": "fx1leftbodyfade"
       },
       "Tail": {
         "cs": 1,
@@ -713,7 +713,7 @@
         },
         "sb": {},
         "layer": 61,
-        "image": "fx1lefttail10kfade"
+        "image": "fx1lefttailfade"
       },
       "Head": {
         "cs": 1,
@@ -740,7 +740,7 @@
         },
         "sb": {},
         "layer": 62,
-        "image": "fx1lefthead10kfade"
+        "image": "fx1leftheadfade"
       }
     },
     "key6:ShortNote": {
@@ -769,7 +769,7 @@
         },
         "sb": {},
         "layer": 63,
-        "image": "fx1right10kfade"
+        "image": "fx1rightfade"
       }
     },
     "key6:LongNote": {
@@ -798,7 +798,7 @@
         },
         "sb": {},
         "layer": 60,
-        "image": "fx1rightbody10kfade"
+        "image": "fx1rightbodyfade"
       },
       "Tail": {
         "cs": 1,
@@ -825,7 +825,7 @@
         },
         "sb": {},
         "layer": 61,
-        "image": "fx1righttail10kfade"
+        "image": "fx1righttailfade"
       },
       "Head": {
         "cs": 1,
@@ -852,7 +852,7 @@
         },
         "sb": {},
         "layer": 62,
-        "image": "fx1righthead10kfade"
+        "image": "fx1rightheadfade"
       }
     },
     "key7:ShortNote": {
@@ -1217,7 +1217,7 @@
         },
         "sb": {},
         "layer": 53,
-        "image": "fx2right10kfade"
+        "image": "fx2rightfade"
       }
     },
     "key10:LongNote": {
@@ -1246,7 +1246,7 @@
         },
         "sb": {},
         "layer": 50,
-        "image": "fx2rightbody10kfade"
+        "image": "fx2rightbodyfade"
       },
       "Tail": {
         "cs": 1,
@@ -1273,7 +1273,7 @@
         },
         "sb": {},
         "layer": 51,
-        "image": "fx2righttail10kfade"
+        "image": "fx2righttailfade"
       },
       "Head": {
         "cs": 1,
@@ -1300,7 +1300,7 @@
         },
         "sb": {},
         "layer": 52,
-        "image": "fx2righthead10kfade"
+        "image": "fx2rightheadfade"
       }
     }
   }

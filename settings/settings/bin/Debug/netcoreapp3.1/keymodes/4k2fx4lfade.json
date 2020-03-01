@@ -1,6 +1,6 @@
 {
-  "name": "netcoreapp3.1 10kfade2st",
-  "playfield": "keymodes/playfields/playfield10kfade2st.json",
+  "name": "DJMAXwApp KSH XB",
+  "playfield": "keymodes/playfields/playfield KSH XB.json",
   "cses": [
     [
       0.5,
@@ -18,119 +18,83 @@
     },
     {
       "name": "fx2leftbody",
-      "path": "resources/fxfade/fx2leftbodyfade.png",
+      "path": "resources/all/fx2leftbody.png",
       "layer": 50,
-      "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2lefttail",
-      "path": "resources/fxfade/fx2lefttailfade.png",
+      "path": "resources/all/fx2lefttail.png",
       "layer": 51,
-      "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2lefthead",
-      "path": "resources/fxfade/fx2leftheadfade.png",
+      "path": "resources/all/fx2lefthead.png",
       "layer": 52,
-      "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2left",
-      "path": "resources/fxfade/fx2leftfade.png",
+      "path": "resources/all/fx2left.png",
       "layer": 53,
-      "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2rightbody",
-      "path": "resources/fxfade/fx2rightbodyfade.png",
+      "path": "resources/all/fx2rightbody.png",
       "layer": 50,
-      "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2righttail",
-      "path": "resources/fxfade/fx2righttailfade.png",
+      "path": "resources/all/fx2righttail.png",
       "layer": 51,
-      "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2righthead",
-      "path": "resources/fxfade/fx2rightheadfade.png",
+      "path": "resources/all/fx2righthead.png",
       "layer": 52,
-      "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2right",
-      "path": "resources/fxfade/fx2rightfade.png",
+      "path": "resources/all/fx2right.png",
       "layer": 53,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1leftbody",
-      "path": "resources/fxfade/fx1leftbodyfade.png",
+      "name": "fxleftbody",
+      "path": "resources/all/fxleftbody.png",
       "layer": 60,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1lefttail",
-      "path": "resources/fxfade/fx1lefttailfade.png",
+      "name": "fxlefttail",
+      "path": "resources/all/fxlefttail.png",
       "layer": 61,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1lefthead",
-      "path": "resources/fxfade/fx1leftheadfade.png",
+      "name": "fxlefthead",
+      "path": "resources/all/fxlefthead.png",
       "layer": 62,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1left",
-      "path": "resources/fxfade/fx1leftfade.png",
+      "name": "fxleft",
+      "path": "resources/all/fxleft.png",
       "layer": 63,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1rightbody",
-      "path": "resources/fxfade/fx1rightbodyfade.png",
+      "name": "fxrightbody",
+      "path": "resources/all/fxrightbody.png",
       "layer": 60,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1righttail",
-      "path": "resources/fxfade/fx1righttailfade.png",
+      "name": "fxrighttail",
+      "path": "resources/all/fxrighttail.png",
       "layer": 61,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1righthead",
-      "path": "resources/fxfade/fx1rightheadfade.png",
+      "name": "fxrighthead",
+      "path": "resources/all/fxrighthead.png",
       "layer": 62,
-      "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fx1right",
-      "path": "resources/fxfade/fx1rightfade.png",
+      "name": "fxright",
+      "path": "resources/all/fxright.png",
       "layer": 63,
-      "blendAlphaMode": "alphamultiply"
-    },
-    {
-      "name": "stbody",
-      "path": "resources/all/stbody.png",
-      "layer": 70
-    },
-    {
-      "name": "sttail",
-      "path": "resources/all/sttail.png",
-      "layer": 71
-    },
-    {
-      "name": "sthead",
-      "path": "resources/all/sthead.png",
-      "layer": 72
-    },
-    {
-      "name": "st",
-      "path": "resources/all/st.png",
-      "layer": 73
     },
     {
       "name": "note1body",
@@ -203,119 +167,7 @@
         "image": "measure"
       }
     },
-    "scratch1:ShortNote": {
-      "Head": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            -0.2222222222
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 73,
-        "image": "st"
-      }
-    },
-    "scratch1:LongNote": {
-      "Body": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            -0.2222222222
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 70,
-        "image": "stbody"
-      },
-      "Tail": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            -0.2222222222
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 71,
-        "image": "sttail"
-      },
-      "Head": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            -0.2222222222
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 72,
-        "image": "sthead"
-      }
-    },
-    "key1:ShortNote": {
+    "laserleft1:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -341,10 +193,10 @@
         },
         "sb": {},
         "layer": 53,
-        "image": "fx2leftfade"
+        "image": "fx2left"
       }
     },
-    "key1:LongNote": {
+    "laserleft1:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -370,7 +222,7 @@
         },
         "sb": {},
         "layer": 50,
-        "image": "fx2leftbodyfade"
+        "image": "fx2leftbody"
       },
       "Tail": {
         "cs": 1,
@@ -397,7 +249,7 @@
         },
         "sb": {},
         "layer": 51,
-        "image": "fx2lefttailfade"
+        "image": "fx2lefttail"
       },
       "Head": {
         "cs": 1,
@@ -424,10 +276,10 @@
         },
         "sb": {},
         "layer": 52,
-        "image": "fx2leftheadfade"
+        "image": "fx2lefthead"
       }
     },
-    "key2:ShortNote": {
+    "bt1:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -456,7 +308,7 @@
         "image": "note1"
       }
     },
-    "key2:LongNote": {
+    "bt1:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -539,7 +391,7 @@
         "image": "note1head"
       }
     },
-    "key3:ShortNote": {
+    "fx1:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -568,7 +420,7 @@
         "image": "note2"
       }
     },
-    "key3:LongNote": {
+    "fx1:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -651,7 +503,7 @@
         "image": "note2head"
       }
     },
-    "key4:ShortNote": {
+    "bt2:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -680,7 +532,7 @@
         "image": "note1"
       }
     },
-    "key4:LongNote": {
+    "bt2:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -763,7 +615,7 @@
         "image": "note1head"
       }
     },
-    "key5:ShortNote": {
+    "laserright1:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -789,10 +641,10 @@
         },
         "sb": {},
         "layer": 63,
-        "image": "fx1leftfade"
+        "image": "fxleft"
       }
     },
-    "key5:LongNote": {
+    "laserright1:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -818,7 +670,7 @@
         },
         "sb": {},
         "layer": 60,
-        "image": "fx1leftbodyfade"
+        "image": "fxleftbody"
       },
       "Tail": {
         "cs": 1,
@@ -845,7 +697,7 @@
         },
         "sb": {},
         "layer": 61,
-        "image": "fx1lefttailfade"
+        "image": "fxlefttail"
       },
       "Head": {
         "cs": 1,
@@ -872,10 +724,10 @@
         },
         "sb": {},
         "layer": 62,
-        "image": "fx1leftheadfade"
+        "image": "fxlefthead"
       }
     },
-    "key6:ShortNote": {
+    "laserleft2:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -901,10 +753,10 @@
         },
         "sb": {},
         "layer": 63,
-        "image": "fx1rightfade"
+        "image": "fxright"
       }
     },
-    "key6:LongNote": {
+    "laserleft2:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -930,7 +782,7 @@
         },
         "sb": {},
         "layer": 60,
-        "image": "fx1rightbodyfade"
+        "image": "fxrightbody"
       },
       "Tail": {
         "cs": 1,
@@ -957,7 +809,7 @@
         },
         "sb": {},
         "layer": 61,
-        "image": "fx1righttailfade"
+        "image": "fxrighttail"
       },
       "Head": {
         "cs": 1,
@@ -984,10 +836,10 @@
         },
         "sb": {},
         "layer": 62,
-        "image": "fx1rightheadfade"
+        "image": "fxrighthead"
       }
     },
-    "key7:ShortNote": {
+    "bt3:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -1016,7 +868,7 @@
         "image": "note1"
       }
     },
-    "key7:LongNote": {
+    "bt3:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -1099,7 +951,7 @@
         "image": "note1head"
       }
     },
-    "key8:ShortNote": {
+    "fx2:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -1128,7 +980,7 @@
         "image": "note2"
       }
     },
-    "key8:LongNote": {
+    "fx2:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -1211,7 +1063,7 @@
         "image": "note2head"
       }
     },
-    "key9:ShortNote": {
+    "bt4:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -1240,7 +1092,7 @@
         "image": "note1"
       }
     },
-    "key9:LongNote": {
+    "bt4:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -1323,7 +1175,7 @@
         "image": "note1head"
       }
     },
-    "key10:ShortNote": {
+    "laserleft10:ShortNote": {
       "Head": {
         "cs": 1,
         "gc": {
@@ -1349,10 +1201,10 @@
         },
         "sb": {},
         "layer": 53,
-        "image": "fx2rightfade"
+        "image": "fx2right"
       }
     },
-    "key10:LongNote": {
+    "laserright2:LongNote": {
       "Body": {
         "cs": 1,
         "gc": {
@@ -1378,7 +1230,7 @@
         },
         "sb": {},
         "layer": 50,
-        "image": "fx2rightbodyfade"
+        "image": "fx2rightbody"
       },
       "Tail": {
         "cs": 1,
@@ -1405,7 +1257,7 @@
         },
         "sb": {},
         "layer": 51,
-        "image": "fx2righttailfade"
+        "image": "fx2righttail"
       },
       "Head": {
         "cs": 1,
@@ -1432,119 +1284,7 @@
         },
         "sb": {},
         "layer": 52,
-        "image": "fx2rightheadfade"
-      }
-    },
-    "scratch2:ShortNote": {
-      "Head": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            0.0
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 73,
-        "image": "st"
-      }
-    },
-    "scratch2:LongNote": {
-      "Body": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            0.0
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 70,
-        "image": "stbody"
-      },
-      "Tail": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            0.0
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 71,
-        "image": "sttail"
-      },
-      "Head": {
-        "cs": 1,
-        "gc": {
-          "x": [
-            0.0
-          ],
-          "y": [
-            0.6990740741,
-            1.0
-          ],
-          "w": [
-            0.2222222222
-          ],
-          "h": [
-            0.02037037037
-          ],
-          "ox": [
-            0.0
-          ],
-          "oy": [
-            -1.0
-          ]
-        },
-        "sb": {},
-        "layer": 72,
-        "image": "sthead"
+        "image": "fx2righthead"
       }
     }
   }

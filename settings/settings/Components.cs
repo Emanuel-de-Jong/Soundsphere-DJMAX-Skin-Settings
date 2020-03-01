@@ -44,7 +44,7 @@ namespace settings
                     {
                         inputMode = "10key2scratch";
                     }
-                    else if(modeName == "4k2fx4l")
+                    else if(modeName.Contains("4k2fx4l"))
                     {
                         inputMode = "4bt2fx2laserleft2laserright";
                     }
