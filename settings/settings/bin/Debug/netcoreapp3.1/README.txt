@@ -28,8 +28,10 @@ DJMAX does not have this feature, so it is not the default.
 Now override CustomScore.lua in soundsphere\sphere\screen\gameplay 
 with your chosen custom score. Make sure you rename it to CustomScore.lua.
 
-(optional)3. Override soundsphere\sphere\screen\result\JudgeTable.lua* with 
-DJMAX\settings\JudgeTable.lua
+(optional)3. Override soundsphere\sphere\screen\result\JudgeTable.lua* 
+with DJMAX\settings\JudgeTable.lua
+Do the same for soundsphere\userdata\interface\result.json 
+and DJMAX\settings\result.json*
 
 4. Start up soundsphere and select one of the keymodes this skin offers.
 
@@ -38,8 +40,8 @@ The grade you see after hitting a note.
 In DJMAX this is displayed as MAX100% - MAX1% but you may also know it as
 Great - Bad.
 
-judge table*:
-CEYNOU HELP
+judge table and result*:
+Style the result screen and set the grades you can get (e.g. A+).
 
 
 
