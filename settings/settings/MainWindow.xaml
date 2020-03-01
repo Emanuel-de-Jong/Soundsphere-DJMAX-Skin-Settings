@@ -151,7 +151,7 @@
         </TabItem>
 
 
-        <TabItem Header="Skin (WIP)">
+        <!--<TabItem Header="Skin (WIP)">
             <TabItem.Resources>
             </TabItem.Resources>
 
@@ -401,6 +401,6 @@
 
                 <Button Grid.Row="5" Grid.ColumnSpan="2">Apply</Button>
             </Grid>
-        </TabItem>
+        </TabItem>-->
     </TabControl>
 </Window>

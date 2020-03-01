@@ -21,32 +21,41 @@ namespace settings
             List<MetaDataItem> metaData = new List<MetaDataItem>();
 
             Logger.Add(eMessageType.process, "Making playfield, keymode and metadataitem for each mode");
-            foreach (int mode in Info.modes)
+            foreach ((string, bool) mode in Info.modes)
             {
-                Logger.Add(eMessageType.value, "Mode: " + mode);
-                for (int i = 0; i < 2; i++)
+                string modeName = mode.Item1;
+                bool hasST = mode.Item2;
+
+                Logger.Add(eMessageType.value, "Mode: " + modeName);
+                for (int i = 0; i < (hasST ? 2 : 1); i++)
                 {
                     bool sidetracks = i == 0 ? false : true;
 
                     Logger.Add(eMessageType.value, "Sidetracks: " + sidetracks);
 
                     Logger.Add(eMessageType.process, "Making playfield");
-                    List<PlayfieldItem> playfield = PlayfieldItem.GetPlayfield(mode, sidetracks, componentsSettings);
+                    List<PlayfieldItem> playfield = PlayfieldItem.GetPlayfield(modeName, sidetracks, componentsSettings);
 
-                    string name = Info.skinName + " " + mode + "K" + (sidetracks ? "2ST" : "");
-                    string playfieldName = "playfield" + mode + "k" + (sidetracks ? "2st" : "");
-                    string keymodeName = mode + "k" + (sidetracks ? "2st" : "");
-                    string inputMode = (mode + (sidetracks ? 2 : 0)) + "key";
-                    if (mode == 10 && sidetracks)
+                    string keymodeName = modeName + (sidetracks ? "2st" : "");
+                    string playfieldName = "playfield" + keymodeName;
+                    string name = Info.skinName + " " + keymodeName;
+                    string inputMode = (modeName + (sidetracks ? 2 : 0)) + "key";
+                    if (modeName.Contains("10k") && sidetracks)
+                    {
                         inputMode = "10key2scratch";
+                    }
+                    else if(modeName == "4k2fx4l")
+                    {
+                        inputMode = "4bt2fx2laserleft2laserright";
+                    }
 
                     Logger.Add(eMessageType.process, "Making keymode");
                     Keymode keymode = new Keymode()
                     {
                         name = name,
                         playfield = Info.files[playfieldName],
-                        images = Image.GetImages(mode, sidetracks),
-                        notes = Keymode.GetNotes(mode, sidetracks),
+                        images = Image.GetImages(modeName, sidetracks),
+                        notes = Keymode.GetNotes(modeName, sidetracks),
                         cses = new List<object[]>() { Info.csMiddle }
                     };
 

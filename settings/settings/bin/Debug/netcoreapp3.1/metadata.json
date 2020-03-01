@@ -1,74 +1,74 @@
 [
   {
-    "name": "DJMAXwApp 4K",
-    "inputMode": "4key",
+    "name": "netcoreapp3.1 4k",
+    "inputMode": "4k0key",
     "type": "json:full-v2",
     "path": "keymodes/4k.json"
   },
   {
-    "name": "DJMAXwApp 4K2ST",
-    "inputMode": "6key",
+    "name": "netcoreapp3.1 4k2st",
+    "inputMode": "4k2key",
     "type": "json:full-v2",
     "path": "keymodes/4k2st.json"
   },
   {
-    "name": "DJMAXwApp 5K",
-    "inputMode": "5key",
+    "name": "netcoreapp3.1 5k",
+    "inputMode": "5k0key",
     "type": "json:full-v2",
     "path": "keymodes/5k.json"
   },
   {
-    "name": "DJMAXwApp 5K2ST",
-    "inputMode": "7key",
+    "name": "netcoreapp3.1 5k2st",
+    "inputMode": "5k2key",
     "type": "json:full-v2",
     "path": "keymodes/5k2st.json"
   },
   {
-    "name": "DJMAXwApp 6K",
-    "inputMode": "6key",
+    "name": "netcoreapp3.1 6k",
+    "inputMode": "6k0key",
     "type": "json:full-v2",
     "path": "keymodes/6k.json"
   },
   {
-    "name": "DJMAXwApp 6K2ST",
-    "inputMode": "8key",
+    "name": "netcoreapp3.1 6k2st",
+    "inputMode": "6k2key",
     "type": "json:full-v2",
     "path": "keymodes/6k2st.json"
   },
   {
-    "name": "DJMAXwApp 8K",
-    "inputMode": "8key",
+    "name": "netcoreapp3.1 8k",
+    "inputMode": "8k0key",
     "type": "json:full-v2",
     "path": "keymodes/8k.json"
   },
   {
-    "name": "DJMAXwApp 8K2ST",
-    "inputMode": "10key",
+    "name": "netcoreapp3.1 8k2st",
+    "inputMode": "8k2key",
     "type": "json:full-v2",
     "path": "keymodes/8k2st.json"
   },
   {
-    "name": "DJMAXwApp 10K",
-    "inputMode": "10key",
+    "name": "netcoreapp3.1 10k",
+    "inputMode": "10k0key",
     "type": "json:full-v2",
     "path": "keymodes/10k.json"
   },
   {
-    "name": "DJMAXwApp 10K2ST",
+    "name": "netcoreapp3.1 10k2st",
     "inputMode": "10key2scratch",
     "type": "json:full-v2",
     "path": "keymodes/10k2st.json"
   },
   {
-    "name": "DJMAXwApp XB",
-    "inputMode": "10key",
+    "name": "netcoreapp3.1 10kfade",
+    "inputMode": "10kfade0key",
     "type": "json:full-v2",
-    "path": "keymodes/XB.json"
+    "path": "keymodes/10kfade.json"
   },
   {
-    "name": "DJMAXwApp KSH XB",
-    "inputMode": "4bt2fx2laserleft2laserright",
+    "name": "netcoreapp3.1 10kfade2st",
+    "inputMode": "10key2scratch",
     "type": "json:full-v2",
-    "path": "keymodes/KSH XB.json"
+    "path": "keymodes/10kfade2st.json"
   }
 ]

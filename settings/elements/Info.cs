@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using logger;
 
@@ -11,7 +12,7 @@ namespace elements
         public static string soundspherePath = "userdata/skins/" + skinName + "/";
         public static object[] csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
         public static object[] cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() };
-        public static List<int> modes = new List<int>() { 4, 5, 6, 8, 10 }; 
+        public static List<(string, bool)> modes = new List<(string, bool)>() { ("4k", true), ("5k", true), ("6k", true), ("8k", true), ("10k", true), ("10kfade", true) }; 
         public static Dictionary<string, string> files = SetFiles();
         public static Dictionary<string, int> layers = SetLayers();
 

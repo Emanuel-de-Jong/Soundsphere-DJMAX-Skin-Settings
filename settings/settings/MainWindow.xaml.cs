@@ -23,19 +23,17 @@ namespace settings
 
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
-            InitializeImages();
+            //InitializeImages();
         }
 
-        public void InitializeImages()
-        {
-            Logger.Add(eMessageType.process, "Initializing images");
-            imgBg.Source = new BitmapImage(new Uri(Info.absolutePath + "\\" + Info.files["bg"], UriKind.Absolute));
-            imgFX1.Source = new BitmapImage(new Uri(Info.absolutePath + "\\" + Info.files["fx1right"], UriKind.Absolute));
-            imgFX2.Source = new BitmapImage(new Uri(Info.absolutePath + "\\" + Info.files["fx2right"], UriKind.Absolute));
-            Logger.Add(eMessageType.completion, "Initializing images complete");
-        }
-
-
+        //public void InitializeImages()
+        //{
+        //    Logger.Add(eMessageType.process, "Initializing images");
+        //    imgBg.Source = new BitmapImage(new Uri(Info.absolutePath + "\\" + Info.files["bg"], UriKind.Absolute));
+        //    imgFX1.Source = new BitmapImage(new Uri(Info.absolutePath + "\\" + Info.files["fx1right"], UriKind.Absolute));
+        //    imgFX2.Source = new BitmapImage(new Uri(Info.absolutePath + "\\" + Info.files["fx2right"], UriKind.Absolute));
+        //    Logger.Add(eMessageType.completion, "Initializing images complete");
+        //}
 
         public void ComponentsPressed(object sender, RoutedEventArgs e)
         {

@@ -1,5 +1,5 @@
 {
-  "name": "netcoreapp3.1 8K2ST",
+  "name": "netcoreapp3.1 8k2st",
   "playfield": "keymodes/playfields/playfield8k2st.json",
   "cses": [
     [
@@ -18,49 +18,49 @@
     },
     {
       "name": "fxleftbody",
-      "path": "resources/all/fxleftbody.png",
+      "path": "resources/all/fx1leftbody.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fxlefttail",
-      "path": "resources/all/fxlefttail.png",
+      "path": "resources/all/fx1lefttail.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fxlefthead",
-      "path": "resources/all/fxlefthead.png",
+      "path": "resources/all/fx1lefthead.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fxleft",
-      "path": "resources/all/fxleft.png",
+      "path": "resources/all/fx1left.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fxrightbody",
-      "path": "resources/all/fxrightbody.png",
+      "path": "resources/all/fx1rightbody.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fxrighttail",
-      "path": "resources/all/fxrighttail.png",
+      "path": "resources/all/fx1righttail.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fxrighthead",
-      "path": "resources/all/fxrighthead.png",
+      "path": "resources/all/fx1righthead.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fxright",
-      "path": "resources/all/fxright.png",
+      "path": "resources/all/fx1right.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
     },

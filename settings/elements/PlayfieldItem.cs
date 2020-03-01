@@ -30,7 +30,7 @@ namespace elements
             layer = 0;
         }
 
-        public static List<PlayfieldItem> GetPlayfield(int keymode, bool sidetracks, Dictionary<string, bool> componentsSettings)
+        public static List<PlayfieldItem> GetPlayfield(string keymode, bool sidetracks, Dictionary<string, bool> componentsSettings)
         {
             Logger.Add(eMessageType.process, "Making playfield");
             List<PlayfieldItem> playfield = new List<PlayfieldItem>();
@@ -46,7 +46,7 @@ namespace elements
                 positionsST = JsonConvert.DeserializeObject<PlayfieldSTPositions>(json);
             }
 
-            json = File.ReadAllText(Info.files["positionsplayfield" + keymode + "k"]);
+            json = File.ReadAllText(Info.files["positionsplayfield" + keymode]);
             var positionsKeymode = JsonConvert.DeserializeObject<PlayfieldKeymodePositions>(json);
 
 
@@ -265,8 +265,19 @@ namespace elements
                 size = positions.scorefield.size
             });
 
-
-            int keys = keymode > 6 ? 6 : keymode;
+            int keys;
+            switch (keymode)
+            {
+                case "4k":
+                    keys = 4;
+                    break;
+                case "5k":
+                    keys = 5;
+                    break;
+                default:
+                    keys = 6;
+                    break;
+            }
             for (int i=1; i<=keys; i++)
             {
                 playfield.Add(new InputImage()
@@ -279,7 +290,7 @@ namespace elements
                     layer = Info.layers["key"],
                     cs = Info.csMiddle,
                     inputType = eInputType.key,
-                    inputIndex = positionsKeymode["key" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
+                    inputIndex = positionsKeymode["key" + i].inputIndex + (sidetracks ? (keymode.Contains("10k") ? 0 : 1) : 0),
                     pressed = componentsSettings["keypressed"] ? Info.files["keypressed" + keys + "k"] : Info.files["key" + keys + "k"],
                     released = Info.files["key" + keys + "k"],
                 });
@@ -295,7 +306,7 @@ namespace elements
                         layer = Info.layers["beam"],
                         cs = Info.csMiddle,
                         inputType = eInputType.key,
-                        inputIndex = positionsKeymode["beam" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
+                        inputIndex = positionsKeymode["beam" + i].inputIndex + (sidetracks ? (keymode.Contains("10k") ? 0 : 1) : 0),
                         pressed = Info.files["beam" + keys + "k"],
                         released = Info.files["blank"],
                     });
@@ -313,14 +324,14 @@ namespace elements
                         layer = Info.layers["particle"],
                         cs = Info.csMiddle,
                         inputType = eInputType.key,
-                        inputIndex = positionsKeymode["particle" + i].inputIndex + (sidetracks ? (keymode == 10 ? 0 : 1) : 0),
+                        inputIndex = positionsKeymode["particle" + i].inputIndex + (sidetracks ? (keymode.Contains("10k") ? 0 : 1) : 0),
                         pressed = Info.files["particle"],
                         released = Info.files["blank"],
                     });
                 }
             }
 
-            if(keymode == 8)
+            if(keymode == "8k")
             {
                 for(int i=1; i<=2; i++)
                 {
@@ -338,8 +349,8 @@ namespace elements
                         cs = Info.csMiddle,
                         inputType = eInputType.key,
                         inputIndex = positionsKeymode["fxkey" + i].inputIndex + (sidetracks ? 1 : 0),
-                        pressed = componentsSettings["keypressed"] ? Info.files["fxkey" + side + "pressed"] : Info.files["fxkey" + side],
-                        released = Info.files["fxkey" + side],
+                        pressed = componentsSettings["keypressed"] ? Info.files["fx1key" + side + "pressed"] : Info.files["fx1key" + side],
+                        released = Info.files["fx1key" + side],
                     });
 
                     if (componentsSettings["beam"])
@@ -379,7 +390,7 @@ namespace elements
                     }
                 }
             }
-            else if(keymode == 10)
+            else if(keymode.Contains("10k"))
             {
                 for(int i=1; i<=2; i++)
                 {
@@ -416,8 +427,8 @@ namespace elements
                             cs = Info.csMiddle,
                             inputType = eInputType.key,
                             inputIndex = positionsKeymode["fxkey" + keynumber].inputIndex,
-                            pressed = componentsSettings["keypressed"] ? Info.files["fxkey" + side + "pressed"] : (i == 1 ? Info.files["fxkey" + side] : Info.files["blank"]),
-                            released = i == 1 ? Info.files["fxkey" + side] : Info.files["blank"],
+                            pressed = componentsSettings["keypressed"] ? Info.files["fx1key" + side + "pressed"] : (i == 1 ? Info.files["fx1key" + side] : Info.files["blank"]),
+                            released = i == 1 ? Info.files["fx1key" + side] : Info.files["blank"],
                         });
 
                         if (componentsSettings["beam"])
@@ -459,8 +470,32 @@ namespace elements
                 }
             }
 
+            
             if (sidetracks && componentsSettings["particles"])
             {
+                int keyAmount = 0;
+                switch (keymode)
+                {
+                    case "4k":
+                        keyAmount = 4;
+                        break;
+                    case "5k":
+                        keyAmount = 5;
+                        break;
+                    case "6k":
+                        keyAmount = 6;
+                        break;
+                    case "8k":
+                        keyAmount = 8;
+                        break;
+                    case "10k":
+                        keyAmount = 10;
+                        break;
+                    case "10kfade":
+                        keyAmount = 10;
+                        break;
+                }
+
                 playfield.Add(new InputImage()
                 {
                     classa = eClass.InputImage,
@@ -470,7 +505,7 @@ namespace elements
                     h = positionsST[1].h,
                     layer = Info.layers["stparticle"],
                     cs = Info.csMiddle,
-                    inputType = keymode == 10 ? eInputType.scratch : eInputType.key,
+                    inputType = keymode.Contains("10k") ? eInputType.scratch : eInputType.key,
                     inputIndex = 1,
                     pressed = Info.files["stparticle"],
                     released = Info.files["blank"],
@@ -485,8 +520,8 @@ namespace elements
                     h = positionsST[2].h,
                     layer = Info.layers["stparticle"],
                     cs = Info.csMiddle,
-                    inputType = keymode == 10 ? eInputType.scratch : eInputType.key,
-                    inputIndex = keymode == 10 ? 2 : keymode + 2,
+                    inputType = keymode.Contains("10k") ? eInputType.scratch : eInputType.key,
+                    inputIndex = keymode.Contains("10k") ? 2 : keyAmount + 2,
                     pressed = Info.files["stparticle"],
                     released = Info.files["blank"],
                 });

@@ -1,5 +1,5 @@
 {
-  "name": "netcoreapp3.1 4K",
+  "name": "netcoreapp3.1 4k",
   "playfield": "keymodes/playfields/playfield4k.json",
   "cses": [
     [

@@ -1,5 +1,5 @@
 {
-  "name": "netcoreapp3.1 10K2ST",
+  "name": "netcoreapp3.1 10k2st",
   "playfield": "keymodes/playfields/playfield10k2st.json",
   "cses": [
     [
@@ -18,97 +18,97 @@
     },
     {
       "name": "fx2leftbody",
-      "path": "resources/10k/fx2leftbody.png",
+      "path": "resources/all/fx2leftbody.png",
       "layer": 50,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2lefttail",
-      "path": "resources/10k/fx2lefttail.png",
+      "path": "resources/all/fx2lefttail.png",
       "layer": 51,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2lefthead",
-      "path": "resources/10k/fx2lefthead.png",
+      "path": "resources/all/fx2lefthead.png",
       "layer": 52,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2left",
-      "path": "resources/10k/fx2left.png",
+      "path": "resources/all/fx2left.png",
       "layer": 53,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2rightbody",
-      "path": "resources/10k/fx2rightbody.png",
+      "path": "resources/all/fx2rightbody.png",
       "layer": 50,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2righttail",
-      "path": "resources/10k/fx2righttail.png",
+      "path": "resources/all/fx2righttail.png",
       "layer": 51,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2righthead",
-      "path": "resources/10k/fx2righthead.png",
+      "path": "resources/all/fx2righthead.png",
       "layer": 52,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx2right",
-      "path": "resources/10k/fx2right.png",
+      "path": "resources/all/fx2right.png",
       "layer": 53,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1leftbody",
-      "path": "resources/10k/fx1leftbody.png",
+      "path": "resources/all/fx1leftbody.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1lefttail",
-      "path": "resources/10k/fx1lefttail.png",
+      "path": "resources/all/fx1lefttail.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1lefthead",
-      "path": "resources/10k/fx1lefthead.png",
+      "path": "resources/all/fx1lefthead.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1left",
-      "path": "resources/10k/fx1left.png",
+      "path": "resources/all/fx1left.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1rightbody",
-      "path": "resources/10k/fx1rightbody.png",
+      "path": "resources/all/fx1rightbody.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1righttail",
-      "path": "resources/10k/fx1righttail.png",
+      "path": "resources/all/fx1righttail.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1righthead",
-      "path": "resources/10k/fx1righthead.png",
+      "path": "resources/all/fx1righthead.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
       "name": "fx1right",
-      "path": "resources/10k/fx1right.png",
+      "path": "resources/all/fx1right.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
     },
