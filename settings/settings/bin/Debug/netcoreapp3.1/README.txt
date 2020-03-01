@@ -15,6 +15,14 @@ Welcome!
 This is a skin made for the VSRG, soundsphere (github.com/semyon422/soundsphere).
 It is inspired by the PORTABLE 1 gear CLASSIC note skin from DJMAX Respect V.
 In this readme, we will be explaining how to use it.
+Supported keymodes are: 4k, 5k, 6k, 8k, 10k, 10kfade*.
+8k looks like 6k with 2 multi column fxes. The same goes for 10k but with 4 fxes.
+Each of these modes also has a 2 side track mode which adds 2 more buttons
+representing the side tracks in djmax.
+
+fade*:
+The fx buttons in this skin are faded so that you can see 
+both of them when they overlap.
 
 
 
