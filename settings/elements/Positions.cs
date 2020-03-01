@@ -22,36 +22,23 @@ namespace elements
         {
             get
             {
-                switch (name)
+                return name switch
                 {
-                    case "measure1":
-                        return scratch1;
-                    case "scratch1":
-                        return scratch1;
-                    case "key1":
-                        return key1;
-                    case "key2":
-                        return key2;
-                    case "key3":
-                        return key3;
-                    case "key4":
-                        return key4;
-                    case "key5":
-                        return key5;
-                    case "key6":
-                        return key6;
-                    case "key7":
-                        return key7;
-                    case "key8":
-                        return key8;
-                    case "key9":
-                        return key9;
-                    case "key10":
-                        return key10;
-                    case "scratch2":
-                        return scratch2;
-                }
-                return measure1;
+                    "measure1" => scratch1,
+                    "scratch1" => scratch1,
+                    "key1" => key1,
+                    "key2" => key2,
+                    "key3" => key3,
+                    "key4" => key4,
+                    "key5" => key5,
+                    "key6" => key6,
+                    "key7" => key7,
+                    "key8" => key8,
+                    "key9" => key9,
+                    "key10" => key10,
+                    "scratch2" => scratch2,
+                    _ => measure1,
+                };
             }
         }
     }

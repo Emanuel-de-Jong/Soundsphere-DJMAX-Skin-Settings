@@ -36,10 +36,10 @@ namespace elements
                 for (int i = 1; i <= 2; i++)
                 {
                     string side = i == 1 ? "left" : "right";
-                    images.Add(new Image() { name = "fx" + side + "body", path = Info.files["fx1" + side + "body"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1body"] });
-                    images.Add(new Image() { name = "fx" + side + "tail", path = Info.files["fx1" + side + "tail"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1tail"] });
-                    images.Add(new Image() { name = "fx" + side + "head", path = Info.files["fx1" + side + "head"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1head"] });
-                    images.Add(new Image() { name = "fx" + side, path = Info.files["fx1" + side], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1"] });
+                    images.Add(new Image() { name = "fx1" + side + "body", path = Info.files["fx1" + side + "body"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1body"] });
+                    images.Add(new Image() { name = "fx1" + side + "tail", path = Info.files["fx1" + side + "tail"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1tail"] });
+                    images.Add(new Image() { name = "fx1" + side + "head", path = Info.files["fx1" + side + "head"], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1head"] });
+                    images.Add(new Image() { name = "fx1" + side, path = Info.files["fx1" + side], blendAlphaMode = eBlendAlphaMode.alphamultiply, layer = Info.layers["fx1"] });
                 }
             }
             else if (keymode.Contains("10k"))
@@ -67,19 +67,12 @@ namespace elements
                 images.Add(new Image() { name = "st", path = Info.files["st"], layer = Info.layers["st"] });
             }
 
-            int noteKey;
-            switch (keymode)
+            var noteKey = keymode switch
             {
-                case "4k":
-                    noteKey = 4;
-                    break;
-                case "5k":
-                    noteKey = 5;
-                    break;
-                default:
-                    noteKey = 6;
-                    break;
-            }
+                "4k" => 4,
+                "5k" => 5,
+                _ => 6,
+            };
             for (int i = 1; i <= 2; i++)
             {
                 string noteCount = i.ToString();

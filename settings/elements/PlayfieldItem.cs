@@ -265,19 +265,12 @@ namespace elements
                 size = positions.scorefield.size
             });
 
-            int keys;
-            switch (keymode)
+            var keys = keymode switch
             {
-                case "4k":
-                    keys = 4;
-                    break;
-                case "5k":
-                    keys = 5;
-                    break;
-                default:
-                    keys = 6;
-                    break;
-            }
+                "4k" => 4,
+                "5k" => 5,
+                _ => 6,
+            };
             for (int i=1; i<=keys; i++)
             {
                 playfield.Add(new InputImage()
@@ -398,7 +391,7 @@ namespace elements
                     {
                         string side = j == 1 ? "left" : "right";
 
-                        int keynumber = 0;
+                        int keynumber;
                         if(i == 2 && j == 1)
                         {
                             keynumber = 1;

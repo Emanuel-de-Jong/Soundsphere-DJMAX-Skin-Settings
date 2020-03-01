@@ -41,70 +41,40 @@ namespace elements
         {
             get
             {
-                switch (name)
+                return name switch
                 {
-                    case "key1":
-                        return key1;
-                    case "key2":
-                        return key2;
-                    case "key3":
-                        return key3;
-                    case "key4":
-                        return key4;
-                    case "key5":
-                        return key5;
-                    case "key6":
-                        return key6;
-                    case "fxkey1":
-                        return fxkey1;
-                    case "fxkey2":
-                        return fxkey2;
-                    case "fxkey3":
-                        return fxkey3;
-                    case "fxkey4":
-                        return fxkey4;
-                    case "beam1":
-                        return beam1;
-                    case "beam2":
-                        return beam2;
-                    case "beam3":
-                        return beam3;
-                    case "beam4":
-                        return beam4;
-                    case "beam5":
-                        return beam5;
-                    case "beam6":
-                        return beam6;
-                    case "fxbeam1":
-                        return fxbeam1;
-                    case "fxbeam2":
-                        return fxbeam2;
-                    case "fxbeam3":
-                        return fxbeam3;
-                    case "fxbeam4":
-                        return fxbeam4;
-                    case "particle1":
-                        return particle1;
-                    case "particle2":
-                        return particle2;
-                    case "particle3":
-                        return particle3;
-                    case "particle4":
-                        return particle4;
-                    case "particle5":
-                        return particle5;
-                    case "particle6":
-                        return particle6;
-                    case "fxparticle1":
-                        return fxparticle1;
-                    case "fxparticle2":
-                        return fxparticle2;
-                    case "fxparticle3":
-                        return fxparticle3;
-                    case "fxparticle4":
-                        return fxparticle4;
-                }
-                return key1;
+                    "key1" => key1,
+                    "key2" => key2,
+                    "key3" => key3,
+                    "key4" => key4,
+                    "key5" => key5,
+                    "key6" => key6,
+                    "fxkey1" => fxkey1,
+                    "fxkey2" => fxkey2,
+                    "fxkey3" => fxkey3,
+                    "fxkey4" => fxkey4,
+                    "beam1" => beam1,
+                    "beam2" => beam2,
+                    "beam3" => beam3,
+                    "beam4" => beam4,
+                    "beam5" => beam5,
+                    "beam6" => beam6,
+                    "fxbeam1" => fxbeam1,
+                    "fxbeam2" => fxbeam2,
+                    "fxbeam3" => fxbeam3,
+                    "fxbeam4" => fxbeam4,
+                    "particle1" => particle1,
+                    "particle2" => particle2,
+                    "particle3" => particle3,
+                    "particle4" => particle4,
+                    "particle5" => particle5,
+                    "particle6" => particle6,
+                    "fxparticle1" => fxparticle1,
+                    "fxparticle2" => fxparticle2,
+                    "fxparticle3" => fxparticle3,
+                    "fxparticle4" => fxparticle4,
+                    _ => key1,
+                };
             }
         }
     }

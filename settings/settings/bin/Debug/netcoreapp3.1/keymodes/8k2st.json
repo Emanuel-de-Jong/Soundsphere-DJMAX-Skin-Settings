@@ -17,49 +17,49 @@
       "layer": 40
     },
     {
-      "name": "fxleftbody",
+      "name": "fx1leftbody",
       "path": "resources/all/fx1leftbody.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fxlefttail",
+      "name": "fx1lefttail",
       "path": "resources/all/fx1lefttail.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fxlefthead",
+      "name": "fx1lefthead",
       "path": "resources/all/fx1lefthead.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fxleft",
+      "name": "fx1left",
       "path": "resources/all/fx1left.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fxrightbody",
+      "name": "fx1rightbody",
       "path": "resources/all/fx1rightbody.png",
       "layer": 60,
       "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fxrighttail",
+      "name": "fx1righttail",
       "path": "resources/all/fx1righttail.png",
       "layer": 61,
       "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fxrighthead",
+      "name": "fx1righthead",
       "path": "resources/all/fx1righthead.png",
       "layer": 62,
       "blendAlphaMode": "alphamultiply"
     },
     {
-      "name": "fxright",
+      "name": "fx1right",
       "path": "resources/all/fx1right.png",
       "layer": 63,
       "blendAlphaMode": "alphamultiply"
@@ -629,7 +629,7 @@
         },
         "sb": {},
         "layer": 63,
-        "image": "fxleft"
+        "image": "fx1left"
       }
     },
     "key5:LongNote": {
@@ -658,7 +658,7 @@
         },
         "sb": {},
         "layer": 60,
-        "image": "fxleftbody"
+        "image": "fx1leftbody"
       },
       "Tail": {
         "cs": 1,
@@ -685,7 +685,7 @@
         },
         "sb": {},
         "layer": 61,
-        "image": "fxlefttail"
+        "image": "fx1lefttail"
       },
       "Head": {
         "cs": 1,
@@ -712,7 +712,7 @@
         },
         "sb": {},
         "layer": 62,
-        "image": "fxlefthead"
+        "image": "fx1lefthead"
       }
     },
     "key6:ShortNote": {
@@ -741,7 +741,7 @@
         },
         "sb": {},
         "layer": 63,
-        "image": "fxright"
+        "image": "fx1right"
       }
     },
     "key6:LongNote": {
@@ -770,7 +770,7 @@
         },
         "sb": {},
         "layer": 60,
-        "image": "fxrightbody"
+        "image": "fx1rightbody"
       },
       "Tail": {
         "cs": 1,
@@ -797,7 +797,7 @@
         },
         "sb": {},
         "layer": 61,
-        "image": "fxrighttail"
+        "image": "fx1righttail"
       },
       "Head": {
         "cs": 1,
@@ -824,7 +824,7 @@
         },
         "sb": {},
         "layer": 62,
-        "image": "fxrighthead"
+        "image": "fx1righthead"
       }
     },
     "key7:ShortNote": {

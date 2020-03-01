@@ -1,395 +1,200 @@
-13:19:47 - <<PROCESS>>: Initializing components
-13:19:48 - <<COMPLETION>>: Initialization complete
-13:19:50 - <<PROCESS>>: Getting components settings
-13:19:50 - <<NOTE>>: GenerateJSON pressed
-13:19:50 - <<PROCESS>>: Making playfield, keymode and metadataitem for each mode
-13:19:50 - <<PROCESS>>: Getting all file paths in current directory
-13:19:50 - <<PROCESS>>: Changeing the file paths to a <file name without extension, relative path from current directory> dictionary
-13:19:50 - <<PROCESS>>: Setting layers
-13:19:50 - <<VALUE>>: Mode: 4k
-13:19:50 - <<VALUE>>: Sidetracks: False
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions4k.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Sidetracks: True
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions4k2st.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Mode: 5k
-13:19:50 - <<VALUE>>: Sidetracks: False
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions5k.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Sidetracks: True
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions5k2st.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Mode: 6k
-13:19:50 - <<VALUE>>: Sidetracks: False
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions6k.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Sidetracks: True
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions6k2st.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Mode: 8k
-13:19:50 - <<VALUE>>: Sidetracks: False
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions8k.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Sidetracks: True
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions8k2st.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Mode: 10k
-13:19:50 - <<VALUE>>: Sidetracks: False
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions10k.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Sidetracks: True
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions10k2st.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Mode: 10kfade
-13:19:50 - <<VALUE>>: Sidetracks: False
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions10kfade.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<VALUE>>: Sidetracks: True
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Making playfield
-13:19:50 - <<PROCESS>>: Getting playfield position jsons
-13:19:50 - <<COMPLETION>>: Making playfield complete
-13:19:50 - <<PROCESS>>: Making keymode
-13:19:50 - <<PROCESS>>: Getting images for keymode
-13:19:50 - <<COMPLETION>>: Getting images for keymode complete
-13:19:50 - <<PROCESS>>: Getting notes for keymode
-13:19:50 - <<PROCESS>>: Getting position json path from Info
-13:19:50 - <<VALUE>>: Position json path: settings/positions/positions10kfade2st.json
-13:19:50 - <<PROCESS>>: Reading position json
-13:19:50 - <<PROCESS>>: Deserializing position json to object
-13:19:50 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:50 - <<PROCESS>>: Making metadataitem
-13:19:50 - <<COMPLETION>>: Making playfield, keymode and metadataitems for each mode complete
-13:19:50 - <<PROCESS>>: Creating JSONs
-13:19:50 - <<PROCESS>>: Writing to playfield jsons
-13:19:50 - <<PROCESS>>: Writing to keymode jsons
-13:19:50 - <<PROCESS>>: Writing to metadata json
-13:19:50 - <<COMPLETION>>: Creating JSONs complete
-13:19:55 - <<PROCESS>>: Getting components settings
-13:19:55 - <<NOTE>>: GenerateJSON pressed
-13:19:55 - <<PROCESS>>: Making playfield, keymode and metadataitem for each mode
-13:19:55 - <<VALUE>>: Mode: 4k
-13:19:55 - <<VALUE>>: Sidetracks: False
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions4k.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Sidetracks: True
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions4k2st.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Mode: 5k
-13:19:55 - <<VALUE>>: Sidetracks: False
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions5k.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Sidetracks: True
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions5k2st.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Mode: 6k
-13:19:55 - <<VALUE>>: Sidetracks: False
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions6k.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Sidetracks: True
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions6k2st.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Mode: 8k
-13:19:55 - <<VALUE>>: Sidetracks: False
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions8k.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Sidetracks: True
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions8k2st.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Mode: 10k
-13:19:55 - <<VALUE>>: Sidetracks: False
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions10k.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Sidetracks: True
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions10k2st.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Mode: 10kfade
-13:19:55 - <<VALUE>>: Sidetracks: False
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions10kfade.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<VALUE>>: Sidetracks: True
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Making playfield
-13:19:55 - <<PROCESS>>: Getting playfield position jsons
-13:19:55 - <<COMPLETION>>: Making playfield complete
-13:19:55 - <<PROCESS>>: Making keymode
-13:19:55 - <<PROCESS>>: Getting images for keymode
-13:19:55 - <<COMPLETION>>: Getting images for keymode complete
-13:19:55 - <<PROCESS>>: Getting notes for keymode
-13:19:55 - <<PROCESS>>: Getting position json path from Info
-13:19:55 - <<VALUE>>: Position json path: settings/positions/positions10kfade2st.json
-13:19:55 - <<PROCESS>>: Reading position json
-13:19:55 - <<PROCESS>>: Deserializing position json to object
-13:19:55 - <<COMPLETION>>: Getting notes for keymode complete
-13:19:55 - <<PROCESS>>: Making metadataitem
-13:19:55 - <<COMPLETION>>: Making playfield, keymode and metadataitems for each mode complete
-13:19:55 - <<PROCESS>>: Creating JSONs
-13:19:55 - <<PROCESS>>: Writing to playfield jsons
-13:19:55 - <<PROCESS>>: Writing to keymode jsons
-13:19:55 - <<PROCESS>>: Writing to metadata json
-13:19:55 - <<COMPLETION>>: Creating JSONs complete
+13:36:48 - <<PROCESS>>: Initializing components
+13:36:48 - <<COMPLETION>>: Initialization complete
+13:36:53 - <<PROCESS>>: Getting components settings
+13:36:53 - <<NOTE>>: GenerateJSON pressed
+13:36:53 - <<PROCESS>>: Making playfield, keymode and metadataitem for each mode
+13:36:53 - <<PROCESS>>: Getting all file paths in current directory
+13:36:53 - <<PROCESS>>: Changeing the file paths to a <file name without extension, relative path from current directory> dictionary
+13:36:53 - <<PROCESS>>: Setting layers
+13:36:53 - <<VALUE>>: Mode: 4k
+13:36:53 - <<VALUE>>: Sidetracks: False
+13:36:53 - <<PROCESS>>: Making playfield
+13:36:53 - <<PROCESS>>: Making playfield
+13:36:53 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions4k.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Sidetracks: True
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions4k2st.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Mode: 5k
+13:36:54 - <<VALUE>>: Sidetracks: False
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions5k.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Sidetracks: True
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions5k2st.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Mode: 6k
+13:36:54 - <<VALUE>>: Sidetracks: False
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions6k.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Sidetracks: True
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions6k2st.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Mode: 8k
+13:36:54 - <<VALUE>>: Sidetracks: False
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions8k.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Sidetracks: True
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions8k2st.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Mode: 10k
+13:36:54 - <<VALUE>>: Sidetracks: False
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions10k.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Sidetracks: True
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions10k2st.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Mode: 10kfade
+13:36:54 - <<VALUE>>: Sidetracks: False
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions10kfade.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<VALUE>>: Sidetracks: True
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Making playfield
+13:36:54 - <<PROCESS>>: Getting playfield position jsons
+13:36:54 - <<COMPLETION>>: Making playfield complete
+13:36:54 - <<PROCESS>>: Making keymode
+13:36:54 - <<PROCESS>>: Getting images for keymode
+13:36:54 - <<COMPLETION>>: Getting images for keymode complete
+13:36:54 - <<PROCESS>>: Getting notes for keymode
+13:36:54 - <<PROCESS>>: Getting position json path from Info
+13:36:54 - <<VALUE>>: Position json path: settings/positions/positions10kfade2st.json
+13:36:54 - <<PROCESS>>: Reading position json
+13:36:54 - <<PROCESS>>: Deserializing position json to object
+13:36:54 - <<COMPLETION>>: Getting notes for keymode complete
+13:36:54 - <<PROCESS>>: Making metadataitem
+13:36:54 - <<COMPLETION>>: Making playfield, keymode and metadataitems for each mode complete
+13:36:54 - <<PROCESS>>: Creating JSONs
+13:36:54 - <<PROCESS>>: Writing to playfield jsons
+13:36:54 - <<PROCESS>>: Writing to keymode jsons
+13:36:54 - <<PROCESS>>: Writing to metadata json
+13:36:54 - <<COMPLETION>>: Creating JSONs complete

@@ -10,14 +10,12 @@ namespace elements
         {
             get
             {
-                switch (number)
+                return number switch
                 {
-                    case 1:
-                        return stparticle1;
-                    case 2:
-                        return stparticle2;
-                }
-                return stparticle1;
+                    1 => stparticle1,
+                    2 => stparticle2,
+                    _ => stparticle1,
+                };
             }
         }
     }

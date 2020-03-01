@@ -63,7 +63,6 @@ namespace logger
                 {
                     outputFile.Write("");
                 }
-                
             }
         }
     }

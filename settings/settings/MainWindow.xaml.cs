@@ -43,17 +43,18 @@ namespace settings
         public Dictionary<string, bool> GetComponentsSettings()
         {
             Logger.Add(eMessageType.process, "Getting components settings");
-            Dictionary<string, bool> componentsSettings = new Dictionary<string, bool>();
-
-            componentsSettings["novidbg"] = (bool)novidbg.IsChecked;
-            componentsSettings["combobg"] = (bool)combobg.IsChecked;
-            componentsSettings["beam"] = (bool)beam.IsChecked;
-            componentsSettings["combo"] = (bool)combo.IsChecked;
-            componentsSettings["progressbar"] = (bool)progressbar.IsChecked;
-            componentsSettings["accuracy"] = (bool)accuracy.IsChecked;
-            componentsSettings["timegate"] = (bool)timegate.IsChecked;
-            componentsSettings["keypressed"] = (bool)keypressed.IsChecked;
-            componentsSettings["particles"] = (bool)particles.IsChecked;
+            Dictionary<string, bool> componentsSettings = new Dictionary<string, bool>
+            {
+                ["novidbg"] = (bool)novidbg.IsChecked,
+                ["combobg"] = (bool)combobg.IsChecked,
+                ["beam"] = (bool)beam.IsChecked,
+                ["combo"] = (bool)combo.IsChecked,
+                ["progressbar"] = (bool)progressbar.IsChecked,
+                ["accuracy"] = (bool)accuracy.IsChecked,
+                ["timegate"] = (bool)timegate.IsChecked,
+                ["keypressed"] = (bool)keypressed.IsChecked,
+                ["particles"] = (bool)particles.IsChecked
+            };
 
             return componentsSettings;
         }
