@@ -149,7 +149,7 @@ namespace elements
                         { "layer", "note" }, { "lnBodyLayer", "notebody" }, { "lnTailLayer", "notetail" }, { "lnHeadLayer", "notehead" },
                         { "image", "note1" }, { "lnBodyImage", "note1body" }, { "lnTailImage", "note1tail" }, { "lnHeadImage", "note1head" }});
             }
-            else if (keymode == "10k")
+            else if (keymode.Contains("10k"))
             {
                 itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
                         { "layer", "fx2" }, { "lnBodyLayer", "fx2body" }, { "lnTailLayer", "fx2tail" }, { "lnHeadLayer", "fx2head" },
@@ -181,39 +181,6 @@ namespace elements
                 itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
                         { "layer", "fx2" }, { "lnBodyLayer", "fx2body" }, { "lnTailLayer", "fx2tail" }, { "lnHeadLayer", "fx2head" },
                         { "image", "fx2right" }, { "lnBodyImage", "fx2rightbody" }, { "lnTailImage", "fx2righttail" }, { "lnHeadImage", "fx2righthead" }});
-            }
-            else if (keymode == "10kfade")
-            {
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "fx2" }, { "lnBodyLayer", "fx2body" }, { "lnTailLayer", "fx2tail" }, { "lnHeadLayer", "fx2head" },
-                        { "image", "fx2leftfade" }, { "lnBodyImage", "fx2leftbodyfade" }, { "lnTailImage", "fx2lefttailfade" }, { "lnHeadImage", "fx2leftheadfade" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "note" }, { "lnBodyLayer", "notebody" }, { "lnTailLayer", "notetail" }, { "lnHeadLayer", "notehead" },
-                        { "image", "note1" }, { "lnBodyImage", "note1body" }, { "lnTailImage", "note1tail" }, { "lnHeadImage", "note1head" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "note" }, { "lnBodyLayer", "notebody" }, { "lnTailLayer", "notetail" }, { "lnHeadLayer", "notehead" },
-                        { "image", "note2" }, { "lnBodyImage", "note2body" }, { "lnTailImage", "note2tail" }, { "lnHeadImage", "note2head" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "note" }, { "lnBodyLayer", "notebody" }, { "lnTailLayer", "notetail" }, { "lnHeadLayer", "notehead" },
-                        { "image", "note1" }, { "lnBodyImage", "note1body" }, { "lnTailImage", "note1tail" }, { "lnHeadImage", "note1head" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "fx1" }, { "lnBodyLayer", "fx1body" }, { "lnTailLayer", "fx1tail" }, { "lnHeadLayer", "fx1head" },
-                        { "image", "fx1leftfade" }, { "lnBodyImage", "fx1leftbodyfade" }, { "lnTailImage", "fx1lefttailfade" }, { "lnHeadImage", "fx1leftheadfade" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "fx1" }, { "lnBodyLayer", "fx1body" }, { "lnTailLayer", "fx1tail" }, { "lnHeadLayer", "fx1head" },
-                        { "image", "fx1rightfade" }, { "lnBodyImage", "fx1rightbodyfade" }, { "lnTailImage", "fx1righttailfade" }, { "lnHeadImage", "fx1rightheadfade" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "note" }, { "lnBodyLayer", "notebody" }, { "lnTailLayer", "notetail" }, { "lnHeadLayer", "notehead" },
-                        { "image", "note1" }, { "lnBodyImage", "note1body" }, { "lnTailImage", "note1tail" }, { "lnHeadImage", "note1head" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "note" }, { "lnBodyLayer", "notebody" }, { "lnTailLayer", "notetail" }, { "lnHeadLayer", "notehead" },
-                        { "image", "note2" }, { "lnBodyImage", "note2body" }, { "lnTailImage", "note2tail" }, { "lnHeadImage", "note2head" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "note" }, { "lnBodyLayer", "notebody" }, { "lnTailLayer", "notetail" }, { "lnHeadLayer", "notehead" },
-                        { "image", "note1" }, { "lnBodyImage", "note1body" }, { "lnTailImage", "note1tail" }, { "lnHeadImage", "note1head" }});
-                itemsValues.Add(new Dictionary<string, string>() {{ "name", "key" + keyItem++ },
-                        { "layer", "fx2" }, { "lnBodyLayer", "fx2body" }, { "lnTailLayer", "fx2tail" }, { "lnHeadLayer", "fx2head" },
-                        { "image", "fx2rightfade" }, { "lnBodyImage", "fx2rightbodyfade" }, { "lnTailImage", "fx2righttailfade" }, { "lnHeadImage", "fx2rightheadfade" }});
             }
 
 

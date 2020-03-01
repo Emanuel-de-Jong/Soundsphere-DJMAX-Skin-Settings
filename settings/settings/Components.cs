@@ -31,6 +31,28 @@ namespace settings
                 {
                     bool sidetracks = i == 0 ? false : true;
 
+                    int keyAmount;
+                    if (modeName == "4k")
+                    {
+                        keyAmount = 4;
+                    }
+                    else if (modeName == "5k")
+                    {
+                        keyAmount = 5;
+                    }
+                    else if (modeName == "6k")
+                    {
+                        keyAmount = 6;
+                    }
+                    else if(modeName == "8k")
+                    {
+                        keyAmount = 8;
+                    }
+                    else
+                    {
+                        keyAmount = 10;
+                    }
+
                     Logger.Add(eMessageType.value, "Sidetracks: " + sidetracks);
 
                     Logger.Add(eMessageType.process, "Making playfield");
@@ -39,7 +61,7 @@ namespace settings
                     string keymodeName = modeName + (sidetracks ? "2st" : "");
                     string playfieldName = "playfield" + keymodeName;
                     string name = Info.skinName + " " + keymodeName;
-                    string inputMode = (modeName + (sidetracks ? 2 : 0)) + "key";
+                    string inputMode = (keyAmount + (sidetracks ? 2 : 0)) + "key";
                     if (modeName.Contains("10k") && sidetracks)
                     {
                         inputMode = "10key2scratch";
