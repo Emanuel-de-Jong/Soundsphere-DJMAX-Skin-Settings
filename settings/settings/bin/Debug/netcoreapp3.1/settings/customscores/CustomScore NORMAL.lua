@@ -2,56 +2,56 @@ local Score = require("sphere.screen.gameplay.CloudburstEngine.Score")
 
 local CustomScore = Score:new()
 
-CustomScore.passEdge = 0.165
-CustomScore.missEdge = 0.200
+CustomScore.passEdge = 0.220
+CustomScore.missEdge = 0.260
 
 CustomScore.timegates = {
 	{
-		time = 0.015,
+		time = 0.018,
 		name = "MAX 100%"
 	},
 	{
-		time = 0.030,
+		time = 0.040,
 		name = "MAX 90%"
 	},
 	{
-		time = 0.045,
+		time = 0.060,
 		name = "MAX 80%"
 	},
 	{
-		time = 0.060,
+		time = 0.080,
 		name = "MAX 70%"
 	},
 	{
-		time = 0.075,
+		time = 0.100,
 		name = "MAX 60%"
 	},
 	{
-		time = 0.090,
+		time = 0.120,
 		name = "MAX 50%"
 	},
 	{
-		time = 0.105,
+		time = 0.140,
 		name = "MAX 40%"
 	},
 	{
-		time = 0.120,
+		time = 0.160,
 		name = "MAX 30%"
 	},
 	{
-		time = 0.135,
+		time = 0.180,
 		name = "MAX 20%"
 	},
 	{
-		time = 0.150,
+		time = 0.200,
 		name = "MAX 10%"
 	},
 	{
-		time = 0.165,
+		time = 0.220,
 		name = "MAX 1%"
 	},
 	{
-		time = 0.200,
+		time = 0.260,
 		name = "BREAK"
 	}
 }
