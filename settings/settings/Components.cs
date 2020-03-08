@@ -78,7 +78,7 @@ namespace settings
                         playfield = Info.files[playfieldName],
                         images = Image.GetImages(modeName, sidetracks),
                         notes = Keymode.GetNotes(modeName, sidetracks),
-                        cses = new List<object[]>() { Info.csMiddle }
+                        cses = new List<object[]>() { Info.cs }
                     };
 
                     Logger.Add(eMessageType.process, "Making metadataitem");
