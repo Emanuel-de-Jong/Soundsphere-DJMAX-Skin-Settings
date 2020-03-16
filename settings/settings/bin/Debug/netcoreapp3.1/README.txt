@@ -74,7 +74,6 @@ You have to press Apply in the settings.exe here as well.
 
 IV. troubleshooting
 Most often, the problem has one of the following causes:
-- You are not playing in 1920 x 1080
 - A file is missing or named incorrectly (including json files)
 - You haven't used settings.exe after changing a name or the
 position of a file.

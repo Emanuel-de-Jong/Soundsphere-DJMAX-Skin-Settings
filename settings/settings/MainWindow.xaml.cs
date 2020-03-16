@@ -60,8 +60,7 @@ namespace settings
         }
         private void ComponentsPositionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            double cs = 0;
-            double csMiddle = 0.5;
+            double cs = 0.5;
 
             double left = -0.320;
             double right = 0.325;
@@ -72,17 +71,14 @@ namespace settings
             {
                 case "Left":
                     Info.cs[0] = cs + left;
-                    Info.csMiddle[0] = csMiddle + left;
                     imgPosition.Source = new BitmapImage(new Uri("Images/Components/positionLeft.png", UriKind.Relative));
                     break;
                 case "Middle":
                     Info.cs[0] = cs;
-                    Info.csMiddle[0] = csMiddle;
                     imgPosition.Source = new BitmapImage(new Uri("Images/Components/positionMiddle.png", UriKind.Relative));
                     break;
                 case "Right":
                     Info.cs[0] = cs + right;
-                    Info.csMiddle[0] = csMiddle + right;
                     imgPosition.Source = new BitmapImage(new Uri("Images/Components/positionRight.png", UriKind.Relative));
                     break;
             }

@@ -10,8 +10,7 @@ namespace elements
         public static string absolutePath = Directory.GetCurrentDirectory();
         public static string skinName = Path.GetFileName(absolutePath);
         public static string soundspherePath = "userdata/skins/" + skinName + "/";
-        public static object[] csMiddle = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
-        public static object[] cs = new object[] { 0, 0, 0, 0, eBinding.h.ToString() };
+        public static object[] cs = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
         public static List<(string, bool)> modes = new List<(string, bool)>() { ("4k", true), ("5k", true), ("6k", true), ("8k", true), ("10k", true), ("10kfade", true) }; // , ("4k2fx4l", true), ("4k2fx4lfade", true)
         public static Dictionary<string, string> files = SetFiles();
         public static Dictionary<string, int> layers = SetLayers();
