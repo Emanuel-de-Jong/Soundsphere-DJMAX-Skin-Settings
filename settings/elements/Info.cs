@@ -11,7 +11,7 @@ namespace elements
         public static string skinName = Path.GetFileName(absolutePath);
         public static string soundspherePath = "userdata/skins/" + skinName + "/";
         public static object[] cs = new object[] { 0.5, 0, 0, 0, eBinding.h.ToString() };
-        public static List<(string, bool)> modes = new List<(string, bool)>() { ("4k", true), ("5k", true), ("6k", true), ("8k", true), ("10k", true), ("10kfade", true) }; // , ("4k2fx4l", true), ("4k2fx4lfade", true)
+        public static List<(string, bool)> modes = new List<(string, bool)>() { ("4k", true), ("5k", true), ("6k", true), ("8k", true), ("10k", true), ("10kfade", true) };
         public static Dictionary<string, string> files = SetFiles();
         public static Dictionary<string, int> layers = SetLayers();
 
@@ -26,9 +26,16 @@ namespace elements
             Logger.Add(eMessageType.process, "Changeing the file paths to a <file name without extension, relative path from current directory> dictionary");
             foreach (string path in paths)
             {
-                string name = Path.GetFileNameWithoutExtension(path);
                 string shortPath = path.Substring(path.LastIndexOf(skinName) + skinName.Length + 1);
                 shortPath = shortPath.Replace("\\", "/");
+
+                if (shortPath.Contains("/!"))
+                {
+                    continue;
+                }
+
+                string name = Path.GetFileNameWithoutExtension(path);
+
                 tempFiles[name] = shortPath;
             }
 
