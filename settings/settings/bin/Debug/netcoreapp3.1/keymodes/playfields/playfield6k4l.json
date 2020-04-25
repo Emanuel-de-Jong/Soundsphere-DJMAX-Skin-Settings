@@ -2,13 +2,13 @@
   {
     "image": "resources/all/bg.png",
     "class": "StaticObject",
-    "x": 0.6564814815,
+    "x": -0.2324074074,
     "y": 0.0,
     "w": 0.4648148148,
     "h": 1.0,
     "layer": 1,
     "cs": [
-      0,
+      0.5,
       0,
       0,
       0,
@@ -18,13 +18,13 @@
   {
     "image": "resources/all/judgeline.png",
     "class": "StaticObject",
-    "x": 0.0,
+    "x": -0.888888889,
     "y": 0.0,
     "w": 1.777777778,
     "h": 1.0,
     "layer": 20,
     "cs": [
-      0,
+      0.5,
       0,
       0,
       0,
@@ -34,13 +34,13 @@
   {
     "image": "resources/all/playfield.png",
     "class": "StaticObject",
-    "x": 0.0,
+    "x": -0.888888889,
     "y": 0.0,
     "w": 1.777777778,
     "h": 1.0,
     "layer": 90,
     "cs": [
-      0,
+      0.5,
       0,
       0,
       0,
@@ -50,13 +50,13 @@
   {
     "image": "resources/all/combo.png",
     "class": "StaticObject",
-    "x": 0.0,
+    "x": -0.888888889,
     "y": 0.0,
     "w": 1.777777778,
     "h": 1.0,
     "layer": 100,
     "cs": [
-      0,
+      0.5,
       0,
       0,
       0,
@@ -79,13 +79,13 @@
     "font": "userdata/skins/DJMAX/resources/fonts/Haettenschweiler.ttf",
     "size": 105,
     "class": "ScoreDisplay",
-    "x": 0.0,
+    "x": -0.888888889,
     "y": 0.108240209,
     "w": 1.777777778,
     "h": 1.0,
     "layer": 100,
     "cs": [
-      0,
+      0.5,
       0,
       0,
       0,
@@ -155,6 +155,51 @@
     ]
   },
   {
+    "image": "resources/all/rate.png",
+    "class": "StaticObject",
+    "x": -0.888888889,
+    "y": 0.0,
+    "w": 1.777777778,
+    "h": 1.0,
+    "layer": 100,
+    "cs": [
+      0.5,
+      0,
+      0,
+      0,
+      "h"
+    ]
+  },
+  {
+    "color": [
+      255,
+      255,
+      255,
+      229
+    ],
+    "format": "%0.2f",
+    "field": "accuracy",
+    "align": {
+      "x": "left",
+      "y": "top"
+    },
+    "font": "userdata/skins/DJMAX/resources/fonts/Lato-Black.ttf",
+    "size": 12,
+    "class": "ScoreDisplay",
+    "x": 0.0,
+    "y": 0.527142857,
+    "w": 1.777777778,
+    "h": 1.0,
+    "layer": 100,
+    "cs": [
+      0.5,
+      0,
+      0,
+      0,
+      "h"
+    ]
+  },
+  {
     "color": [
       250,
       200,
@@ -170,13 +215,13 @@
     "font": "userdata/skins/DJMAX/resources/fonts/Bulo Black.otf",
     "size": 57,
     "class": "ScoreDisplay",
-    "x": 0.0,
+    "x": -0.888888889,
     "y": 0.517768907,
     "w": 1.777777778,
     "h": 1.0,
     "layer": 100,
     "cs": [
-      0,
+      0.5,
       0,
       0,
       0,

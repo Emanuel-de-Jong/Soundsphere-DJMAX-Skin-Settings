@@ -72,9 +72,15 @@
     "path": "keymodes/10kfade2st.json"
   },
   {
-    "name": "DJMAX KSH XB",
+    "name": "DJMAX 6k4l",
     "inputMode": "4bt2fx2laserleft2laserright",
     "type": "json:full-v2",
-    "path": "keymodes/KSH XB.json"
+    "path": "keymodes/6k4l.json"
+  },
+  {
+    "name": "DJMAX 6k4lfade",
+    "inputMode": "4bt2fx2laserleft2laserright",
+    "type": "json:full-v2",
+    "path": "keymodes/6k4lfade.json"
   }
 ]
