@@ -9,3 +9,4 @@ D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\obj\Debug
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\bin\Debug\netcoreapp3.1\logger.dll
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\bin\Debug\netcoreapp3.1\logger.pdb
 D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\obj\Debug\netcoreapp3.1\elements.csproj.CopyComplete
+D:\Programming\Repos\Soundsphere-DJMAX-Skin-Settings\settings\elements\obj\Debug\netcoreapp3.1\elements.csproj.CoreCompileInputs.cache

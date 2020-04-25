@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8Ulyt09AcdEiqCEF1AinqAWJOSKV3ulc48wAORij9Di0ZBVdwVaZyTCWI8P6GQJSIPkqj4nCdPzg6kVwQzizeg==",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\Repos\\Soundsphere-DJMAX-Skin-Settings\\settings\\settings\\settings.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Emanu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
