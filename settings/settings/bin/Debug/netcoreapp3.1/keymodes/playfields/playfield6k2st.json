@@ -76,7 +76,7 @@
       "x": "center",
       "y": "top"
     },
-    "font": "userdata/skins/netcoreapp3.1/resources/fonts/Haettenschweiler.ttf",
+    "font": "userdata/skins/DJMAX/resources/fonts/Haettenschweiler.ttf",
     "size": 105,
     "class": "ScoreDisplay",
     "x": -0.888888889,
@@ -183,7 +183,7 @@
       "x": "left",
       "y": "top"
     },
-    "font": "userdata/skins/netcoreapp3.1/resources/fonts/Lato-Black.ttf",
+    "font": "userdata/skins/DJMAX/resources/fonts/Lato-Black.ttf",
     "size": 12,
     "class": "ScoreDisplay",
     "x": 0.0,
@@ -212,7 +212,7 @@
       "x": "center",
       "y": "top"
     },
-    "font": "userdata/skins/netcoreapp3.1/resources/fonts/Bulo Black.otf",
+    "font": "userdata/skins/DJMAX/resources/fonts/Bulo Black.otf",
     "size": 57,
     "class": "ScoreDisplay",
     "x": -0.888888889,
@@ -241,7 +241,7 @@
       "x": "right",
       "y": "center"
     },
-    "font": "userdata/skins/netcoreapp3.1/resources/fonts/Lato-HeavyItalic.ttf",
+    "font": "userdata/skins/DJMAX/resources/fonts/Lato-HeavyItalic.ttf",
     "size": 15,
     "class": "ScoreDisplay",
     "x": -0.1064814815,
@@ -270,7 +270,7 @@
       "x": "right",
       "y": "center"
     },
-    "font": "userdata/skins/netcoreapp3.1/resources/fonts/Lato-Regular.ttf",
+    "font": "userdata/skins/DJMAX/resources/fonts/Lato-Regular.ttf",
     "size": 16,
     "class": "ScoreDisplay",
     "x": 0.1574074074,

@@ -1,5 +1,5 @@
 {
-  "name": "netcoreapp3.1 10k",
+  "name": "DJMAX 10k",
   "playfield": "keymodes/playfields/playfield10k.json",
   "cses": [
     [

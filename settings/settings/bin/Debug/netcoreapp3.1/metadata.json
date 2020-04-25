@@ -1,74 +1,80 @@
 [
   {
-    "name": "netcoreapp3.1 4k",
+    "name": "DJMAX 4k",
     "inputMode": "4key",
     "type": "json:full-v2",
     "path": "keymodes/4k.json"
   },
   {
-    "name": "netcoreapp3.1 4k2st",
+    "name": "DJMAX 4k2st",
     "inputMode": "6key",
     "type": "json:full-v2",
     "path": "keymodes/4k2st.json"
   },
   {
-    "name": "netcoreapp3.1 5k",
+    "name": "DJMAX 5k",
     "inputMode": "5key",
     "type": "json:full-v2",
     "path": "keymodes/5k.json"
   },
   {
-    "name": "netcoreapp3.1 5k2st",
+    "name": "DJMAX 5k2st",
     "inputMode": "7key",
     "type": "json:full-v2",
     "path": "keymodes/5k2st.json"
   },
   {
-    "name": "netcoreapp3.1 6k",
+    "name": "DJMAX 6k",
     "inputMode": "6key",
     "type": "json:full-v2",
     "path": "keymodes/6k.json"
   },
   {
-    "name": "netcoreapp3.1 6k2st",
+    "name": "DJMAX 6k2st",
     "inputMode": "8key",
     "type": "json:full-v2",
     "path": "keymodes/6k2st.json"
   },
   {
-    "name": "netcoreapp3.1 8k",
+    "name": "DJMAX 8k",
     "inputMode": "8key",
     "type": "json:full-v2",
     "path": "keymodes/8k.json"
   },
   {
-    "name": "netcoreapp3.1 8k2st",
+    "name": "DJMAX 8k2st",
     "inputMode": "10key",
     "type": "json:full-v2",
     "path": "keymodes/8k2st.json"
   },
   {
-    "name": "netcoreapp3.1 10k",
+    "name": "DJMAX 10k",
     "inputMode": "10key",
     "type": "json:full-v2",
     "path": "keymodes/10k.json"
   },
   {
-    "name": "netcoreapp3.1 10k2st",
+    "name": "DJMAX 10k2st",
     "inputMode": "10key2scratch",
     "type": "json:full-v2",
     "path": "keymodes/10k2st.json"
   },
   {
-    "name": "netcoreapp3.1 10kfade",
+    "name": "DJMAX 10kfade",
     "inputMode": "10key",
     "type": "json:full-v2",
     "path": "keymodes/10kfade.json"
   },
   {
-    "name": "netcoreapp3.1 10kfade2st",
+    "name": "DJMAX 10kfade2st",
     "inputMode": "10key2scratch",
     "type": "json:full-v2",
     "path": "keymodes/10kfade2st.json"
+  },
+  {
+    "name": "DJMAX KSH XB",
+    "inputMode": "4bt2fx2laserleft2laserright",
+    "type": "json:full-v2",
+    "path": "keymodes/KSH XB.json"
   }
 ]
